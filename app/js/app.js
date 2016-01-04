@@ -1,6 +1,11 @@
 import $ from 'jquery';
+import SVGMorpheus from './svgmorpheus';
 window.$ = window.jQuery = $;
 import './draw-svg';
+
+$('.hero-btn').on('click', toggleSection);
+
+morhOnvif();
 
 function drawHeroSvg(el) {
     if (typeof el === 'string') {
@@ -38,4 +43,26 @@ function toggleSection(e) {
     drawHeroSvg(targetFigure.find('svg'));
 }
 
-$('.hero-btn').on('click', toggleSection);
+function morhOnvif() {
+    let morph = new SVGMorpheus('.onvif svg');
+
+    let options = {
+        duration: 5000,
+        rotation: 'none',
+        easing: 'sine-in-out'
+    };
+
+    function toStateOne() {
+        morph.to('onvif-state-1', options, toStateTwo);
+    }
+
+    function toStateTwo() {
+        morph.to('onvif-state-2', options, toStateThree);
+    }
+
+    function toStateThree() {
+        morph.to('onvif-state-3', options, toStateOne);
+    }
+
+    toStateOne();
+}

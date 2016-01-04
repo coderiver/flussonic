@@ -190,11 +190,12 @@ a
     color: red
 
 .features
-  background: #001E8D
-  color: white
+  position: relative
+  min-height: 950px
   padding: 100px 40px 40px
   box-sizing: border-box
-  min-height: 950px
+  background: #001E8D
+  color: white
 
 .features__center
   max-width: 420px
@@ -213,4 +214,35 @@ a
   +f(t, 14)
   line-height: 1.78
 
-.features__list
+.features__pic
+  position: absolute
+
+.onvif
+  right: 50%
+  top: 90px
+  margin-right: percentage(200/1200)
+
+.motion
+  position: relative
+  top: 163px
+  left: 50%
+  margin-left: percentage(150/1200)
+  &__item
+    position: absolute
+    top: 50%
+    left: 50%
+  &__1
+    background: img-url('motion1.png') no-repeat center
+    width: 240px
+    height: 240px
+    margin: -120px 0 0 -120px
+  &__2
+    background: img-url('motion2.png') no-repeat center
+    width: 152px
+    height: 152px
+    margin: -76px 0 0 -76px
+  &__3
+    background: img-url('motion3.png') no-repeat center
+    width: 82px
+    height: 82px
+    margin: -41px 0 0 -41px

@@ -16,7 +16,10 @@ gulp.task('imagemin', function() {
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
-                removeViewBox: false
+                removeViewBox: false,
+                collapsGroups: false,
+                cleanupIDs: false,
+                mergePaths: false
             }]
         }))
         .pipe(gulp.dest(config.dest.img));

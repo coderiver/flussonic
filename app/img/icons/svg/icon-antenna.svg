@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-antenna</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-antenna" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" stroke="#231F20">
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="17.173" cy="17.558" r="17"></circle>
+            <path d="M23.549,16.455 C26.686,20.502 27.985,24.393 26.463,25.906 C24.571,27.784 19.047,25.288 14.124,20.333 C9.201,15.377 6.742,9.837 8.633,7.958 C10.2,6.4 14.272,7.853 18.425,11.223" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M26.385,25.989 C24.414,29.084 16.609,29.407 10.791,23.768 C5.117,18.27 5.664,9.625 8.468,8.021" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M11.876,15.387 L22.692,11.231 C22.481,10.971 22.424,10.521 22.42,10.348 C22.389,9.209 23.287,8.262 24.426,8.231 C25.564,8.2 26.512,9.098 26.542,10.236 C26.573,11.374 25.676,12.322 24.537,12.353 C24.348,12.358 23.798,12.233 23.622,12.082 L19.716,22.75" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M15.18,19.686 L21.909,12.966" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M10.609,24.547 L8.377,26.768 L8.39,32.116" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

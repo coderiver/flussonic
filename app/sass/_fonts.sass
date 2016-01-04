@@ -1,0 +1,33 @@
++fontWOFF("firasans-regular", firasans-regular)
++fontWOFF("firasans-medium", firasans-medium)
++fontWOFF("firasans-thin", firasans-thin)
++fontWOFF("firasans-bold", firasans-bold)
++fontWOFF("firasans-extralight", firasans-extralight)
++fontWOFF("firasans-light", firasans-light)
++fontWOFF("firasans-extrabold", firasans-extrabold)
++fontWOFF("firasans-ultra", firasans-ultra)
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "r"
+    $font-family: "firasans-regular"
+  @if $name == "m"
+    $font-family: "firasans-medium"
+  @if $name == "t"
+    $font-family: "firasans-thin"
+  @if $name == "b"
+    $font-family: "firasans-bold"
+  @if $name == "el"
+    $font-family: "firasans-extralight"
+  @if $name == "l"
+    $font-family: "firasans-light"
+  @if $name == "eb"
+    $font-family: "firasans-extrabold"
+  @if $name == "u"
+    $font-family: "firasans-ultra"
+  font-family: $font-family
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: ($letter-spacing / 1000) + em

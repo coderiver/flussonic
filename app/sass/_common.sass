@@ -1,0 +1,216 @@
+html
+  font-size: 62.5%
+
+body
+  background: #FFF
+  color: black
+  line-height: 1.4
+  +f(l, 16)
+  +smooth-font
+
+a
+  text-decoration: underline
+  color: $color-blue
+  +trans(color)
+  &:hover,
+  &:focus
+    color: red
+
+.header
+  position: relative
+
+.header__inner
+  width: 80%
+  margin: auto
+  box-sizing: border-box
+  padding: 0 0 0 percentage(165/1200)
+  position: relative
+
+.lang
+  position: absolute
+  top: 26px
+  right: 33px
+  a
+    &:not(:hover)
+      color: inherit
+  &:hover
+    .lang__list
+      opacity: 1
+      visibility: visible
+
+.lang__list
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  z-index: 1
+  top: 0
+  left: 0
+  white-space: nowrap
+  background: white
+  +trans
+
+.nav
+  padding: 22px 0 0
+  margin: 0 0 85px 0
+
+.nav__item
+  display: inline-block
+  vertical-align: top
+  margin-right: 20px
+  line-height: 1.7
+
+.nav__link
+  display: inline-block
+  +f(l, 16)
+
+
+.logo
+  display: block
+  position: absolute
+  top: 28px
+  left: 0
+  color: black
+  +f(b, 16, 100)
+  text-decoration: none
+  text-transform: uppercase
+  line-height: 1
+
+.lang
+  +f(l, 16)
+  color: rgba(black, 0.3)
+
+.link
+  color: $color-blue
+  text-decoration: none
+  border-bottom: 1px dotted
+  line-height: 1
+  cursor: pointer
+  +trans(color)
+  &:hover
+    color: red
+
+.hero
+  position: relative
+  +f(el, 16)
+  line-height: 1.526
+  padding: 0 45% 95px 0
+  position: relative
+  p
+    margin: 1em 0
+  .btn
+    margin-top: 15px
+
+.hero-figure
+  position: absolute
+  z-index: -1
+  top: -40px
+  right: 0
+  visibility: hidden
+  opacity: 0
+  &-iptv
+    .hero-figure__text
+      width: 330px
+  &-ipcam
+    top: -24px
+    right: 40px
+    .hero-figure__text
+      width: 380px
+  &.is-active
+    visibility: visible
+    opacity: 1
+
+.hero-figure__text
+  position: absolute
+  top: 320px
+  right: 0
+  +f(el, 14)
+  line-height: 1.43
+  color: $color-blue
+
+.hero-links
+  margin: 23px 0
+
+.hero-btn
+  display: inline-block
+  margin-right: 15px
+  text-decoration: none
+  +f(el, 16)
+  color: inherit
+  +trans(color)
+  line-height: 1
+  color: $color-blue
+  cursor: pointer
+  user-select: none
+  > *
+    display: inline-block
+    vertical-align: middle
+  span
+    border-bottom: 1px dotted
+  g
+    stroke: currentColor
+  circle
+    visibility: hidden
+    opacity: 0
+    +trans
+  &:hover
+    color: red
+  &.is-active
+    color: black
+    cursor: default
+    span
+      border-color: rgba(black, 0)
+    circle
+      visibility: visible
+      opacity: 1
+
+
+.title
+  +f(el, 50)
+  line-height: 1.1
+  &_bold
+    +f(l)
+
+.btn
+  display: inline-block
+  box-sizing: border-box
+  height: 45px
+  min-width: 140px
+  padding: 0 10px
+  line-height: 43px
+  border: 1px dotted
+  border-radius: 3px
+  background: none
+  +f(el, 16)
+  color: $color-blue
+  +trans(color)
+  text-decoration: none
+  text-align: center
+  cursor: pointer
+  &:hover
+    color: red
+
+.features
+  background: #001E8D
+  color: white
+  padding: 100px 40px 40px
+  box-sizing: border-box
+  min-height: 950px
+
+.features__center
+  max-width: 420px
+  margin: auto
+
+.feature
+  margin-top: 80px
+  &:nth-child(even)
+    margin-left: 80px
+
+.feature__label
+  +f(m, 16)
+  line-height: 1.526
+
+.feature__text
+  +f(t, 14)
+  line-height: 1.78
+
+.features__list

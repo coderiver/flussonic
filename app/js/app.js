@@ -1,11 +1,13 @@
 import $ from 'jquery';
 import SVGMorpheus from './svgmorpheus';
+import autosize from 'autosize';
 window.$ = window.jQuery = $;
 import './draw-svg';
 
 $('.hero-btn').on('click', toggleSection);
 
-morhOnvif();
+// morhOnvif();
+initTextareaAutoresize();
 
 function drawHeroSvg(el) {
     if (typeof el === 'string') {
@@ -65,4 +67,11 @@ function morhOnvif() {
     }
 
     toStateOne();
+}
+
+function initTextareaAutoresize() {
+    let el = $('textarea').filter('[data-autoresize]');
+    if (el.length) {
+        autosize(el);
+    }
 }

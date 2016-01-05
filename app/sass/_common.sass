@@ -16,6 +16,15 @@ a
   &:focus
     color: red
 
+.text
+  +f(l, 16)
+  line-height: 1.5625
+  p
+    margin: 1em 0
+  a
+    &:not(:hover)
+      color: inherit
+
 .header
   position: relative
 
@@ -170,6 +179,12 @@ a
   &_bold
     +f(l)
 
+
+.section
+  margin-top: 100px
+  .title
+    margin-bottom: 30px
+
 .btn
   display: inline-block
   box-sizing: border-box
@@ -182,12 +197,27 @@ a
   background: none
   +f(el, 16)
   color: $color-blue
-  +trans(color)
+  +trans
+  transition-property: color, background
   text-decoration: none
   text-align: center
   cursor: pointer
   &:hover
     color: red
+  &_fluid
+    display: block
+    width: 100%
+  &_solid
+    background: $color-blue
+    border: none
+    color: white
+    height: 50px
+    line-height: 50px
+    +f(eb, 14, 150)
+    text-transform: uppercase
+    &:hover
+      color: white
+      background: red
 
 .features
   position: relative
@@ -196,13 +226,19 @@ a
   box-sizing: border-box
   background: #001E8D
   color: white
+  overflow: hidden
 
 .features__center
   max-width: 420px
+  padding-left: 80px
   margin: auto
+  box-sizing: content-box
+  position: relative
+  z-index: 1
 
 .feature
   margin-top: 80px
+  max-width: 245px
   &:nth-child(even)
     margin-left: 80px
 
@@ -211,10 +247,10 @@ a
   line-height: 1.526
 
 .feature__text
-  +f(t, 14)
+  +f(el, 14)
   line-height: 1.78
 
-.features__pic
+.feature-pic
   position: absolute
 
 .onvif
@@ -223,26 +259,132 @@ a
   margin-right: percentage(200/1200)
 
 .motion
-  position: relative
-  top: 163px
+  top: 210px
   left: 50%
-  margin-left: percentage(150/1200)
+  margin-left: percentage(220/1200)
+  width: 240px
+  height: 240px
   &__item
     position: absolute
-    top: 50%
-    left: 50%
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    &:before
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      background: img-url('motion1.png') no-repeat center
+      background-size: contain
   &__1
-    background: img-url('motion1.png') no-repeat center
-    width: 240px
-    height: 240px
-    margin: -120px 0 0 -120px
+    // background: img-url('motion1.png') no-repeat center
+    // width: 240px
+    // height: 240px
+    // margin: -120px 0 0 -120px
+    animation: spin 4s linear infinite
   &__2
-    background: img-url('motion2.png') no-repeat center
-    width: 152px
-    height: 152px
-    margin: -76px 0 0 -76px
+    // background: img-url('motion2.png') no-repeat center
+    // width: 152px
+    // height: 152px
+    // margin: -76px 0 0 -76px
+    top: 10px
+    left: -120px
+    animation: spinback 3s linear infinite
+    &:before
+      transform: scale(-0.63, 0.63)
   &__3
-    background: img-url('motion3.png') no-repeat center
-    width: 82px
-    height: 82px
-    margin: -41px 0 0 -41px
+    // background: img-url('motion3.png') no-repeat center
+    // width: 82px
+    // height: 82px
+    // margin: -41px 0 0 -41px
+    top: 37px
+    left: -17px
+    animation: spinback 3.5s linear infinite
+    &:before
+      transform: scale(-0.34, 0.34)
+
+@keyframes spin
+  to
+    transform: rotate(360deg)
+
+@keyframes spinback
+  to
+    transform: rotate(-360deg)
+
+
+.web-access
+  width: 393px
+  height: 288px
+  top: 517px
+  right: 50%
+  margin-right: percentage(150/1200)
+  background: img-url('mouse.png') no-repeat center
+  background-size: contain
+
+.mobile-app
+  top: 638px
+  left: 50%
+  width: 587px
+  height: 519px
+  margin-left: percentage(140/1200)
+  background: img-url('smartphone.png') no-repeat center
+  background-size: contain
+
+.field
+  margin: 20px 0
+
+.input
+  display: block
+  box-sizing: border-box
+  height: 40px
+  padding: 10px 0 9px
+  width: 100%
+  appearance: none
+  background: none
+  border: none
+  border-bottom: 1px solid rgba(black, 0.5)
+  +f(r, 20)
+  color: black
+  resize: none
+  +placeholder
+    +f(l, 16, 150)
+    text-transform: uppercase
+    color: #9D9CA7
+
+textarea.input
+  max-height: 200px
+  line-height: 20px
+
+.news
+  line-height: 1.5625
+  &:not(:last-child)
+    margin-bottom: 25px
+  &_important
+    .news__title
+      font-size: 25px
+      +f(l)
+    .news__text
+      font-size: 22px
+      margin: 10px 0
+    .news__date
+      font-size: 16px
+
+.news__title
+  +f(r)
+
+.news__date
+  display: block
+  font-size: 14px
+  color: #999999
+
+
+.message
+  display: block
+  padding: 10px
+  box-sizing: border-box
+  text-align: center
+  +f(l, 16)
+  line-height: 1.6
+  background: #8CFFB7
+  border-radius: 2px

@@ -1,0 +1,17 @@
+.l
+  padding: 0 percentage(70/1200) 0 percentage(245/1200)
+
+.row
+  margin: 0 -30px
+  +clr
+
+.col
+  float: left
+  box-sizing: border-box
+  padding: 0 30px
+  width: 100%
+
+$col-sizes: 80, 75, 60, 50, 33, 25, 20
+@each $size in $col-sizes
+  .col-#{$size}
+    width: #{$size}%

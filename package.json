@@ -41,6 +41,7 @@
     "watchify": "^3.6.1"
   },
   "dependencies": {
+    "autosize": "^3.0.14",
     "jquery": "^2.1.4"
   }
 }

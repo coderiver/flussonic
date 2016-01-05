@@ -1,7 +1,16 @@
 <!-- BEGIN customers -->
 <section class="section customers">
+  <h2 class="title">Our customers</h2>
   <ul class="customers__list">
-
+    {% for customer in customers %}
+      <li class="customers__list-item customer">
+        <div class="customer__pic">
+          <img src="img/customers/{{customer.img}}">
+        </div>
+        <p class="customer__text text">{{customer.text}}</p>
+        {% if customer.link %}<a class="customer__link" href="#">{{customer.link}}</a>{% endif %}
+      </li>
+    {% endfor %}
   </ul>
 </section>
 <!-- BEGIN customers -->

@@ -7,5 +7,43 @@
     {"name": "About us", "href": "#"},
     {"name": "Documentation", "href": "#"},
     {"name": "My account", "href": "#"}
+  ],
+  "customers": [
+    {
+      "name": "Lukoil",
+      "img": "lukoil.jpg",
+      "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
+      "link": "Case study"
+    },
+    {
+      "name": "Gazprom",
+      "img": "gazprom.jpg",
+      "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
+      "link": ""
+    },
+    {
+      "name": "Ufa Net",
+      "img": "ufanet.jpg",
+      "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
+      "link": ""
+    },
+    {
+      "name": "Kiev Boryspil",
+      "img": "kyiv-boryspil.jpg",
+      "text": "The company currently manages its media library and streaming live events, offering a reliable and always available experience",
+      "link": ""
+    },
+    {
+      "name": "Pskov Line TV",
+      "img": "pskov-line-tv.jpg",
+      "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
+      "link": "Case study"
+    },
+    {
+      "name": "Sibirian Networks",
+      "img": "sibirian-networks.jpg",
+      "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
+      "link": ""
+    }
   ]
 }

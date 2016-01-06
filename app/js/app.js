@@ -1,6 +1,7 @@
 import $ from 'jquery';
-import SVGMorpheus from './svgmorpheus';
 import autosize from 'autosize';
+import SVGMorpheus from './svgmorpheus';
+import {initMap} from './map';
 window.$ = window.jQuery = $;
 import './draw-svg';
 
@@ -8,6 +9,7 @@ $('.hero-btn').on('click', toggleSection);
 
 // morhOnvif();
 initTextareaAutoresize();
+initMap('#map');
 
 function drawHeroSvg(el) {
     if (typeof el === 'string') {

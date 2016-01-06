@@ -21,6 +21,10 @@ a
   line-height: 1.5625
   p
     margin: 1em 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
   a
     &:not(:hover)
       color: inherit
@@ -181,9 +185,36 @@ a
 
 
 .section
-  margin-top: 100px
+  margin-top: 70px
   .title
     margin-bottom: 30px
+
+.section-request
+  margin-top: 100px
+
+.section-contacts
+  margin-top: 65px
+  background: #002FC7
+  color: white
+  padding: 60px 0 55px
+  +clr
+  .svg-map-marker
+    margin: 5px 0 8px -7px
+    font-size: 35px
+    fill: white
+  .title
+    margin-bottom: 16px
+  .social-media
+    float: right
+    margin-top: 5px
+
+.section-contacts__cell
+  float: left
+  width: 50%
+  box-sizing: border-box
+  padding-right: 40px
+  &:nth-child(2)
+    max-width: 390px
 
 .btn
   display: inline-block
@@ -331,8 +362,16 @@ a
   background: img-url('smartphone.png') no-repeat center
   background-size: contain
 
+.form
+  .btn
+    margin-top: 44px
+
 .field
   margin: 20px 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
 
 .input
   display: block
@@ -355,6 +394,7 @@ a
 textarea.input
   max-height: 200px
   line-height: 20px
+
 
 .news
   line-height: 1.5625
@@ -400,6 +440,7 @@ textarea.input
   width: 33.33%
   box-sizing: border-box
   padding: 0 15px
+  margin-bottom: 40px
 
 .customer__pic
   height: 60px
@@ -416,3 +457,88 @@ textarea.input
   display: inline-block
   +f(u, 11, 180)
   text-transform: uppercase
+
+.icon-link
+  display: inline-block
+  vertical-align: top
+  margin-right: 40px
+  color: $color-blue
+  text-decoration: underline
+  line-height: 1.375
+  +trans(color)
+  .svg-icon
+    display: block
+    font-size: 40px
+    fill: currentColor
+    margin-bottom: 5px
+  &:hover
+    color: red
+
+.social-link
+  display: inline-block
+  vertical-align: middle
+  text-decoration: none
+  margin-right: 20px
+  min-width: 36px
+  text-align: center
+  &:last-child
+    margin-right: 0
+  .svg-icon
+    fill: currentColor
+  .svg-facebook
+    font-size: 36px
+  .svg-twitter
+    font-size: 30px
+  .svg-youtube-play
+    font-size: 26px
+
+.hidden-text
+  +hide-text
+
+.map
+  height: 445px
+  border: 1px solid rgba($color-blue, 0.3)
+  border-width: 1px 0
+
+.map__placeholder
+  height: 100%
+  background: img-url('map.jpg') no-repeat center
+  background-size: cover
+
+.footer
+  padding: 15px 15px 20px
+  color: $color-blue
+  +f(l, 12)
+  line-height: 1.5
+  border: 1px solid rgba($color-blue, 0.3)
+  +clr
+
+.footer__left
+  float: left
+
+.footer__right
+  float: right
+
+.partners
+  padding: 29px 0 33px
+  text-align: center
+
+.partners__title
+  margin-bottom: 16px
+  +f(l, 12, 180)
+  line-height: 1
+  text-transform: uppercase
+  color: $color-blue
+
+.partners__item
+  display: inline-block
+  vertical-align: middle
+  &:not(:last-child)
+    margin-right: 25px
+
+
+.site-maker
+  +clr
+  > img
+    float: left
+    margin: 4px 12px 0

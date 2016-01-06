@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="412px" height="271px" viewBox="0 0 412 271" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M19.5961995,0 L392.244656,0 C403.067338,0 411.840855,8.77351737 411.840855,19.5961995 L411.840855,250.475059 C411.840855,261.297742 403.067338,270.071259 392.244656,270.071259 L19.5961995,270.071259 C8.77351737,270.071259 -2.27373675e-13,261.297742 -2.27373675e-13,250.475059 L-2.27373675e-13,19.5961995 C-4.27797359e-12,14.3989643 2.06459367,9.41459425 5.73959396,5.73959396 C9.41459425,2.06459367 14.3989643,0 19.5961995,0 Z M0.028034005,25.5340314 L212.239567,215.250615 L411.806385,27.2947402 L411.80637,18.9226164 L212.239567,167.550786 L0.028034005,18.9226166 L0.028034005,25.5340314 Z" id="mail" fill="#000000" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

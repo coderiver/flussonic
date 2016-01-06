@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600px" height="600px" viewBox="0 0 600 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>circle-mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M300,600 C465.685425,600 600,465.685425 600,300 C600,134.314575 465.685425,0 300,0 C134.314575,0 0,134.314575 0,300 C0,465.685425 134.314575,600 300,600 Z M130.023155,209.090273 L305.302926,365.789952 L470.138575,210.544561 L470.138563,203.629461 L305.302926,326.391457 L130.023155,203.629461 L130.023155,209.090273 Z M146.185818,188 L453.981228,188 C462.920409,188 470.167047,195.246638 470.167047,204.185818 L470.167047,394.884189 C470.167047,403.82337 462.920409,411.070007 453.981228,411.070007 L146.185818,411.070007 C137.246638,411.070007 130,403.82337 130,394.884189 L130,204.185818 C130,199.893073 131.705287,195.776146 134.740716,192.740716 C137.776146,189.705287 141.893073,188 146.185818,188 Z" id="circle-mail" fill="#000000" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

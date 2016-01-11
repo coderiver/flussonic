@@ -251,17 +251,23 @@ a
       background: red
 
 .features
+  display: none
   position: relative
-  min-height: 950px
+  min-height: 980px
   padding: 100px 40px 40px
   box-sizing: border-box
   background: #001E8D
   color: white
-  overflow: hidden
+  &-ipcam
+    overflow: hidden
+    .features__center
+      padding-left: 80px
+  // &-iptv
+  &.is-active
+    display: block
 
 .features__center
   max-width: 420px
-  padding-left: 80px
   margin: auto
   box-sizing: content-box
   position: relative
@@ -343,7 +349,6 @@ a
   to
     transform: rotate(-360deg)
 
-
 .web-access
   width: 393px
   height: 288px
@@ -361,6 +366,171 @@ a
   margin-left: percentage(140/1200)
   background: img-url('smartphone.png') no-repeat center
   background-size: contain
+
+.clouds
+  top: 60px
+  right: 50%
+  // margin-right: percentage(230/1200)
+  margin-right: percentage(140/1200)
+  width: 500px
+  height: 300px
+  &__cloud
+    position: absolute
+    top: 0
+    left: 0
+    width: 270px
+    height: 270px
+    background: img-url('cloud.png') no-repeat center
+    background-size: contain
+    animation: cloud 7s linear infinite
+    @for $i from 1 through 20
+      &:nth-child(#{$i})
+        animation-delay: random(10) + s
+  &__cloud_2
+    background-image: img-url('cloud2.png')
+  &__cloud_3
+    background-image: img-url('cloud3.png')
+  &__logo-amazon
+    position: absolute
+    top: 26px
+    left: 80px
+    background: img-url('amazon.png') no-repeat center
+    background-size: contain
+    width: 140px
+    height: 55px
+  &__logo-openstack
+    position: absolute
+    top: 70px
+    left: 250px
+    background: img-url('openstack.png') no-repeat center
+    background-size: contain
+    width: 86px
+    height: 82px
+
+  &__layer-1
+    top: -30px
+    left: 30px
+  &__layer-2
+    top: 0
+    left: -60px
+    opacity: 0.7
+    // transform: scale(0.7)
+    background-size: 70%
+  &__layer-3
+    top: 60px
+    left: -30px
+    // transform: scale(0.7)
+    background-size: 70%
+  &__layer-4
+    top: 48px
+    left: 90px
+    opacity: 0.7
+  &__layer-5
+    top: 40px
+    left: auto
+    right: 28px
+    // transform: scale(0.8)
+    background-size: 80%
+  &__layer-6
+    top: 40px
+    left: auto
+    right: -55px
+    // transform: scale(0.7)
+    background-size: 70%
+    opacity: 0.7
+  &__layer-7
+    top: 70px
+    left: auto
+    right: 23px
+    // transform: scale(0.8)
+    background-size: 80%
+    opacity: 0.6
+  &__layer-8
+    top: 90px
+    left: 80px
+    // transform: scale(0.7)
+    background-size: 70%
+
+@keyframes cloud
+  0%, 100%
+    opacity: 1
+    transform: translate3d(0,0,0)
+  50%
+    opacity: 0
+    transform: translate3d(50px,0,0)
+  51%
+    opacity: 0
+    transform: translate3d(-50px,0,0)
+
+.transcoder
+  right: 50%
+  margin-right: percentage(220/1200)
+  top: 465px
+  width: 290px
+  height: 400px
+  background: img-url('svg/transcoder.svg') no-repeat center
+  background-size: contain
+  &__lightning
+    width: 100px
+    height: 100px
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -52px 0 0 -44px
+
+.hdd
+  top: 530px
+  left: 50%
+  margin-left: percentage(170/1200)
+  width: 395px
+  height: 540px
+  background: img-url('hdd.png') no-repeat center
+  background-size: contain
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: img-url('hdd-lights.png') no-repeat center
+    animation: blink 2s ease-in-out infinite
+
+@keyframes blink
+  0%, 100%
+    opacity: 0
+  50%
+    opacity: 1
+
+.lego
+  top: 320px
+  left: 50%
+  margin-left: percentage(178/1200)
+  &__brick-upper
+    position: absolute
+    z-index: 1
+    top: -90px
+    left: 65px
+    width: 267px
+    height: 202px
+    background: img-url('lego-blue.png') no-repeat center
+    background-size: contain
+    transform: translateY(-50px)
+  &__brick-lower
+    position: relative
+    z-index: 0
+    width: 267px
+    height: 205px
+    background: img-url('lego-orange.png') no-repeat center
+    background-size: contain
+    &:before
+      content: ""
+      position: absolute
+      top: -105px
+      left: 33px
+      width: 100%
+      padding-bottom: percentage(350/340)
+      background: img-url('lego-shadow.png') no-repeat center
 
 .form
   .btn

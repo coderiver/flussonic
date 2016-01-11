@@ -1,0 +1,40 @@
+<svg id="lightning-shape" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="100px" height="100px">
+  <defs>
+    <filter id="blur-filter" x="-2" y="-2" width="200" height="200">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur1"/>
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur2"/>
+      <feGaussianBlur stdDeviation="3" result="coloredBlur3"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur1"/>
+        <feMergeNode in="coloredBlur2"/>
+        <feMergeNode in="coloredBlur3"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      #lightning-shape g path {
+        filter: url('#blur-filter');
+      }
+    </style>
+
+    <!-- <linearGradient id="grdnt" gradientUnits="userSpaceOnUse" x1="20.6792" y1="6.417" x2="20.6792" y2="35.7505">
+      <stop offset="0" style="stop-color:#00C2FF"/>
+      <stop offset="0.5102" style="stop-color:#FFFFFF"/>
+      <stop offset="0.5549" style="stop-color:#F1FEF5"/>
+      <stop offset="0.6392" style="stop-color:#CDFCDA"/>
+      <stop offset="0.754" style="stop-color:#92F8AF"/>
+      <stop offset="0.8932" style="stop-color:#42F374"/>
+      <stop offset="1" style="stop-color:#00EF43"/>
+    </linearGradient> -->
+  </defs>
+  <g id="lightningpath1">
+    <path fill="rgba(255,255,255,0)" d="M19.3,6.4c-13,7,13.5,18.7,1.7,29.3C32.5,25.6,10.2,17.3,19.3,6.4z"/>
+  </g>
+  <g id="lightningpath2" style="display:none;">
+    <path fill="#fff" d="M19.334,6.417c7.541,10.208-5.834,16.708,1.667,29.333C15.245,23.584,28.636,15.855,19.334,6.417z"/>
+  </g>
+  <g id="lightningpath3">
+    <path fill="rgba(255,255,255,0)" d="M19.3,6.4c-9.4,11.5,13,21,1.7,29.3C36.2,29.1,9.6,18.6,19.3,6.4z"/>
+  </g>
+</svg>

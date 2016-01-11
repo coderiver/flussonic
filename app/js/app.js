@@ -7,7 +7,8 @@ import './draw-svg';
 
 $('.hero-btn').on('click', toggleSection);
 
-// morhOnvif();
+morhOnvif();
+morphLightning();
 initTextareaAutoresize();
 initMap('#map');
 
@@ -29,7 +30,7 @@ function drawHeroSvg(el) {
 }
 
 function toggleSection(e) {
-    let targetBtn, sectionName, targetFigure;
+    let targetBtn, sectionName, targetFigure, targetFeatures;
 
     e.preventDefault();
 
@@ -39,18 +40,20 @@ function toggleSection(e) {
 
     sectionName  = targetBtn.data('section');
     targetFigure = $(`.hero-figure-${sectionName}`);
+    targetFeatures = $(`.features-${sectionName}`);
 
-    $('.hero-btn.is-active, .hero-figure.is-active').removeClass('is-active');
 
-    targetBtn.add(targetFigure).addClass('is-active');
+    $('.hero-btn.is-active, .hero-figure.is-active, .features.is-active').removeClass('is-active');
+
+    targetBtn.add(targetFigure).add(targetFeatures).addClass('is-active');
 
     drawHeroSvg(targetFigure.find('svg'));
 }
 
 function morhOnvif() {
-    let morph = new SVGMorpheus('.onvif svg');
+    const morph = new SVGMorpheus('.onvif svg');
 
-    let options = {
+    const options = {
         duration: 5000,
         rotation: 'none',
         easing: 'sine-in-out'
@@ -66,6 +69,36 @@ function morhOnvif() {
 
     function toStateThree() {
         morph.to('onvif-state-3', options, toStateOne);
+    }
+
+    toStateOne();
+}
+
+function morphLightning() {
+    const morph = new SVGMorpheus('#lightning-shape');
+
+    function toStateOne() {
+        morph.to('lightningpath2', {
+            duration: 1500,
+            rotation: 'none',
+            easing: 'sine-in-out'
+        }, toStateTwo);
+    }
+
+    function toStateTwo() {
+        morph.to('lightningpath3', {
+            duration: 2500,
+            rotation: 'none',
+            easing: 'sine-in-out'
+        }, toStateTree);
+    }
+
+    function toStateTree() {
+        morph.to('lightningpath1', {
+            duration: 1500,
+            rotation: 'none',
+            easing: 'sine-in-out'
+        }, toStateOne);
     }
 
     toStateOne();

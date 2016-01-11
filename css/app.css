@@ -203,9 +203,15 @@ a:hover, a:focus { color: red; }
 
 .btn_solid:hover { color: white; background: red; }
 
-.features { position: relative; min-height: 950px; padding: 100px 40px 40px; box-sizing: border-box; background: #001E8D; color: white; overflow: hidden; }
+.features { display: none; position: relative; min-height: 980px; padding: 100px 40px 40px; box-sizing: border-box; background: #001E8D; color: white; }
 
-.features__center { max-width: 420px; padding-left: 80px; margin: auto; box-sizing: content-box; position: relative; z-index: 1; }
+.features-ipcam { overflow: hidden; }
+
+.features-ipcam .features__center { padding-left: 80px; }
+
+.features.is-active { display: block; }
+
+.features__center { max-width: 420px; margin: auto; box-sizing: content-box; position: relative; z-index: 1; }
 
 .feature { margin-top: 80px; max-width: 245px; }
 
@@ -246,6 +252,116 @@ a:hover, a:focus { color: red; }
 .web-access { width: 393px; height: 288px; top: 517px; right: 50%; margin-right: 12.5%; background: url("../img/mouse.png") no-repeat center; background-size: contain; }
 
 .mobile-app { top: 638px; left: 50%; width: 587px; height: 519px; margin-left: 11.66667%; background: url("../img/smartphone.png") no-repeat center; background-size: contain; }
+
+.clouds { top: 60px; right: 50%; margin-right: 11.66667%; width: 500px; height: 300px; }
+
+.clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
+
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+
+.clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
+
+.clouds__cloud_3 { background-image: url("../img/cloud3.png"); }
+
+.clouds__logo-amazon { position: absolute; top: 26px; left: 80px; background: url("../img/amazon.png") no-repeat center; background-size: contain; width: 140px; height: 55px; }
+
+.clouds__logo-openstack { position: absolute; top: 70px; left: 250px; background: url("../img/openstack.png") no-repeat center; background-size: contain; width: 86px; height: 82px; }
+
+.clouds__layer-1 { top: -30px; left: 30px; }
+
+.clouds__layer-2 { top: 0; left: -60px; opacity: 0.7; background-size: 70%; }
+
+.clouds__layer-3 { top: 60px; left: -30px; background-size: 70%; }
+
+.clouds__layer-4 { top: 48px; left: 90px; opacity: 0.7; }
+
+.clouds__layer-5 { top: 40px; left: auto; right: 28px; background-size: 80%; }
+
+.clouds__layer-6 { top: 40px; left: auto; right: -55px; background-size: 70%; opacity: 0.7; }
+
+.clouds__layer-7 { top: 70px; left: auto; right: 23px; background-size: 80%; opacity: 0.6; }
+
+.clouds__layer-8 { top: 90px; left: 80px; background-size: 70%; }
+
+@-webkit-keyframes cloud { 0%, 100% { opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  50% { opacity: 0;
+    -webkit-transform: translate3d(50px, 0, 0);
+    transform: translate3d(50px, 0, 0); }
+  51% { opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0); } }
+
+@keyframes cloud { 0%, 100% { opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  50% { opacity: 0;
+    -webkit-transform: translate3d(50px, 0, 0);
+    transform: translate3d(50px, 0, 0); }
+  51% { opacity: 0;
+    -webkit-transform: translate3d(-50px, 0, 0);
+    transform: translate3d(-50px, 0, 0); } }
+
+.transcoder { right: 50%; margin-right: 18.33333%; top: 465px; width: 290px; height: 400px; background: url("../img/svg/transcoder.svg") no-repeat center; background-size: contain; }
+
+.transcoder__lightning { width: 100px; height: 100px; position: absolute; top: 50%; left: 50%; margin: -52px 0 0 -44px; }
+
+.hdd { top: 530px; left: 50%; margin-left: 14.16667%; width: 395px; height: 540px; background: url("../img/hdd.png") no-repeat center; background-size: contain; }
+
+.hdd:before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url("../img/hdd-lights.png") no-repeat center; -webkit-animation: blink 2s ease-in-out infinite; animation: blink 2s ease-in-out infinite; }
+
+@-webkit-keyframes blink { 0%, 100% { opacity: 0; }
+  50% { opacity: 1; } }
+
+@keyframes blink { 0%, 100% { opacity: 0; }
+  50% { opacity: 1; } }
+
+.lego { top: 320px; left: 50%; margin-left: 14.83333%; }
+
+.lego__brick-upper { position: absolute; z-index: 1; top: -90px; left: 65px; width: 267px; height: 202px; background: url("../img/lego-blue.png") no-repeat center; background-size: contain; -webkit-transform: translateY(-50px); -ms-transform: translateY(-50px); transform: translateY(-50px); }
+
+.lego__brick-lower { position: relative; z-index: 0; width: 267px; height: 205px; background: url("../img/lego-orange.png") no-repeat center; background-size: contain; }
+
+.lego__brick-lower:before { content: ""; position: absolute; top: -105px; left: 33px; width: 100%; padding-bottom: 102.94118%; background: url("../img/lego-shadow.png") no-repeat center; }
 
 .form .btn { margin-top: 44px; }
 

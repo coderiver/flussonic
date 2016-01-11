@@ -1,26 +1,7 @@
-var map, pointsOnMap, mapStyle;
-
-mapStyle = [{
-    "stylers": [{
-        "hue": "#007fff"
-    }, {
-        "saturation": 89
-    }]
-}, {
-    "featureType": "water",
-    "stylers": [{
-        "color": "#ffffff"
-    }]
-}, {
-    "featureType": "administrative.country",
-    "elementType": "labels",
-    "stylers": [{
-        "visibility": "off"
-    }]
-}];
+var map, pointsOnMap, mapStyle = require('./map-style.json');
 
 pointsOnMap = [
-    [55.7551882, 37.7904922, 1, {
+    [55.754658, 37.790919, 1, {
         'head'    : 'Учебный центр «QAStartUP»',
         'address' : 'Адрес: Вадима Гетьмана, 1-Б',
         'tel'     : 'Телефон: (096) 255-45-49, (093) 615-30-90'
@@ -84,7 +65,7 @@ function initMap(el) {
         zoom: 14,
         disableDefaultUI: false,
         scrollwheel: false,
-        center: new google.maps.LatLng(55.7551882, 37.7904922),
+        center: new google.maps.LatLng(55.754658, 37.790919),
         styles: mapStyle
     };
 

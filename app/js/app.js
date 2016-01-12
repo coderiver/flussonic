@@ -1,53 +1,84 @@
 import $ from 'jquery';
 import autosize from 'autosize';
+import ScrollMagic from 'scrollmagic';
+import debounce from 'lodash.debounce';
 import SVGMorpheus from './svgmorpheus';
-import {initMap} from './map';
+import { initMap } from './map';
 window.$ = window.jQuery = $;
 import './draw-svg';
 
+const scrollController = new ScrollMagic.Controller({
+    container: 'body',
+    loglevel: 2
+});
+
+const mq = window.matchMedia('(max-width: 767px)');
+
 $('.hero-btn').on('click', toggleSection);
+
+$(window).on('resize', debounce(() => {
+    setFeaturesHeight();
+}, 200));
 
 morhOnvif();
 morphLightning();
 initTextareaAutoresize();
+buildHeaderScrollScene();
+setFeaturesHeight();
 initMap('#map');
 
 function drawHeroSvg(el) {
+    if (mq.matches) return;
+
     if (typeof el === 'string') {
         el = $(el);
+    }
+
+    if (/drawsvg-initialized/.test(el.attr('class'))) {
+        el.drawsvg('animate');
+        return;
     }
 
     el.drawsvg({
         duration: 1000,
         stagger: 0,
-        reverse: false,
-        callback() {
-            el.find('path').removeAttr('style');
-        }
+        reverse: false
     });
 
     el.drawsvg('animate');
 }
 
 function toggleSection(e) {
-    let targetBtn, sectionName, targetFigure, targetFeatures;
-
     e.preventDefault();
 
-    targetBtn = $(e.delegateTarget);
+    const targetBtn = $(e.delegateTarget);
 
     if (targetBtn.hasClass('is-active')) return;
 
-    sectionName  = targetBtn.data('section');
-    targetFigure = $(`.hero-figure-${sectionName}`);
-    targetFeatures = $(`.features-${sectionName}`);
+    const sectionName  = targetBtn.data('section');
+    const targetFigure = $(`.hero-figure-${sectionName}`);
+    const targetFeatures = $(`.features-${sectionName}`);
 
 
     $('.hero-btn.is-active, .hero-figure.is-active, .features.is-active').removeClass('is-active');
 
-    targetBtn.add(targetFigure).add(targetFeatures).addClass('is-active');
+    targetBtn
+        .add(`.hero-btn[data-section='${sectionName}']`)
+        .add(targetFigure)
+        .add(targetFeatures)
+        .addClass('is-active');
+
+    setFeaturesHeight(targetFeatures);
 
     drawHeroSvg(targetFigure.find('svg'));
+}
+
+function setFeaturesHeight(activeFeatures) {
+    if (activeFeatures === undefined || activeFeatures === null) {
+        activeFeatures = $('.features.is-active');
+    }
+
+    activeFeatures.parent().css({ height: activeFeatures.outerHeight() });
 }
 
 function morhOnvif() {
@@ -109,4 +140,29 @@ function initTextareaAutoresize() {
     if (el.length) {
         autosize(el);
     }
+}
+
+function buildHeaderScrollScene() {
+    const header    = $('header');
+    const container = $('.features-container');
+    const trigger   = $('.hero .hero-links');
+
+    function calcDuration() {
+        return container.outerHeight() + container.offset().top - trigger.offset().top - 70;
+    }
+
+    const scene = new ScrollMagic.Scene({
+        duration: calcDuration(),
+        offset: -22,
+        triggerElement: trigger[0],
+        triggerHook: 'onLeave'
+    }).on('start', (e) => {
+        header.toggleClass('show-buttons');
+    }).on('end', (e) => {
+        header.toggleClass('hide-buttons');
+    }).addTo(scrollController);
+
+    $(window).on('resize', debounce((e) => {
+        scene.duration(calcDuration());
+    }, 500));
 }

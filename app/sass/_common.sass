@@ -5,6 +5,7 @@ body
   background: #FFF
   color: black
   line-height: 1.4
+  min-width: 320px
   +f(l, 16)
   +smooth-font
 
@@ -15,6 +16,9 @@ a
   &:hover,
   &:focus
     color: red
+
+.out
+  overflow: hidden
 
 .text
   +f(l, 16)
@@ -30,19 +34,64 @@ a
       color: inherit
 
 .header
-  position: relative
+  position: fixed
+  z-index: 3
+  top: 0
+  left: 0
+  width: 100%
+  padding: 22px 0
+  background: white
+  .l
+    position: relative
+  .hero-links
+    margin: 0
+    position: absolute
+    bottom: -5px
+    left: 0
+    right: 0
+    background: white
+    transform: translateY(100%)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.3s ease
+  &.show-buttons
+    .hero-links
+      transform: translateY(0)
+      opacity: 1
+      visibility: visible
+  &.hide-buttons
+    .hero-links
+      transform: translateY(-100%)
+      opacity: 0
+      visibility: hidden
+  +md
+    padding: 15px 0
+    .hero-links
+      bottom: -8px
+    // .nav
+    //   position: absolute
+    //   z-index: 3
+    //   top: 0
+    //   right: -20px
+    //   width: 200px
+    //   text-align: right
+    //   background: white
+    //   padding: 20px
+    //   box-shadow: 0 0 10px 0 rgba(black, 0.3)
+    // .nav__item
+    //   display: block
+    //   margin: 0
 
 .header__inner
-  width: 80%
-  margin: auto
-  box-sizing: border-box
-  padding: 0 0 0 percentage(165/1200)
   position: relative
 
 .lang
   position: absolute
-  top: 26px
-  right: 33px
+  z-index: 1
+  top: 3px
+  right: -33px
+  +f(l, 16)
+  color: rgba(black, 0.3)
   a
     &:not(:hover)
       color: inherit
@@ -50,6 +99,8 @@ a
     .lang__list
       opacity: 1
       visibility: visible
+  +md
+    right: 0
 
 .lang__list
   opacity: 0
@@ -63,8 +114,7 @@ a
   +trans
 
 .nav
-  padding: 22px 0 0
-  margin: 0 0 85px 0
+  position: relative
 
 .nav__item
   display: inline-block
@@ -76,21 +126,20 @@ a
   display: inline-block
   +f(l, 16)
 
-
 .logo
-  display: block
+  display: inline-block
   position: absolute
-  top: 28px
-  left: 0
+  top: 5px
+  right: 100%
+  margin-right: 75px
   color: black
   +f(b, 16, 100)
   text-decoration: none
   text-transform: uppercase
   line-height: 1
-
-.lang
-  +f(l, 16)
-  color: rgba(black, 0.3)
+  +md
+    position: static
+    margin: 0
 
 .link
   color: $color-blue
@@ -102,16 +151,26 @@ a
   &:hover
     color: red
 
+.toparea
+  padding-top: 130px
+  padding-bottom: 95px
+  +sm
+    padding-bottom: 40px
+
 .hero
   position: relative
   +f(el, 16)
   line-height: 1.526
-  padding: 0 45% 95px 0
+  padding: 0 45% 0 0
   position: relative
   p
     margin: 1em 0
   .btn
     margin-top: 15px
+  +sm
+    padding-right: 0
+    .hero-figure
+      display: none
 
 .hero-figure
   position: absolute
@@ -120,6 +179,10 @@ a
   right: 0
   visibility: hidden
   opacity: 0
+  > svg:not(.drawsvg-animating)
+    .dashed-line
+      stroke-dasharray: 3px !important
+      transition: stroke-dasharray 0.5s linear
   &-iptv
     .hero-figure__text
       width: 330px
@@ -128,6 +191,8 @@ a
     right: 40px
     .hero-figure__text
       width: 380px
+    +r(900)
+      right: -10px
   &.is-active
     visibility: visible
     opacity: 1
@@ -182,15 +247,33 @@ a
   line-height: 1.1
   &_bold
     +f(l)
+  +sm
+    font-size: 34px
 
 
 .section
   margin-top: 70px
   .title
     margin-bottom: 30px
+  +sm
+    margin-top: 40px
+    .title
+      margin-bottom: 20px
 
 .section-request
   margin-top: 100px
+  +sm
+    .col
+      float: none
+      width: auto
+      margin-top: 20px
+
+.section-news
+  +sm
+    .col
+      float: none
+      width: auto
+      margin-top: 20px
 
 .section-contacts
   margin-top: 65px
@@ -207,6 +290,17 @@ a
   .social-media
     float: right
     margin-top: 5px
+  +sm
+    padding: 40px 0
+    .section-contacts__cell
+      float: none
+      width: auto
+      max-width: none
+      padding: 0
+      &:not(:first-child)
+        margin-top: 20px
+    .svg-map-marker
+      margin-left: 0
 
 .section-contacts__cell
   float: left
@@ -215,6 +309,22 @@ a
   padding-right: 40px
   &:nth-child(2)
     max-width: 390px
+
+.questions
+  +sm
+    .icon-link
+      display: block
+      margin: 10px 0 0
+      .svg-icon
+        display: inline-block
+        vertical-align: middle
+        margin: 0 5px 0 0
+        min-width: 45px
+      // > span
+      //   display: inline-block
+      //   vertical-align: middle
+      br
+        display: none
 
 .btn
   display: inline-block
@@ -250,21 +360,61 @@ a
       color: white
       background: red
 
-.features
-  display: none
+.features-container
   position: relative
+  background: #001E8D
+  min-height: 980px
+  transition: height 0.3s ease
+  +sm
+    min-height: 0
+    height: 600px
+
+.features
+  visibility: hidden
+  opacity: 0
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
   min-height: 980px
   padding: 100px 40px 40px
   box-sizing: border-box
   background: #001E8D
   color: white
+  transition: 0.5s ease
+  transition-property: opacity, visibility
   &-ipcam
     overflow: hidden
     .features__center
       padding-left: 80px
-  // &-iptv
+    .features__lines
+      top: -108px
+      left: 50%
+      margin-left: -588px
+      width: percentage(1090/1200)
+      max-width: 1098px
+  &-iptv
+    .features__lines
+      top: 30px
+      left: 30px
   &.is-active
-    display: block
+    visibility: visible
+    opacity: 1
+  +sm
+    padding: 30px 15px
+    min-height: 0
+    .features__center
+      padding: 0
+      max-width: none
+
+.features__lines
+  position: absolute
+  top: 0
+  left: 50%
+  > svg
+    width: 100%
+    > g
+      stroke: rgba(white, 0.5)
 
 .features__center
   max-width: 420px
@@ -274,10 +424,15 @@ a
   z-index: 1
 
 .feature
-  margin-top: 80px
-  max-width: 245px
+  margin-top: 74px
+  max-width: 247px
   &:nth-child(even)
     margin-left: 80px
+  +sm
+    margin: 30px 0 0
+    max-width: none
+    &:nth-child(even)
+      margin-left: 0
 
 .feature__label
   +f(m, 16)
@@ -289,11 +444,13 @@ a
 
 .feature-pic
   position: absolute
+  +sm
+    display: none
 
 .onvif
   right: 50%
-  top: 90px
-  margin-right: percentage(200/1200)
+  top: 73px
+  margin-right: percentage(218/1200)
 
 .motion
   top: 210px
@@ -352,9 +509,9 @@ a
 .web-access
   width: 393px
   height: 288px
-  top: 517px
+  top: 516px
   right: 50%
-  margin-right: percentage(150/1200)
+  margin-right: percentage(158/1200)
   background: img-url('mouse.png') no-repeat center
   background-size: contain
 
@@ -363,7 +520,7 @@ a
   left: 50%
   width: 587px
   height: 519px
-  margin-left: percentage(140/1200)
+  margin-left: percentage(127/1200)
   background: img-url('smartphone.png') no-repeat center
   background-size: contain
 
@@ -535,6 +692,9 @@ a
 .form
   .btn
     margin-top: 44px
+  +sm
+    .btn
+      margin-top: 20px
 
 .field
   margin: 20px 0
@@ -556,6 +716,7 @@ a
   +f(r, 20)
   color: black
   resize: none
+  border-radius: 0
   +placeholder
     +f(l, 16, 150)
     text-transform: uppercase
@@ -571,14 +732,15 @@ textarea.input
   &:not(:last-child)
     margin-bottom: 25px
   &_important
-    .news__title
-      font-size: 25px
-      +f(l)
-    .news__text
-      font-size: 22px
-      margin: 10px 0
-    .news__date
-      font-size: 16px
+    +rmin(767)
+      .news__title
+        font-size: 25px
+        +f(l)
+      .news__text
+        font-size: 22px
+        margin: 10px 0
+      .news__date
+        font-size: 16px
 
 .news__title
   +f(r)
@@ -599,6 +761,16 @@ textarea.input
   background: #8CFFB7
   border-radius: 2px
 
+.customers
+  +sm
+    .customers__list
+      margin: 0
+    .customers__list-item
+      display: block
+      width: auto
+      margin: 20px 0 0 0
+      padding: 0
+
 .customers__list
   font-size: 0
   margin: 0 -15px -40px
@@ -611,6 +783,13 @@ textarea.input
   box-sizing: border-box
   padding: 0 15px
   margin-bottom: 40px
+
+.customer
+  +sm
+    .customer__pic
+      height: auto
+      max-height: 60px
+      line-height: normal
 
 .customer__pic
   height: 60px
@@ -669,6 +848,8 @@ textarea.input
   height: 445px
   border: 1px solid rgba($color-blue, 0.3)
   border-width: 1px 0
+  +sm
+    height: 250px
 
 .map__placeholder
   height: 100%
@@ -682,6 +863,13 @@ textarea.input
   line-height: 1.5
   border: 1px solid rgba($color-blue, 0.3)
   +clr
+  +xs
+    text-align: center
+    .footer__left
+      float: none
+      margin-top: 10px
+    .footer__right
+      float: none
 
 .footer__left
   float: left
@@ -709,6 +897,12 @@ textarea.input
 
 .site-maker
   +clr
+  min-width: 278px
   > img
     float: left
-    margin: 4px 12px 0
+    margin: 4px 12px 0 0
+  +xs
+    > img
+      float: none
+      display: block
+      margin: 0 auto 10px

@@ -40,7 +40,7 @@
 	M705,19.8h29.1"/>
 <path opacity="0.4" fill="none" stroke="#003CFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="
 	M711.1,25.8h19.201"/>
-<path fill="none" stroke="#003CFF" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" d="M468.833,242.333
+<path class="dashed-line" fill="none" stroke="#003CFF" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3" d="M468.833,242.333
 	L-34.2,584.8"/>
 <path fill="none" stroke="#003CFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
 	M568.667,134.5c0,2.737-1.479,4-4,4H549.5c-2.75,0-4-1.575-4-4"/>

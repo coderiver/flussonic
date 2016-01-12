@@ -1,59 +1,29 @@
 <!-- BEGIN header -->
 <header class="header">
-  <div class="lang">
-    <span class="lang__current">По-русски</span>
-    <ul class="lang__list">
-      <li class="lang__list-item"><a href="#">По-русски</a></li>
-      <li class="lang__list-item"><a href="#">English</a></li>
-    </ul>
-  </div>
-  <div class="header__inner">
-    <span class="logo">Flussonic</span>
-    <nav class="nav">
-      <ul class="nav__list">
-        {% for link in navigation %}
+  <div class="l">
+    <div class="header__inner">
+
+      <span class="logo">Flussonic</span>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          {% for link in navigation %}
           <li class="nav__item"><a href="{{link.href}}" class="nav__link link">{{link.name}}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+          {% endfor %}
+        </ul>
+      </nav>
 
-    <div class="hero">
-      <h1 class="title title_bold">Video streaming<br> and recording</h1>
-      <div class="hero-links">
-        <span data-section="ipcam" class="hero-btn is-active">
-          {% include "../../../_tmp/img/svg/icon-camera.svg"%}
-          <span>For IP Cameras</span>
-        </span>
-        <span data-section="iptv" class="hero-btn">
-          {% include "../../../_tmp/img/svg/icon-antenna.svg"%}
-          <span>For IPTV</span>
-        </span>
-      </div>
-      <p>
-        Flussonic takes in video streams from different sources,
-        delivers  them to users in multiple formats and saves
-        them into unlimited archives
-      </p>
-      <button class="btn" type="button">Try it for free</button>
-
-      <div class="hero-figure hero-figure-ipcam is-active">
-        {% include "../../../_tmp/img/svg/ip-camera.svg" %}
-        <p class="hero-figure__text">
-          Supported protocols
-          <br>RTSP  RTMP  HLS
-          <br>MPEG-TS
-        </p>
+      <div class="lang">
+        <span class="lang__current">По-русски</span>
+        <ul class="lang__list">
+          <li class="lang__list-item"><a href="#">По-русски</a></li>
+          <li class="lang__list-item"><a href="#">English</a></li>
+        </ul>
       </div>
 
-      <div class="hero-figure hero-figure-iptv">
-        {% include "../../../_tmp/img/svg/satellite-antenna.svg" %}
-        <p class="hero-figure__text">
-          Getting the stream through
-          <br>a satellite receiver or a PC
-        </p>
-      </div>
+      {% include "_hero-links.html" %}
+
     </div>
-
   </div>
 </header>
 <!-- BEGIN header -->

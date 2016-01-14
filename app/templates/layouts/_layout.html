@@ -5,7 +5,7 @@
     {% include "_head.html" %}
     {# {% include "_media-tags.html" %} #}
   </head>
-  <body>
+  <body{% if bodyClass %} class="{{bodyClass}}"{% endif %}>
 
     <!-- BEGIN content -->
     <div class="out">

@@ -4,8 +4,11 @@ import ScrollMagic from 'scrollmagic';
 import debounce from 'lodash.debounce';
 import SVGMorpheus from './svgmorpheus';
 import { initMap } from './map';
+import './draw-swg-lines';
 window.$ = window.jQuery = $;
 import './draw-svg';
+import 'jquery.transit';
+import './dispatcher';
 
 const scrollController = new ScrollMagic.Controller({
     container: 'body',
@@ -14,18 +17,34 @@ const scrollController = new ScrollMagic.Controller({
 
 const mq = window.matchMedia('(max-width: 767px)');
 
-$('.hero-btn').on('click', toggleSection);
+$('.hero-btn').on('click touchend', toggleSection);
 
 $(window).on('resize', debounce(() => {
     setFeaturesHeight();
 }, 200));
 
+$('.menu-button').on('click touchend', function(e) {
+    e.preventDefault();
+    $(this).parents('.header').toggleClass('show-menu');
+});
+
+$('.header .lang').on('touchend', function() {
+    const $this = $(this);
+    $this.addClass('hover');
+    setTimeout(() => {
+        $('body').one('touchend', function() {
+            $this.removeClass('hover');
+        });
+    }, 100);
+});
+
 morhOnvif();
-morphLightning();
+// morphLightning();
 initTextareaAutoresize();
 buildHeaderScrollScene();
+buildLegoScene();
 setFeaturesHeight();
-initMap('#map');
+// initMap('#map');
 
 function drawHeroSvg(el) {
     if (mq.matches) return;
@@ -165,4 +184,22 @@ function buildHeaderScrollScene() {
     $(window).on('resize', debounce((e) => {
         scene.duration(calcDuration());
     }, 500));
+}
+
+function buildLegoScene() {
+    const container  = $('.lego');
+    const upperBrick = container.find('.lego__brick-upper');
+    const deltaY     = -100;
+
+    const scene = new ScrollMagic.Scene({
+        duration: 200,
+        triggerElement: container[0],
+        triggerHook: 'onCenter'
+    }).on('progress', (e) => {
+        upperBrick.transit({
+            y: deltaY - (deltaY * e.progress)
+        }, 300, 'linear');
+    }).on('end', (e) => {
+        container.toggleClass('animation-done');
+    }).addTo(scrollController);
 }

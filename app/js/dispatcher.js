@@ -1,15 +1,25 @@
 import $ from 'jquery';
 
-const o = $({});
-
-$.subscribe = function() {
-    o.on.apply(o, arguments);
+export const actions = {
+    CHANGE_SECTION: 'CHANGE_SECTION'
 };
 
-$.unsubscribe = function() {
-    o.off.apply(o, arguments);
-};
+export const dispatcher = {
+    _o: $({}),
 
-$.publish = function() {
-    o.trigger.apply(o, arguments);
+    on() {
+        this._o.on.apply(this._o, arguments);
+    },
+
+    one() {
+        this._o.one.apply(this._o, arguments);
+    },
+
+    off() {
+        this._o.off.apply(this._o, arguments);
+    },
+
+    trigger() {
+        this._o.trigger.apply(this._o, arguments);
+    }
 };

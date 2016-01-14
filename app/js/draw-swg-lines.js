@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import debounce from 'lodash.debounce';
+import { dispatcher, actions } from './dispatcher';
 
 const $win               = $(window);
 const $featuresContainer = $('.features-container');
@@ -7,10 +8,14 @@ const $onvIf             = $featuresContainer.find('.onvif');
 const $webAccess         = $featuresContainer.find('.web-access');
 const $mobileApp         = $featuresContainer.find('.mobile-app');
 const $motion            = $featuresContainer.find('.motion');
-const $figureIpTV        = $('.hero-figure-iptv');
+const $clouds            = $featuresContainer.find('.clouds');
+const $lego              = $featuresContainer.find('.lego');
+const $hdd               = $featuresContainer.find('.hdd');
+const $transcoder        = $featuresContainer.find('.transcoder');
+const $figureIpTv        = $('.hero-figure-iptv');
 const $figureIpCam       = $('.hero-figure-ipcam');
 
-const currentState = 'ipcam';
+let currentState = 'ipcam'; // ipcam or iptv;
 
 const svgTag = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 const pathTag = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -19,15 +24,7 @@ const svg = $(svgTag);
 const path = $(pathTag);
 
 svg.append(path).attr({
-    id: 'lines-svg',
-    width: '100%',
-    height: '100%'
-}).css({
-    position: 'absolute',
-    top: '0',
-    left: '0',
-    'z-index': 0,
-    'pointer-events': 'none'
+    id: 'lines-svg'
 }).appendTo($featuresContainer);
 
 path.attr({
@@ -37,18 +34,14 @@ path.attr({
     fill: 'none'
 });
 
-$win.on('load', () => {
+$win.on('resize', debounce(() => render(), 50));
+
+dispatcher.on('CHANGE_SECTION', (e, sectionName) => {
+    currentState = sectionName;
     render();
-    // svg.drawsvg({
-    //     duration: 2000,
-    //     stagger: 300,
-    //     reverse: false
-    // });
-    // setTimeout(() => {
-    //     svg.drawsvg('animate');
-    // }, 3000);
 });
-$win.on('resize', debounce(render, 50));
+
+render();
 
 
 function getIpCamPoints() {
@@ -61,7 +54,7 @@ function getIpCamPoints() {
     return [
         {
             x: $figureIpCam.offset().left + 321,
-            y: $featuresContainer.offset().top
+            y: containerOffset.top
         },
         {
             x: onvifOffset.left + 255,
@@ -99,6 +92,31 @@ function getIpCamPoints() {
     });
 }
 
+function getIpTvPoints() {
+    const containerOffset  = $featuresContainer.offset();
+    const cloudsOffset     = $onvIf.offset();
+    const transcoderOffset = $transcoder.offset();
+    const legoOffset       = $lego.offset();
+    const hddOffset        = $hdd.offset();
+
+    return [
+        {
+            x: $figureIpTv.offset().left + 321,
+            y: containerOffset.top
+        },
+        {
+            x: cloudsOffset.left + 125,
+            y: cloudsOffset.top + 150
+        }
+    ].map(point => {
+        const { x, y } = point;
+        return {
+            x,
+            y: y - containerOffset.top
+        };
+    });
+}
+
 function renderIpCamLines() {
     const points = getIpCamPoints();
     const { x: x1, y: y1 } = points[0];
@@ -109,6 +127,9 @@ function renderIpCamLines() {
     const { x: x6 }        = points[5];
     const { x: x7, y: y7 } = points[6];
     const { x: x8, y: y8 } = points[7];
+
+    // svg.fadeIn(300);
+
     return (
         `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 80} s-10,0 -20,5 L${x2},${y2} ` +
         `M${x3},${y3} l-10,5 s-5,0 -10,15 v100 s0,15 15,25 L${x4},${y4} ` +
@@ -118,13 +139,33 @@ function renderIpCamLines() {
     );
 }
 
-function draw() {
-    path.attr({
-        d: renderIpCamLines()
-    });
+function renderIpTvLines() {
+    // svg.fadeOut(300);
+    // return;
+
+    const points = getIpTvPoints();
+    const { x: x1, y: y1 } = points[0];
+    const { x: x2, y: y2 } = points[1];
+    // const { x: x3, y: y3 } = points[2];
+    // const { x: x4, y: y4 } = points[3];
+    // const { x: x5, y: y5 } = points[4];
+    // const { x: x6 }        = points[5];
+    // const { x: x7, y: y7 } = points[6];
+    // const { x: x8, y: y8 } = points[7];
+
+    return (
+        `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 160} s-10,0 -20,5 L${x2},${y2} `
+    );
 }
 
-function render() {
-    // setSize();
-    draw();
+function render(state = currentState) {
+    switch (state) {
+        case 'ipcam':
+            path.attr('d', renderIpCamLines());
+            break;
+        case 'iptv':
+            path.attr('d', renderIpTvLines());
+            break;
+        default: return;
+    }
 }

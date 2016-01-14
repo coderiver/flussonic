@@ -4,11 +4,11 @@ import ScrollMagic from 'scrollmagic';
 import debounce from 'lodash.debounce';
 import SVGMorpheus from './svgmorpheus';
 import { initMap } from './map';
+import { dispatcher, actions } from './dispatcher';
 import './draw-swg-lines';
 window.$ = window.jQuery = $;
 import './draw-svg';
 import 'jquery.transit';
-import './dispatcher';
 
 const scrollController = new ScrollMagic.Controller({
     container: 'body',
@@ -39,12 +39,12 @@ $('.header .lang').on('touchend', function() {
 });
 
 morhOnvif();
-// morphLightning();
+morphLightning();
 initTextareaAutoresize();
 buildHeaderScrollScene();
 buildLegoScene();
 setFeaturesHeight();
-// initMap('#map');
+initMap('#map');
 
 function drawHeroSvg(el) {
     if (mq.matches) return;
@@ -90,6 +90,8 @@ function toggleSection(e) {
     setFeaturesHeight(targetFeatures);
 
     drawHeroSvg(targetFigure.find('svg'));
+
+    dispatcher.trigger(actions.CHANGE_SECTION, sectionName);
 }
 
 function setFeaturesHeight(activeFeatures) {

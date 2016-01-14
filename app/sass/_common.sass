@@ -426,17 +426,29 @@ a
     min-height: 0
     height: 600px
 
+#lines-svg
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+  pointer-events: none
+  +sm
+    display: none !important
+
 .features
   visibility: hidden
   opacity: 0
   position: absolute
+  z-index: 1
   top: 0
   left: 0
   right: 0
   min-height: 980px
   padding: 100px 40px 40px
   box-sizing: border-box
-  background: #001E8D
+  // background: #001E8D
   color: white
   transition: 0.5s ease
   transition-property: opacity, visibility
@@ -979,23 +991,28 @@ textarea.input
   background: red
 
 .dot
-  .hero-figure-ipcam
-    &:before
-      @extend %dot
-      top: 240px
-      left: 468px
-  .onvif
-    &:before
-      @extend %dot
-      top: 26px
-      left: 252px
-  .web-access
-    &:before
-      @extend %dot
-      top: 10px
-      left: 97px
-  .mobile-app
-    &:before
-      @extend %dot
-      top: 28px
-      left: 120px
+  // .hero-figure-ipcam
+  //   &:before
+  //     @extend %dot
+  //     top: 240px
+  //     left: 468px
+  // .hero-figure-iptv
+  //   &:before
+  //     @extend %dot
+  //     top: 240px
+  //     left: 468px
+  // .onvif
+  //   &:before
+  //     @extend %dot
+  //     top: 26px
+  //     left: 252px
+  // .web-access
+  //   &:before
+  //     @extend %dot
+  //     top: 10px
+  //     left: 97px
+  // .mobile-app
+  //   &:before
+  //     @extend %dot
+  //     top: 28px
+  //     left: 120px

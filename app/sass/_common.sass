@@ -39,9 +39,9 @@ a
   top: 0
   left: 0
   width: 100%
-  padding: 22px 0
   background: white
   min-width: 320px
+  transition: box-shadow 0.3s ease
   .hero-links
     margin: 0
     position: absolute
@@ -49,34 +49,41 @@ a
     height: 100%
     left: 0
     right: 0
-    background: white
-    transform: translateY(100%)
     opacity: 0
+    background: white
     visibility: hidden
-    transition: all 0.3s ease
+    transition: all 0.2s ease-out
+    overflow: hidden
     &:before
       content: ""
       display: inline-block
       vertical-align: middle
       height: 100%
       width: 0
-  &.show-buttons
+  .hero-btn
+    transform: translateY(100%)
+    transition: all 0.2s ease-out
+  &.has-shadow
+    box-shadow: 0 0 10px 0 rgba(black, 0.3)
+  &.is-show-buttons
     .hero-links
-      transform: translateY(0)
       opacity: 1
       visibility: visible
+    .hero-btn
+      transform: translateY(0)
     .lang
       z-index: 0
-  &.hide-buttons
+  &.is-hide-buttons
     .hero-links
-      transform: translateY(-100%)
       opacity: 0
       visibility: hidden
-    .lang
-      z-index: 1
+      transition-timing-function: ease-in
+    .hero-btn
+      transform: translateY(-100%)
+      transition-timing-function: ease-in
   +sm
-    padding: 15px 0
     .header__inner
+      padding: 15px 0
       position: static
     .hero-links
       padding-left: 15px
@@ -92,24 +99,40 @@ a
       z-index: 3
       top: 0
       right: 0
+      left: 0
       background: white
-      text-align: right
-      padding: 55px 15px 15px
+      text-align: center
+      padding: 40px 15px 15px
       box-shadow: 0 0 10px 0 rgba(black, 0.3)
       transition: 0.3s ease
       transition-property: opacity, visibility
+      max-height: 100vh
+      overflow: auto
+      box-sizing: border-box
+      +smooth-scroll
     .nav__item
       display: block
       margin: 0
     .nav__link
       line-height: 2
-    &.show-menu
+    &.is-show-menu
+      .logo
+        z-index: 5
       .nav
         opacity: 1
         visibility: visible
 
 .header__inner
   position: relative
+  padding: 22px 0
+
+.header__buttons
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  overflow: hidden
 
 .menu-button
   display: none
@@ -122,7 +145,7 @@ a
   height: 40px
   box-sizing: border-box
   padding: 8px
-  color: rgba(black, 0.5)
+  color: $color-blue
   background: none
   &:before,
   &:after,
@@ -131,23 +154,37 @@ a
     display: block
     width: 100%
     border-top: 3px solid
+    transition: all 0.3s ease
   > span
     margin: 6px 0
+  .is-show-menu &
+    &:before
+      transform: rotate(45deg)
+      transform-origin: 2px 6px
+    &:after
+      transform: rotate(-45deg)
+      transform-origin: 1px -3px
+    > span
+      opacity: 0
+      transform: scale(0)
+  &:hover
+    color: red
   +sm
     display: block
 
 .lang
   position: absolute
   z-index: 1
-  top: 3px
-  right: -33px
+  top: 25px
+  // right: -33px
+  right: 0
   +f(l, 16)
   color: rgba(black, 0.3)
   a
     &:not(:hover)
       color: inherit
   &:hover,
-  &.hover
+  &.is-hover
     .lang__list
       opacity: 1
       visibility: visible
@@ -185,7 +222,8 @@ a
 .logo
   display: inline-block
   position: absolute
-  top: 5px
+  top: 50%
+  margin-top: -0.55em
   right: 100%
   margin-right: 75px
   color: black
@@ -194,7 +232,9 @@ a
   text-transform: uppercase
   line-height: 1
   +md
-    position: static
+    position: relative
+    top: auto
+    right: auto
     margin: 0
 
 .link
@@ -236,7 +276,8 @@ a
   right: 0
   visibility: hidden
   opacity: 0
-  > svg:not(.drawsvg-animating)
+  // > svg:not(.drawsvg-animating)
+  > svg
     .dashed-line
       stroke-dasharray: 3px !important
       transition: stroke-dasharray 0.5s linear
@@ -420,7 +461,7 @@ a
 .features-container
   position: relative
   background: #001E8D
-  min-height: 980px
+  height: 980px
   transition: height 0.3s ease
   +sm
     min-height: 0
@@ -434,8 +475,12 @@ a
   height: 100%
   z-index: 0
   pointer-events: none
+  transition: opacity 0.5s ease
   +sm
     display: none !important
+  .is-changing &
+    opacity: 0
+    transition: none
 
 .features
   visibility: hidden
@@ -445,27 +490,18 @@ a
   top: 0
   left: 0
   right: 0
-  min-height: 980px
   padding: 100px 40px 40px
   box-sizing: border-box
-  // background: #001E8D
   color: white
   transition: 0.5s ease
   transition-property: opacity, visibility
   &-ipcam
     overflow: hidden
+    min-height: 950px
     .features__center
       padding-left: 80px
-    // .features__lines
-    //   top: -108px
-    //   left: 50%
-    //   margin-left: -588px
-    //   width: percentage(1090/1200)
-    //   max-width: 1098px
-  // &-iptv
-  //   .features__lines
-  //     top: 30px
-  //     left: 30px
+  &-iptv
+    min-height: 980px
   &.is-active
     visibility: visible
     opacity: 1
@@ -475,16 +511,6 @@ a
     .features__center
       padding: 0
       max-width: none
-
-.features__lines
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  > svg
-    width: 100%
-    > g
-      stroke: rgba(white, 0.5)
 
 .features__center
   max-width: 420px
@@ -501,6 +527,8 @@ a
   +sm
     margin: 30px 0 0
     max-width: none
+    br
+      display: none
     &:nth-child(even)
       margin-left: 0
 
@@ -691,11 +719,11 @@ a
 
 .transcoder
   right: 50%
-  margin-right: percentage(220/1200)
+  margin-right: percentage(255/1200)
   top: 465px
-  width: 290px
+  width: 233px
   height: 400px
-  background: img-url('svg/transcoder.svg') no-repeat center
+  background: img-url('transcoder.png') no-repeat center
   background-size: contain
   &__lightning
     width: 100px
@@ -703,10 +731,10 @@ a
     position: absolute
     top: 50%
     left: 50%
-    margin: -52px 0 0 -44px
+    margin: -47px 0 0 -44px
 
 .hdd
-  top: 530px
+  top: 495px
   left: 50%
   margin-left: percentage(170/1200)
   width: 395px
@@ -730,7 +758,7 @@ a
     opacity: 1
 
 .lego
-  top: 320px
+  top: 285px
   left: 50%
   margin-left: percentage(178/1200)
   &__brick-upper
@@ -1016,3 +1044,22 @@ textarea.input
   //     @extend %dot
   //     top: 28px
   //     left: 120px
+  // .lego
+  //   &:after
+  //     @extend %dot
+  //     bottom: 0
+  //     left: 104px
+  // .hdd
+  //   &:after
+  //     @extend %dot
+  //     top: 382px
+  //     left: 15px
+  // .transcoder
+  //   &:before
+  //     @extend %dot
+  //     top: 3px
+  //     left: 90px
+  //   &:after
+  //     @extend %dot
+  //     bottom: 10px
+  //     left: 204px

@@ -36,7 +36,7 @@ path.attr({
 
 $win.on('resize', debounce(() => render(), 50));
 
-dispatcher.on('CHANGE_SECTION', (e, sectionName) => {
+dispatcher.on(actions.BEGIN_CHANGE_SECTION, (e, sectionName) => {
     currentState = sectionName;
     render();
 });
@@ -57,12 +57,12 @@ function getIpCamPoints() {
             y: containerOffset.top
         },
         {
-            x: onvifOffset.left + 255,
-            y: onvifOffset.top + 26
+            x: onvifOffset.left + 256,
+            y: onvifOffset.top + 27
         },
         {
             x: onvifOffset.left + 5,
-            y: onvifOffset.top + 205
+            y: onvifOffset.top + 206
         },
         {
             x: webAccessOffset.left + 97,
@@ -105,8 +105,24 @@ function getIpTvPoints() {
             y: containerOffset.top
         },
         {
-            x: cloudsOffset.left + 125,
+            x: cloudsOffset.left + 75,
             y: cloudsOffset.top + 150
+        },
+        {
+            x: transcoderOffset.left + 62,
+            y: transcoderOffset.top + 3
+        },
+        {
+            x: transcoderOffset.left + 176,
+            y: transcoderOffset.top + $transcoder.height() - 44
+        },
+        {
+            x: legoOffset.left + 104,
+            y: legoOffset.top + $lego.height()
+        },
+        {
+            x: hddOffset.left + 15,
+            y: hddOffset.top + 382
         }
     ].map(point => {
         const { x, y } = point;
@@ -119,6 +135,7 @@ function getIpTvPoints() {
 
 function renderIpCamLines() {
     const points = getIpCamPoints();
+
     const { x: x1, y: y1 } = points[0];
     const { x: x2, y: y2 } = points[1];
     const { x: x3, y: y3 } = points[2];
@@ -127,8 +144,6 @@ function renderIpCamLines() {
     const { x: x6 }        = points[5];
     const { x: x7, y: y7 } = points[6];
     const { x: x8, y: y8 } = points[7];
-
-    // svg.fadeIn(300);
 
     return (
         `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 80} s-10,0 -20,5 L${x2},${y2} ` +
@@ -140,21 +155,29 @@ function renderIpCamLines() {
 }
 
 function renderIpTvLines() {
-    // svg.fadeOut(300);
-    // return;
-
     const points = getIpTvPoints();
+
     const { x: x1, y: y1 } = points[0];
     const { x: x2, y: y2 } = points[1];
-    // const { x: x3, y: y3 } = points[2];
-    // const { x: x4, y: y4 } = points[3];
-    // const { x: x5, y: y5 } = points[4];
-    // const { x: x6 }        = points[5];
-    // const { x: x7, y: y7 } = points[6];
-    // const { x: x8, y: y8 } = points[7];
+    const { x: x3, y: y3 } = points[2];
+    const { x: x4, y: y4 } = points[3];
+    const { x: x5, y: y5 } = points[4];
+    const { x: x6, y: y6 } = points[5];
+
+    const _x5 = x5 - 20;
+    const _y5 = y5 + 53;
+
+    const _dx = _x5 - x4;
+    const _dy = y4 - _y5;
+
+    const _x6 = _x5 - 208;
+    const _y6 = _y5 + 208 * _dy / _dx;
 
     return (
-        `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 160} s-10,0 -20,5 L${x2},${y2} `
+        `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 200} s-10,0 -20,5 L${x2},${y2} ` +
+        `v170 s0,10 10,20 L${x3},${y3} ` +
+        `M${x4},${y4} L${_x5},${_y5} s15,-5 20,-20 L${x5},${y5} ` +
+        `M${_x6},${_y6} s45,-20 40,40 V${y6 - 70} s0,10 10,20 L${x6},${y6}`
     );
 }
 

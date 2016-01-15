@@ -9,6 +9,7 @@ import './draw-swg-lines';
 window.$ = window.jQuery = $;
 import './draw-svg';
 import 'jquery.transit';
+import svg4everybody from 'svg4everybody';
 
 const scrollController = new ScrollMagic.Controller({
     container: 'body',
@@ -25,18 +26,20 @@ $(window).on('resize', debounce(() => {
 
 $('.menu-button').on('click touchend', function(e) {
     e.preventDefault();
-    $(this).parents('.header').toggleClass('show-menu');
+    $(this).parents('.header').toggleClass('is-show-menu');
 });
 
-$('.header .lang').on('touchend', function() {
-    const $this = $(this);
-    $this.addClass('hover');
-    setTimeout(() => {
-        $('body').one('touchend', function() {
-            $this.removeClass('hover');
-        });
-    }, 100);
-});
+if ('ontouchend' in window) {
+    $('.header .lang').on('click', function() {
+        const $this = $(this);
+        $this.addClass('is-hover');
+        setTimeout(() => {
+            $('body').one('touchend', function() {
+                $this.removeClass('is-hover');
+            });
+        }, 100);
+    });
+}
 
 morhOnvif();
 morphLightning();
@@ -45,8 +48,9 @@ buildHeaderScrollScene();
 buildLegoScene();
 setFeaturesHeight();
 initMap('#map');
+svg4everybody();
 
-function drawHeroSvg(el) {
+function drawHeroSvg(el, cb = $.noop) {
     if (mq.matches) return;
 
     if (typeof el === 'string') {
@@ -61,7 +65,8 @@ function drawHeroSvg(el) {
     el.drawsvg({
         duration: 1000,
         stagger: 0,
-        reverse: false
+        reverse: false,
+        callback: cb
     });
 
     el.drawsvg('animate');
@@ -74,12 +79,16 @@ function toggleSection(e) {
 
     if (targetBtn.hasClass('is-active')) return;
 
+
     const sectionName  = targetBtn.data('section');
     const targetFigure = $(`.hero-figure-${sectionName}`);
     const targetFeatures = $(`.features-${sectionName}`);
 
+    dispatcher.trigger(actions.BEGIN_CHANGE_SECTION, sectionName);
 
     $('.hero-btn.is-active, .hero-figure.is-active, .features.is-active').removeClass('is-active');
+
+    targetFeatures.parent().addClass('is-changing');
 
     targetBtn
         .add(`.hero-btn[data-section='${sectionName}']`)
@@ -89,9 +98,10 @@ function toggleSection(e) {
 
     setFeaturesHeight(targetFeatures);
 
-    drawHeroSvg(targetFigure.find('svg'));
-
-    dispatcher.trigger(actions.CHANGE_SECTION, sectionName);
+    drawHeroSvg(targetFigure.find('svg'), () => {
+        targetFeatures.parent().removeClass('is-changing');
+        dispatcher.trigger(actions.END_CHANGE_SECTION, sectionName);
+    });
 }
 
 function setFeaturesHeight(activeFeatures) {
@@ -178,9 +188,17 @@ function buildHeaderScrollScene() {
         triggerElement: trigger[0],
         triggerHook: 'onLeave'
     }).on('start', (e) => {
-        header.toggleClass('show-buttons');
+        header.toggleClass('is-show-buttons');
     }).on('end', (e) => {
-        header.toggleClass('hide-buttons');
+        header.toggleClass('is-hide-buttons');
+    }).addTo(scrollController);
+
+    const scene2 = new ScrollMagic.Scene({
+        offset: 5,
+        triggerElement: 'body',
+        triggerHook: 'onLeave'
+    }).on('start', () => {
+        header.toggleClass('has-shadow');
     }).addTo(scrollController);
 
     $(window).on('resize', debounce((e) => {
@@ -198,7 +216,7 @@ function buildLegoScene() {
         triggerElement: container[0],
         triggerHook: 'onCenter'
     }).on('progress', (e) => {
-        upperBrick.transit({
+        upperBrick.stop().transit({
             y: deltaY - (deltaY * e.progress)
         }, 300, 'linear');
     }).on('end', (e) => {

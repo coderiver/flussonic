@@ -135,7 +135,7 @@
             <path fill="#FFFFFF" d="M101.6,75c1.9,1.1,2.6,3.6,1.4,5.5c-1.1,1.9-3.6,2.6-5.5,1.4c-1.9-1.1-2.6-3.6-1.4-5.5
     C97.2,74.6,99.7,73.9,101.6,75z" />
         </g>
-        <g id="onvif-state-2">
+        <g id="onvif-state-2" style="display:none">
           <path opacity="0.4" fill="none" stroke="#B194FF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="M151.1 69.2l26.9 59.2" />
     <path opacity="0.4" fill="none" stroke="#B194FF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="M178 128.4l81.2-2.8" />
     <path opacity="0.4" fill="none" stroke="#B194FF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="M97.1 225l62.7-34.5L78.9 172l69.4-35.1" />
@@ -200,7 +200,7 @@
     <path fill="#FFFFFF" d="M125.4 279.7c2 1.2 2.7 3.7 1.5 5.7 -1.2 2-3.7 2.7-5.7 1.5s-2.7-3.7-1.5-5.7C120.8 279.2 123.4 278.5 125.4 279.7z" />
     <path fill="#FFFFFF" d="M115.2 77.5c1.9 1.1 2.6 3.6 1.4 5.5 -1.1 1.9-3.6 2.6-5.5 1.4 -1.9-1.1-2.6-3.6-1.4-5.5C110.9 77.1 113.4 76.4 115.2 77.5z" />
         </g>
-        <g id="onvif-state-3">
+        <g id="onvif-state-3" style="display:none">
           <path opacity="0.4" fill="none" stroke="#B194FF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="
   M154.3,77l28.5,37.9" />
         <path opacity="0.4" fill="none" stroke="#B194FF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" enable-background="new    " d="

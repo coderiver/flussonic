@@ -15,10 +15,11 @@
     <style>
       #lightning-shape g path {
         filter: url('#blur-filter');
+        fill: url('#grdnt')
       }
     </style>
 
-    <!-- <linearGradient id="grdnt" gradientUnits="userSpaceOnUse" x1="20.6792" y1="6.417" x2="20.6792" y2="35.7505">
+    <linearGradient id="grdnt" gradientUnits="userSpaceOnUse" x1="20.6792" y1="6.417" x2="20.6792" y2="35.7505">
       <stop offset="0" style="stop-color:#00C2FF"/>
       <stop offset="0.5102" style="stop-color:#FFFFFF"/>
       <stop offset="0.5549" style="stop-color:#F1FEF5"/>
@@ -26,7 +27,7 @@
       <stop offset="0.754" style="stop-color:#92F8AF"/>
       <stop offset="0.8932" style="stop-color:#42F374"/>
       <stop offset="1" style="stop-color:#00EF43"/>
-    </linearGradient> -->
+    </linearGradient>
   </defs>
   <g id="lightningpath1">
     <path fill="rgba(255,255,255,0)" d="M19.3,6.4c-13,7,13.5,18.7,1.7,29.3C32.5,25.6,10.2,17.3,19.3,6.4z"/>

@@ -1,6 +1,8 @@
 import $ from 'jquery';
 
 export const actions = {
+    BEGIN_CHANGE_SECTION: 'BEGIN_CHANGE_SECTION',
+    END_CHANGE_SECTION: 'END_CHANGE_SECTION',
     CHANGE_SECTION: 'CHANGE_SECTION'
 };
 

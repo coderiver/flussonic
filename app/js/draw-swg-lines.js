@@ -117,7 +117,7 @@ function getIpTvPoints() {
             y: transcoderOffset.top + $transcoder.height() - 44
         },
         {
-            x: legoOffset.left + 104,
+            x: legoOffset.left + 103,
             y: legoOffset.top + $lego.height()
         },
         {
@@ -148,8 +148,8 @@ function renderIpCamLines() {
     return (
         `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 80} s-10,0 -20,5 L${x2},${y2} ` +
         `M${x3},${y3} l-10,5 s-5,0 -10,15 v100 s0,15 15,25 L${x4},${y4} ` +
-        `M${x5},${y5} l110,95 s10,10 30,15 H${x6} s25,0 40,20 L${x7},${y7} ` +
-        `M${x6},${y5 + 95 + 15} H${x8 - 50} s15,0 30,-20 l20,-30 s5,-12 -5,-20 ` +
+        `M${x5},${y5} l140,120 s10,10 30,15 H${x6} s25,0 40,20 L${x7},${y7} ` +
+        `M${x6},${y5 + 120 + 15} H${x8 - 50} s15,0 30,-20 l20,-30 s5,-12 -5,-20 ` +
         `m17,17 a167,167,0,1,0-12.3-12.08`
     );
 }

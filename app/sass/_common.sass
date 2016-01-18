@@ -1,5 +1,7 @@
 html
   font-size: 62.5%
+  +rmin(1600)
+    font-size: 0.625vw
 
 body
   background: #FFF
@@ -10,12 +12,25 @@ body
   +smooth-font
 
 a
-  text-decoration: underline
+  text-decoration: none
   color: $color-blue
   +trans(color)
   &:hover,
   &:focus
     color: red
+
+.lnk,
+a:not([class])
+  text-decoration: none
+  border-bottom: 1px solid rgba($color-blue, 0.3)
+  +trans()
+  transition-property: color, border-color
+  &:hover
+    border-color: rgba(red, 0.3)
+
+.lnk_black
+  &:not(:hover)
+    border-color: rgba(black, 0.3)
 
 .out
   overflow: hidden
@@ -181,6 +196,7 @@ a
   +f(l, 16)
   color: rgba(black, 0.3)
   a
+    border: none
     &:not(:hover)
       color: inherit
   &:hover,
@@ -347,12 +363,15 @@ a
     +f(l)
   +sm
     font-size: 34px
+    font-size: 3.4rem
 
 
 .section
   margin-top: 70px
+  margin-top: 7rem
   .title
     margin-bottom: 30px
+    margin-bottom: 3rem
   +sm
     margin-top: 40px
     .title
@@ -360,6 +379,7 @@ a
 
 .section-request
   margin-top: 100px
+  margin-top: 10rem
   +sm
     .col
       float: none
@@ -375,13 +395,16 @@ a
 
 .section-contacts
   margin-top: 65px
+  margin-top: 6.5rem
   background: #002FC7
   color: white
   padding: 60px 0 55px
+  padding: 6rem 0 5.5rem
   +clr
   .svg-map-marker
     margin: 5px 0 8px -7px
     font-size: 35px
+    font-size: 3.5rem
     fill: white
   .title
     margin-bottom: 16px
@@ -428,11 +451,16 @@ a
   display: inline-block
   box-sizing: border-box
   height: 45px
+  height: 4.5rem
   min-width: 140px
+  min-width: 14rem
   padding: 0 10px
+  padding: 0 1rem
   line-height: 43px
+  line-height: 4.3rem
   border: 1px dotted
   border-radius: 3px
+  border-radius: 0.3rem
   background: none
   +f(el, 16)
   color: $color-blue
@@ -451,7 +479,9 @@ a
     border: none
     color: white
     height: 50px
+    height: 5rem
     line-height: 50px
+    line-height: 5rem
     +f(eb, 14, 150)
     text-transform: uppercase
     &:hover
@@ -490,7 +520,7 @@ a
   top: 0
   left: 0
   right: 0
-  padding: 100px 40px 40px
+  padding: 100px 40px 100px
   box-sizing: border-box
   color: white
   transition: 0.5s ease
@@ -498,10 +528,10 @@ a
   &-ipcam
     overflow: hidden
     min-height: 950px
-    .features__center
-      padding-left: 80px
+    min-height: 95rem
   &-iptv
     min-height: 980px
+    min-height: 98rem
   &.is-active
     visibility: visible
     opacity: 1
@@ -514,14 +544,16 @@ a
 
 .features__center
   max-width: 420px
+  max-width: 42rem
+  padding-left: 80px
   margin: auto
   box-sizing: content-box
   position: relative
   z-index: 1
 
 .feature
-  margin-top: 74px
-  max-width: 247px
+  margin-top: 60px
+  max-width: 24.7rem
   &:nth-child(even)
     margin-left: 80px
   +sm
@@ -533,11 +565,12 @@ a
       margin-left: 0
 
 .feature__label
-  +f(m, 16)
+  +f(b, 18)
   line-height: 1.526
+  margin-bottom: 10px
 
 .feature__text
-  +f(el, 14)
+  +f(l, 16)
   line-height: 1.78
 
 .feature-pic
@@ -736,7 +769,7 @@ a
 .hdd
   top: 495px
   left: 50%
-  margin-left: percentage(170/1200)
+  margin-left: percentage(210/1200)
   width: 395px
   height: 540px
   background: img-url('hdd.png') no-repeat center
@@ -757,10 +790,11 @@ a
   50%
     opacity: 1
 
+
 .lego
-  top: 285px
+  top: 300px
   left: 50%
-  margin-left: percentage(178/1200)
+  margin-left: percentage(218/1200)
   &__brick-upper
     position: absolute
     z-index: 1
@@ -811,7 +845,9 @@ a
   display: block
   box-sizing: border-box
   height: 40px
+  height: 4rem
   padding: 10px 0 9px
+  padding: 1rem 0 0.9rem
   width: 100%
   appearance: none
   background: none
@@ -839,12 +875,15 @@ textarea.input
     +rmin(767)
       .news__title
         font-size: 25px
+        font-size: 2.5rem
         +f(l)
       .news__text
         font-size: 22px
+        font-size: 2.2rem
         margin: 10px 0
       .news__date
         font-size: 16px
+        font-size: 1.6rem
 
 .news__title
   +f(r)
@@ -852,12 +891,14 @@ textarea.input
 .news__date
   display: block
   font-size: 14px
+  font-size: 1.4rem
   color: #999999
 
 
 .message
   display: block
   padding: 10px
+  padding: 1rem
   box-sizing: border-box
   text-align: center
   +f(l, 16)
@@ -883,6 +924,7 @@ textarea.input
   display: inline-block
   vertical-align: top
   font-size: 16px
+  font-size: 1.6rem
   width: 33.33%
   box-sizing: border-box
   padding: 0 15px
@@ -897,8 +939,11 @@ textarea.input
 
 .customer__pic
   height: 60px
+  height: 6rem
   margin-bottom: 10px
+  margin-bottom: 1rem
   line-height: 60px
+  line-height: 6rem
   font-size: 0
   > img
     display: inline-block
@@ -916,16 +961,21 @@ textarea.input
   vertical-align: top
   margin-right: 40px
   color: $color-blue
-  text-decoration: underline
+  text-decoration: none
   line-height: 1.375
   +trans(color)
   .svg-icon
     display: block
     font-size: 40px
+    font-size: 4rem
     fill: currentColor
     margin-bottom: 5px
+  .lnk
+    +trans(border-color)
   &:hover
     color: red
+    .lnk
+      border-color: rgba(red, 0.3)
 
 .social-link
   display: inline-block
@@ -934,22 +984,30 @@ textarea.input
   margin-right: 20px
   min-width: 36px
   text-align: center
+  +trans(opacity)
   &:last-child
     margin-right: 0
   .svg-icon
     fill: currentColor
   .svg-facebook
     font-size: 36px
+    font-size: 3.6rem
   .svg-twitter
     font-size: 30px
+    font-size: 3rem
   .svg-youtube-play
     font-size: 26px
+    font-size: 2.6rem
+  &:hover
+    color: inherit
+    opacity: 0.8
 
 .hidden-text
   +hide-text
 
 .map
   height: 445px
+  height: 44.5rem
   border: 1px solid rgba($color-blue, 0.3)
   border-width: 1px 0
   +sm
@@ -995,8 +1053,16 @@ textarea.input
 .partners__item
   display: inline-block
   vertical-align: middle
+  opacity: 0.4
+  filter: grayscale(1)
+  +trans()
   &:not(:last-child)
     margin-right: 25px
+  &:hover
+    filter: grayscale(0)
+    opacity: 1
+  a
+    border: none
 
 
 .site-maker

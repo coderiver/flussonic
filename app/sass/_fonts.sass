@@ -2,7 +2,7 @@
 +fontWOFF("firasans-medium", firasans-medium)
 +fontWOFF("firasans-thin", firasans-thin)
 +fontWOFF("firasans-bold", firasans-bold)
-+fontWOFF("firasans-extralight", firasans-extralight)
+// +fontWOFF("firasans-extralight", firasans-extralight)
 +fontWOFF("firasans-light", firasans-light)
 +fontWOFF("firasans-extrabold", firasans-extrabold)
 +fontWOFF("firasans-ultra", firasans-ultra)
@@ -18,7 +18,7 @@
   @if $name == "b"
     $font-family: "firasans-bold"
   @if $name == "el"
-    $font-family: "firasans-extralight"
+    $font-family: "firasans-light"
   @if $name == "l"
     $font-family: "firasans-light"
   @if $name == "eb"
@@ -28,6 +28,6 @@
   font-family: $font-family
   font-weight: normal
   @if $font-size != null
-    font-size: $font-size + px
+    font-size: ($font-size/10) + rem
   @if $letter-spacing != null
     letter-spacing: ($letter-spacing / 1000) + em

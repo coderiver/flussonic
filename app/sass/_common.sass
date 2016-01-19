@@ -300,11 +300,17 @@ a:not([class])
   &-iptv
     .hero-figure__text
       width: 330px
+    // > svg
+    //   width: 75rem
+    //   height: 58rem
   &-ipcam
     top: -24px
     right: 40px
     .hero-figure__text
       width: 380px
+    // > svg
+    //   width: 75rem
+    //   height: 55rem
     +r(900)
       right: -10px
   &.is-active
@@ -1084,48 +1090,58 @@ textarea.input
   height: 4px
   background: red
 
-.dot
-  // .hero-figure-ipcam
-  //   &:before
-  //     @extend %dot
-  //     top: 240px
-  //     left: 468px
-  // .hero-figure-iptv
-  //   &:before
-  //     @extend %dot
-  //     top: 240px
-  //     left: 468px
-  // .onvif
-  //   &:before
-  //     @extend %dot
-  //     top: 26px
-  //     left: 252px
-  // .web-access
-  //   &:before
-  //     @extend %dot
-  //     top: 10px
-  //     left: 97px
-  // .mobile-app
-  //   &:before
-  //     @extend %dot
-  //     top: 28px
-  //     left: 120px
-  // .lego
-  //   &:after
-  //     @extend %dot
-  //     bottom: 0
-  //     left: 104px
-  // .hdd
-  //   &:after
-  //     @extend %dot
-  //     top: 382px
-  //     left: 15px
-  // .transcoder
-  //   &:before
-  //     @extend %dot
-  //     top: 3px
-  //     left: 90px
-  //   &:after
-  //     @extend %dot
-  //     bottom: 10px
-  //     left: 204px
+// .dot
+//   .hero-figure-ipcam
+//     &:before
+//       @extend %dot
+//       top: 240px
+//       left: 468px
+//   .hero-figure-iptv
+//     &:before
+//       @extend %dot
+//       top: 240px
+//       left: 468px
+//   .onvif
+//     &:before
+//       @extend %dot
+//       top: 26px
+//       left: 252px
+//   .web-access
+//     &:before
+//       @extend %dot
+//       top: 10px
+//       left: 97px
+//   .mobile-app
+//     &:before
+//       @extend %dot
+//       top: 28px
+//       left: 120px
+//   .lego
+//     &:after
+//       @extend %dot
+//       bottom: 0
+//       left: 104px
+//   .hdd
+//     &:after
+//       @extend %dot
+//       top: 382px
+//       left: 15px
+//   .transcoder
+//     &:before
+//       @extend %dot
+//       top: 3px
+//       left: 90px
+//     &:after
+//       @extend %dot
+//       bottom: 10px
+//       left: 204px
+
+.fade-in
+  transition: all 0.5s ease
+  transition-property: opacity, transform
+  opacity: 0
+  &.slide-up
+    transform: translateY(10px)
+  &.animate
+    opacity: 1
+    transform: translateY(0)

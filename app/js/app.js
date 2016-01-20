@@ -8,7 +8,6 @@ import { dispatcher, actions } from './dispatcher';
 import './draw-swg-lines';
 window.$ = window.jQuery = $;
 import './draw-svg';
-import 'jquery.transit';
 import svg4everybody from 'svg4everybody';
 
 const scrollController = new ScrollMagic.Controller({
@@ -46,7 +45,7 @@ morphLightning();
 initTextareaAutoresize();
 buildHeaderScrollScene();
 buildContentFadeScenes();
-buildLegoScene();
+buildCommonScrollScenes();
 setTimeout(setFeaturesHeight, 200);
 initMap('#map');
 svg4everybody();
@@ -210,22 +209,18 @@ function buildHeaderScrollScene() {
     }, 500));
 }
 
-function buildLegoScene() {
-    const container  = $('.lego');
-    const upperBrick = container.find('.lego__brick-upper');
-    const deltaY     = -100;
-
-    const scene = new ScrollMagic.Scene({
-        duration: 200,
-        triggerElement: container[0],
+function buildCommonScrollScenes() {
+    const legoScene = new ScrollMagic.Scene({
+        offset: -100,
+        triggerElement: '.lego',
         triggerHook: 'onCenter'
-    }).on('progress', (e) => {
-        upperBrick.stop().transit({
-            y: deltaY - (deltaY * e.progress)
-        }, 300, 'linear');
-    }).on('end', (e) => {
-        container.toggleClass('animation-done');
-    }).addTo(scrollController);
+    }).setClassToggle('.lego', 'animate').addTo(scrollController);
+
+    const mouseScene = new ScrollMagic.Scene({
+        offset: -100,
+        triggerElement: '.web-access',
+        triggerHook: 'onCenter'
+    }).setClassToggle('.web-access, .mobile-app', 'animate').addTo(scrollController);
 }
 
 function buildContentFadeScenes() {

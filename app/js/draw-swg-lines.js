@@ -66,14 +66,14 @@ function getIpCamPoints() {
         },
         {
             x: webAccessOffset.left + 97,
-            y: webAccessOffset.top + 12
+            y: webAccessOffset.top + 32
         },
         {
             x: onvifOffset.left + 209,
             y: onvifOffset.top + 323
         },
         {
-            x: mobileAppOffset.left - 40
+            x: mobileAppOffset.left - 20
         },
         {
             x: mobileAppOffset.left + 120,
@@ -86,8 +86,8 @@ function getIpCamPoints() {
     ].map(point => {
         const { x, y } = point;
         return {
-            x,
-            y: y - containerOffset.top
+            x: Math.round(x),
+            y: Math.round(y - containerOffset.top)
         };
     });
 }
@@ -114,7 +114,7 @@ function getIpTvPoints() {
         },
         {
             x: transcoderOffset.left + 176,
-            y: transcoderOffset.top + $transcoder.height() - 44
+            y: transcoderOffset.top + $transcoder.height() - 43
         },
         {
             x: legoOffset.left + 103,
@@ -127,8 +127,8 @@ function getIpTvPoints() {
     ].map(point => {
         const { x, y } = point;
         return {
-            x,
-            y: y - containerOffset.top
+            x: Math.round(x),
+            y: Math.round(y - containerOffset.top)
         };
     });
 }
@@ -147,9 +147,9 @@ function renderIpCamLines() {
 
     return (
         `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 80} s-10,0 -20,5 L${x2},${y2} ` +
-        `M${x3},${y3} l-10,5 s-5,0 -10,15 v100 s0,15 15,25 L${x4},${y4} ` +
-        `M${x5},${y5} l140,120 s10,10 30,15 H${x6} s25,0 40,20 L${x7},${y7} ` +
-        `M${x6},${y5 + 120 + 15} H${x8 - 50} s15,0 30,-20 l20,-30 s5,-12 -5,-20 ` +
+        `M${x3},${y3} l-10,5 s-5,0 -10,15 v150 s0,15 15,25 L${x4},${y4} ` +
+        `M${x5},${y5} l140,135 s10,10 30,15 H${x6} s22,0 40,16 L${x7},${y7} ` +
+        `M${x6 + 7},${y5 + 135 + 15} H${x8 - 50} s19,0 30,-20 l20,-30 s5,-12 -5,-20 ` +
         `m17,17 a167,167,0,1,0-12.3-12.08`
     );
 }
@@ -167,17 +167,21 @@ function renderIpTvLines() {
     const _x5 = x5 - 20;
     const _y5 = y5 + 53;
 
-    const _dx = _x5 - x4;
-    const _dy = y4 - _y5;
+    // const _dx = _x5 - x4;
+    // const _dy = y4 - _y5;
+    //
+    // const _x6 = _x5 - 208;
+    // const _y6 = _y5 + 208 * _dy / _dx;
 
-    const _x6 = _x5 - 208;
-    const _y6 = _y5 + 208 * _dy / _dx;
+    const _x6 = x6 - 98;
+    const _y6 = y6 - 206;
 
     return (
         `M${x1},${y1} v20 s0,25 -30,30 H${x2 + 200} s-10,0 -20,5 L${x2},${y2} ` +
-        `v170 s0,10 10,20 L${x3},${y3} ` +
-        `M${x4},${y4} L${_x5},${_y5} s15,-5 20,-20 L${x5},${y5} ` +
-        `M${_x6},${_y6} s45,-20 40,40 V${y6 - 70} s0,10 10,20 L${x6},${y6}`
+        `v180 s0,10 10,20 L${x3},${y3} ` +
+        `M${x4},${y4} l60,-17 s17,-5 20,-15 l30,-45 s8,-20 30,-20 ` +
+        `H${x6 - 200} s18,0 40,-15 L${_x5},${_y5} s15,-6 20,-20 L${x5},${y5} ` +
+        `M${_x6},${_y6} s45,-20 40,40 V${y6 - 50} s0,10 10,20 L${x6},${y6}`
     );
 }
 

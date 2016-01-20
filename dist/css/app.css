@@ -271,11 +271,11 @@ a:hover, a:focus { color: red; }
 
 .feature__text { font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; line-height: 1.78; }
 
-.feature-pic { position: absolute; }
+.feature-pic { position: absolute; z-index: 1; }
 
 .onvif { right: 50%; top: 73px; margin-right: 18.16667%; }
 
-.motion { top: 210px; left: 50%; margin-left: 18.33333%; width: 240px; height: 240px; }
+.motion { top: 246px; left: 50%; margin-left: 18.5%; width: 240px; height: 240px; }
 
 .motion__item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
@@ -299,53 +299,63 @@ a:hover, a:focus { color: red; }
 
 @keyframes spinback { to { -webkit-transform: rotate(-360deg); transform: rotate(-360deg); } }
 
-.web-access { width: 393px; height: 288px; top: 516px; right: 50%; margin-right: 13.16667%; background: url("../img/mouse.png") no-repeat center; background-size: contain; }
+.web-access { width: 393px; height: 288px; top: 556px; right: 50%; margin-right: 13.16667%; }
+
+.web-access:before { content: ""; width: 100%; height: 100%; display: block; background: url("../img/mouse.png") no-repeat center; background-size: contain; -webkit-transform: translate(-60px, -55px); -ms-transform: translate(-60px, -55px); transform: translate(-60px, -55px); transition: -webkit-transform 1.5s ease; transition: transform 1.5s ease; transition: transform 1.5s ease, -webkit-transform 1.5s ease; }
+
+.web-access.animate:before { -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); }
 
 .mobile-app { top: 638px; left: 50%; width: 587px; height: 519px; margin-left: 10.58333%; background: url("../img/smartphone.png") no-repeat center; background-size: contain; }
+
+.mobile-app__interface { position: absolute; top: 0; left: 0; }
+
+.mobile-app__interface svg path { stroke-dasharray: 500px; stroke-dashoffset: 500px; transition: stroke-dashoffset 2s ease; }
+
+.mobile-app.animate .mobile-app__interface svg path { stroke-dashoffset: 0; transition-delay: 0.5s; }
 
 .clouds { top: 60px; right: 50%; margin-right: 11.66667%; width: 500px; height: 300px; }
 
 .clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
 
-.clouds__cloud:nth-child(1) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
 .clouds__cloud:nth-child(17) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -407,9 +417,11 @@ a:hover, a:focus { color: red; }
 
 .lego { top: 300px; left: 50%; margin-left: 18.16667%; }
 
-.lego__brick-upper { position: absolute; z-index: 1; top: -90px; left: 65px; width: 267px; height: 202px; background: url("../img/lego-blue.png") no-repeat center; background-size: contain; -webkit-transform: translateY(-100px); -ms-transform: translateY(-100px); transform: translateY(-100px); }
+.lego__brick-upper { position: absolute; z-index: 1; top: -90px; left: 65px; width: 267px; height: 202px; background: url("../img/lego-blue.png") no-repeat center; background-size: contain; -webkit-transform: translateY(-100px); -ms-transform: translateY(-100px); transform: translateY(-100px); transition: -webkit-transform 1.5s ease; transition: transform 1.5s ease; transition: transform 1.5s ease, -webkit-transform 1.5s ease; }
 
 .lego__brick-lower { position: relative; z-index: 0; width: 267px; height: 205px; background: url("../img/lego-orange.png") no-repeat center; background-size: contain; }
+
+.lego.animate .lego__brick-upper { -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 
 .form .btn { margin-top: 44px; }
 
@@ -437,7 +449,7 @@ textarea.input { max-height: 200px; line-height: 20px; }
 
 .news__title { font-family: "firasans-regular"; font-weight: normal; }
 
-.news__date { display: block; font-size: 14px; font-size: 1.4rem; color: #999999; }
+.news__date { display: block; font-size: 14px; font-size: 1.4rem; margin-top: 5px; color: #999999; }
 
 .message { display: block; padding: 10px; padding: 1rem; box-sizing: border-box; text-align: center; font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; line-height: 1.6; background: #8CFFB7; border-radius: 2px; }
 
@@ -565,7 +577,7 @@ textarea.input { max-height: 200px; line-height: 20px; }
  .map { height: 250px; } }
 
 @media only screen and (min-width: 767px) {
- .news_important .news__title { font-size: 25px; font-size: 2.5rem; font-family: "firasans-light"; font-weight: normal; }
+ .news_important .news__title { font-size: 25px; font-size: 2.5rem; }
  .news_important .news__text { font-size: 22px; font-size: 2.2rem; margin: 10px 0; }
  .news_important .news__date { font-size: 16px; font-size: 1.6rem; } }
 

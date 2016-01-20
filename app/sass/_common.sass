@@ -581,6 +581,7 @@ a:not([class])
 
 .feature-pic
   position: absolute
+  z-index: 1
   +sm
     display: none
 
@@ -590,9 +591,9 @@ a:not([class])
   margin-right: percentage(218/1200)
 
 .motion
-  top: 210px
+  top: 246px
   left: 50%
-  margin-left: percentage(220/1200)
+  margin-left: percentage(222/1200)
   width: 240px
   height: 240px
   &__item
@@ -646,11 +647,22 @@ a:not([class])
 .web-access
   width: 393px
   height: 288px
-  top: 516px
+  top: 556px
   right: 50%
   margin-right: percentage(158/1200)
-  background: img-url('mouse.png') no-repeat center
-  background-size: contain
+  &:before
+    content: ""
+    width: 100%
+    height: 100%
+    display: block
+    background: img-url('mouse.png') no-repeat center
+    background-size: contain
+    transform: translate(-60px, -55px)
+    transition: transform 1.5s ease
+  &.animate
+    &:before
+      transform: translate(0, 0)
+
 
 .mobile-app
   top: 638px
@@ -660,6 +672,19 @@ a:not([class])
   margin-left: percentage(127/1200)
   background: img-url('smartphone.png') no-repeat center
   background-size: contain
+  &__interface
+    position: absolute
+    top: 0
+    left: 0
+    svg path
+      stroke-dasharray: 500px
+      stroke-dashoffset: 500px
+      transition: stroke-dashoffset 2s ease
+  &.animate
+    .mobile-app__interface
+      svg path
+        stroke-dashoffset: 0
+        transition-delay: 0.5s
 
 .clouds
   top: 60px
@@ -811,6 +836,7 @@ a:not([class])
     background: img-url('lego-blue.png') no-repeat center
     background-size: contain
     transform: translateY(-100px)
+    transition: transform 1.5s ease
   &__brick-lower
     position: relative
     z-index: 0
@@ -818,20 +844,9 @@ a:not([class])
     height: 205px
     background: img-url('lego-orange.png') no-repeat center
     background-size: contain
-  //   &:before
-  //     content: ""
-  //     position: absolute
-  //     top: -105px
-  //     left: 33px
-  //     width: 100%
-  //     padding-bottom: percentage(350/340)
-  //     background: img-url('lego-shadow.png') no-repeat center
-  //     opacity: 0
-  //     transition: opacity 0.3s ease
-  // &.animation-done
-  //   .lego__brick-lower
-  //     &:before
-  //       opacity: 1
+  &.animate
+    .lego__brick-upper
+      transform: translateY(0)
 
 .form
   .btn
@@ -882,7 +897,6 @@ textarea.input
       .news__title
         font-size: 25px
         font-size: 2.5rem
-        +f(l)
       .news__text
         font-size: 22px
         font-size: 2.2rem
@@ -898,6 +912,7 @@ textarea.input
   display: block
   font-size: 14px
   font-size: 1.4rem
+  margin-top: 5px
   color: #999999
 
 

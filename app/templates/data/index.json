@@ -1,10 +1,10 @@
 {
   "navigation": [
-    {"name": "Overview", "href": "#"},
-    {"name": "Free trial", "href": "#"},
-    {"name": "Clients", "href": "#"},
-    {"name": "Support", "href": "#"},
-    {"name": "About us", "href": "#"},
+    {"name": "Overview", "href": "#overview"},
+    {"name": "Free trial", "href": "#trial"},
+    {"name": "Clients", "href": "#clients"},
+    {"name": "Support", "href": "#support"},
+    {"name": "About us", "href": "#about"},
     {"name": "Documentation", "href": "#"},
     {"name": "My account", "href": "#"}
   ],

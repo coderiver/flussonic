@@ -40,6 +40,12 @@ if ('ontouchend' in window) {
     });
 }
 
+$.extend($.easing, {
+    easeOutCubic: function(x, t, b, c, d) {
+        return c * ((t = t / d - 1) * t * t + 1) + b;
+    }
+});
+
 morhOnvif();
 morphLightning();
 initTextareaAutoresize();
@@ -50,6 +56,7 @@ setTimeout(setFeaturesHeight, 200);
 initMap('#map');
 svg4everybody();
 drawHeroSvg('.hero-figure.is-active svg', 300);
+activateScrollToAnchor();
 
 function drawHeroSvg(el, timeout = 0, cb = $.noop) {
     if (mq.matches) return;
@@ -264,5 +271,23 @@ function buildContentFadeScenes() {
             debouncedAnimate();
             scene.destroy();
         }).addTo(scrollController);
+    });
+}
+
+function scrollTo(target, duration = 1000, shift = 100) {
+    $('html, body').animate({
+        scrollTop: target.offset().top - shift
+    }, duration, 'easeOutCubic');
+}
+
+function activateScrollToAnchor() {
+    $('.nav__link').on('click', function(e) {
+        let name = this.hash.slice(1);
+        let $target = name.length ? $(`a[name='${name}']`) : null;
+        e.preventDefault();
+        if ($target && $target.length) {
+            let shift = $target.data('shift') || 80;
+            scrollTo($target, 1000, shift);
+        }
     });
 }

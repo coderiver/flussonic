@@ -28,18 +28,6 @@ $('.menu-button').on('click touchend', function(e) {
     $(this).parents('.header').toggleClass('is-show-menu');
 });
 
-if ('ontouchend' in window) {
-    $('.header .lang').on('click', function() {
-        const $this = $(this);
-        $this.addClass('is-hover');
-        setTimeout(() => {
-            $('body').one('touchend', function() {
-                $this.removeClass('is-hover');
-            });
-        }, 100);
-    });
-}
-
 $.extend($.easing, {
     easeOutCubic: function(x, t, b, c, d) {
         return c * ((t = t / d - 1) * t * t + 1) + b;

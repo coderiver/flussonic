@@ -21,6 +21,14 @@
 =gpu
   transform: translate3d(0,0,0)
 
+=image($width, $height, $name, $ext: 'png')
+  width: $width + px
+  height: $height + px
+  background: img-url('#{$name}.#{$ext}') no-repeat center
+  background-size: contain
+  +retina
+    background-image: img-url('#{$name}-x2.#{$ext}')
+
 =lg
   +r(1200)
     @content

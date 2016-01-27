@@ -6,7 +6,7 @@
     {% for customer in customers %}
       <li class="customers__list-item customer">
         <div class="customer__pic">
-          <img src="img/customers/{{customer.img}}">
+          <a href="#"><img src="img/customers/{{customer.img}}"></a>
         </div>
         <p class="customer__text text">{{customer.text}}</p>
         {% if customer.link %}<a class="customer__link lnk" href="#">{{customer.link}}</a>{% endif %}

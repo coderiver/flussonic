@@ -11,7 +11,7 @@
   "customers": [
     {
       "name": "Lukoil",
-      "img": "lukoil.jpg",
+      "img": "lukoil.gif",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
       "link": "Case study"
     },
@@ -23,7 +23,7 @@
     },
     {
       "name": "Gazprom",
-      "img": "gazprom.jpg",
+      "img": "gazprom.png",
       "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
       "link": ""
     },

@@ -194,7 +194,7 @@ a:not([class])
   // right: -33px
   right: 0
   +f(l, 16)
-  color: #999
+  color: $color-grey
   a
     border: none
     &:not(:hover)
@@ -657,10 +657,7 @@ a:not([class])
     &:before
       content: ""
       display: block
-      width: 100%
-      height: 100%
-      background: img-url('motion1.png') no-repeat center
-      background-size: contain
+      +image(240,240,motion)
   &__1
     // background: img-url('motion1.png') no-repeat center
     // width: 240px
@@ -706,11 +703,8 @@ a:not([class])
   margin-right: percentage(158/1200)
   &:before
     content: ""
-    width: 100%
-    height: 100%
     display: block
-    background: img-url('mouse.png') no-repeat center
-    background-size: contain
+    +image(393,288,mouse)
     transform: translate(-60px, -55px)
     transition: transform 1.5s ease
   &.animate
@@ -723,11 +717,8 @@ a:not([class])
 .mobile-app
   top: 638px
   left: 50%
-  width: 587px
-  height: 519px
   margin-left: percentage(127/1200)
-  background: img-url('smartphone.png') no-repeat center
-  background-size: contain
+  +image(587,519,smartphone)
   &__interface
     position: absolute
     top: 0
@@ -748,8 +739,10 @@ a:not([class])
   top: 60px
   right: 50%
   margin-right: percentage(140/1200)
-  width: 500px
-  height: 300px
+  width: 670px
+  height: 360px
+  > *
+    position: absolute
   &__cloud
     position: absolute
     top: 0
@@ -790,12 +783,10 @@ a:not([class])
     top: 0
     left: -60px
     opacity: 0.7
-    // transform: scale(0.7)
     background-size: 70%
   &__layer-3
     top: 60px
     left: -30px
-    // transform: scale(0.7)
     background-size: 70%
   &__layer-4
     top: 48px
@@ -805,29 +796,119 @@ a:not([class])
     top: 40px
     left: auto
     right: 28px
-    // transform: scale(0.8)
     background-size: 80%
   &__layer-6
     top: 40px
     left: auto
     right: -55px
-    // transform: scale(0.7)
     background-size: 70%
     opacity: 0.7
   &__layer-7
     top: 70px
     left: auto
     right: 23px
-    // transform: scale(0.8)
     background-size: 80%
     opacity: 0.6
   &__layer-8
     top: 90px
     left: 80px
-    // transform: scale(0.7)
     background-size: 70%
+
+  .cloud1
+    background: img-url('cloud1.png') no-repeat center
+    background-size: contain
+  .cloud2
+    background: img-url('cloud2.png') no-repeat center
+    background-size: contain
+  .cloud3
+    background: img-url('cloud3.png') no-repeat center
+    background-size: contain
+  .cloud4
+    background: img-url('cloud4.png') no-repeat center
+    background-size: contain
+
+  &__cld1
+    width: 215px
+    height: 215px
+    top: 90px
+    transform: rotate(25deg)
+  &__cld2
+    width: 190px
+    height: 190px
+    left: 410px
+    top: 125px
+    transform: rotate(-15deg)
+  &__cld3
+    width: 185px
+    height: 185px
+    top: 130px
+    left: 70px
+    opacity: 0.7
+  &__cld4
+    width: 240px
+    height: 240px
+    left: 290px
+    top: 90px
+    transform: rotate(-30deg)
+  &__cld5
+    width: 350px
+    height: 350px
+    left: 110px
+  &__cld6
+    width: 200px
+    height: 200px
+    left: 275px
+    top: 140px
+    opacity: 0.5
+    transform: rotate(115deg)
+  &__cld7
+    width: 260px
+    height: 260px
+    left: 100px
+    top: 70px
+    opacity: 0.7
+    transform: rotate(-5deg)
+  &__cld8
+    width: 140px
+    height: 140px
+    left: 424px
+    top: 170px
+    transform: rotate(40deg)
+    opacity: 0.6
+  &__amazon
+    width: 109px
+    height: 44px
+    left: 290px
+    top: 115px
+    background: img-url('amazon.png') no-repeat center
+    background-size: contain
+  &__openstack
+    width: 60px
+    height: 66px
+    left: 420px
+    top: 175px
+    background: img-url('openstack.png') no-repeat center
+    background-size: contain
+
   +md
-    margin-right: 140px
+    margin-right: 120px
+
+.clouds__cld1
+  animation: CLD1 19s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld2
+  animation: CLD2 19s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld3
+  animation: CLD3 16s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld4
+  animation: CLD4 25s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld5
+  animation: CLD5 18s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld6
+  animation: CLD6 16s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld7
+  animation: CLD7 27s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
+.clouds__cld8
+  animation: CLD8 15s infinite cubic-bezier(0.445, 0.050, 0.550, 0.950)
 
 @keyframes cloud
   0%, 100%
@@ -862,18 +943,13 @@ a:not([class])
   top: 495px
   left: 50%
   margin-left: percentage(210/1200)
-  width: 395px
-  height: 540px
-  background: img-url('hdd.png') no-repeat center
-  background-size: contain
+  +image(395,540,hdd)
   &:before
     content: ""
     position: absolute
     top: 0
     left: 0
-    width: 100%
-    height: 100%
-    background: img-url('hdd-lights.png') no-repeat center
+    +image(395,540,hdd-lights)
     animation: blink 2s ease-in-out infinite
   +md
     margin-left: 196px
@@ -894,19 +970,13 @@ a:not([class])
     z-index: 1
     top: -90px
     left: 65px
-    width: 267px
-    height: 202px
-    background: img-url('lego-blue.png') no-repeat center
-    background-size: contain
+    +image(267,202,lego-blue)
     transform: translateY(-100px)
     transition: transform 1.5s ease
   &__brick-lower
     position: relative
     z-index: 0
-    width: 267px
-    height: 205px
-    background: img-url('lego-orange.png') no-repeat center
-    background-size: contain
+    +image(267,202,lego-orange)
   &.animate
     .lego__brick-upper
       transform: translateY(0)
@@ -978,7 +1048,7 @@ textarea.input
   font-size: 14px
   font-size: 1.4rem
   margin-top: 5px
-  color: #999999
+  color: $color-grey
 
 
 .message
@@ -1023,6 +1093,13 @@ textarea.input
   margin-bottom: 50px
 
 .customer
+  &:hover
+    .customer__pic
+      filter: grayscale(0)
+      opacity: 1
+    .customer__link
+      color: red
+      border-color: rgba(red, 0.3)
   +sm
     .customer__pic
       height: auto
@@ -1037,7 +1114,17 @@ textarea.input
   line-height: 60px
   line-height: 6rem
   font-size: 0
-  > img
+  filter: grayscale(1)
+  opacity: 0.4
+  +gpu
+  +trans
+  a
+    display: inline-block
+    height: 100%
+    border: none
+    text-decoration: none
+    max-width: 100%
+  img
     display: inline-block
     vertical-align: middle
     max-height: 100%
@@ -1045,8 +1132,10 @@ textarea.input
 
 .customer__link
   display: inline-block
-  +f(u, 11, 180)
-  text-transform: uppercase
+  +f(l, 12)
+  &:not(:hover)
+    color: $color-grey
+    border-color: rgba($color-grey, 0.3)
 
 .icon-link
   display: inline-block
@@ -1115,10 +1204,13 @@ textarea.input
 
 .footer
   padding: 15px 15px 20px
-  color: $color-blue
+  color: $color-grey
   +f(l, 12)
   line-height: 1.5
-  // border-top: 1px solid rgba($color-blue, 0.3)
+  a
+    &:not(:hover)
+      color: inherit
+      border-color: rgba($color-grey, 0.3)
   +clr
   +xs
     text-align: center
@@ -1182,20 +1274,15 @@ textarea.input
   position: relative
   left: -45px
   > img,
-  .art-lebedev-logo
+  .logo-als
     float: left
     margin: 4px 12px 0 0
   +xs
     > img,
-    .art-lebedev-logo
+    .logo-als
       float: none
       display: block
       margin: 0 auto 10px
-
-.art-lebedev-logo
-  width: 90px
-  height: 37px
-  background: img-url('art-lebedev.png') no-repeat center
 
 %dot
   position: absolute
@@ -1259,3 +1346,52 @@ textarea.input
   &.animate
     opacity: 1
     transform: translateY(0)
+
+@keyframes CLD1
+  0%, 100%
+    transform: rotate(25deg) translateX(0)
+  50%
+    transform: rotate(35deg) translateX(-10px)
+
+@keyframes CLD2
+  0%, 100%
+    transform: rotate(-15deg) translateX(0px)
+  50%
+    transform: rotate(3deg) translateX(10px)
+
+@keyframes CLD3
+  0%, 100%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(-15deg)
+
+@keyframes CLD4
+  0%, 100%
+    transform: rotate(-30deg) translateX(0px)
+  50%
+    transform: rotate(-45deg) translateX(15px)
+
+@keyframes CLD5
+  0%, 100%
+    transform: rotate(0deg) translateX(0)
+  50%
+    transform: rotate(12deg) translateX(10px)
+
+@keyframes CLD6
+  0%, 100%
+    transform: rotate(115deg)
+  50%
+    transform: rotate(130deg)
+
+@keyframes CLD7
+  0%, 100%
+    transform: rotate(-5deg) translateX(0)
+  50%
+    transform: rotate(-30deg) translateX(-5px)
+
+@keyframes CLD8
+  0%, 100%
+    transform: rotate(40deg)
+  50%
+    transform: rotate(25deg)
+

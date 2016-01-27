@@ -1,12 +1,12 @@
 {
   "navigation": [
-    {"name": "Overview", "href": "#overview"},
-    {"name": "Free trial", "href": "#trial"},
-    {"name": "Clients", "href": "#clients"},
-    {"name": "Support", "href": "#support"},
-    {"name": "About us", "href": "#about"},
-    {"name": "Documentation", "href": "#"},
-    {"name": "My account", "href": "#"}
+    {"name": "Overview", "href": "#overview", "external": false},
+    {"name": "Free trial", "href": "#trial", "external": false},
+    {"name": "Clients", "href": "#clients", "external": false},
+    {"name": "Support", "href": "#support", "external": false},
+    {"name": "About us", "href": "#about", "external": false},
+    {"name": "Documentation", "href": "#", "external": true},
+    {"name": "My account", "href": "#", "external": true}
   ],
   "customers": [
     {

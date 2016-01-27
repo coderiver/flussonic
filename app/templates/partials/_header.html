@@ -8,7 +8,9 @@
       <nav class="nav">
         <ul class="nav__list">
           {% for link in navigation %}
-          <li class="nav__item"><a href="{{link.href}}" class="nav__link link">{{link.name}}</a></li>
+          <li class="nav__item">
+            <a href="{{link.href}}" class="nav__link link{% if link.external %} link_solid-line{% endif %}">{{link.name}}</a>
+          </li>
           {% endfor %}
         </ul>
       </nav>

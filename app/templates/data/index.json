@@ -16,21 +16,15 @@
       "link": "Case study"
     },
     {
-      "name": "Gazprom",
-      "img": "gazprom.jpg",
-      "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
-      "link": ""
-    },
-    {
-      "name": "Ufa Net",
-      "img": "ufanet.jpg",
-      "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
-      "link": ""
-    },
-    {
       "name": "Kiev Boryspil",
       "img": "kyiv-boryspil.jpg",
       "text": "The company currently manages its media library and streaming live events, offering a reliable and always available experience",
+      "link": ""
+    },
+    {
+      "name": "Gazprom",
+      "img": "gazprom.jpg",
+      "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
       "link": ""
     },
     {
@@ -38,6 +32,12 @@
       "img": "pskov-line-tv.jpg",
       "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
       "link": "Case study"
+    },
+    {
+      "name": "Ufa Net",
+      "img": "ufanet.jpg",
+      "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
+      "link": ""
     },
     {
       "name": "Sibirian Networks",

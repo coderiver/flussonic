@@ -247,7 +247,7 @@ a:not([class])
   text-decoration: none
   text-transform: uppercase
   line-height: 1
-  +md
+  +lg
     position: relative
     top: auto
     right: auto
@@ -293,7 +293,7 @@ a:not([class])
 .hero-figure
   position: absolute
   z-index: -1
-  top: -40px
+  top: -30px
   right: 0
   visibility: hidden
   opacity: 0
@@ -316,11 +316,12 @@ a:not([class])
     // > svg
     //   width: 75rem
     //   height: 55rem
-    +r(900)
-      right: -10px
   &.is-active
     visibility: visible
     opacity: 1
+  +md
+    top: -20px
+    right: -30px
 
 .hero-figure__text
   position: absolute
@@ -388,6 +389,18 @@ a:not([class])
     .title
       margin-bottom: 20px
 
+.section-questions
+  line-height: 1.6
+  +sm
+    .row
+      margin: 0
+    .col
+      float: none
+      width: auto
+      padding: 0
+      &:not(:first-child)
+        margin-top: 30px
+
 .section-request
   margin-top: 100px
   margin-top: 10rem
@@ -405,6 +418,7 @@ a:not([class])
       margin-top: 20px
 
 .section-contacts
+  position: relative
   margin-top: 65px
   margin-top: 6.5rem
   background: #002FC7
@@ -417,13 +431,44 @@ a:not([class])
     font-size: 35px
     font-size: 3.5rem
     fill: white
+  .svg-map-marker-o
+    fill: white
+    font-size: 1.2em
+    position: relative
+    top: 3px
   .title
     margin-bottom: 16px
   .social-media
-    float: right
+    position: absolute
     margin-top: 5px
+    top: 50%
+    transform: translateY(-50%)
+    left: 20px
+  .social-link
+    display: block
+    text-align: center
+    margin: 0 auto 32px
+    &:last-child
+      margin-bottom: 0
+  +lg
+    .social-media
+      position: static
+      margin: 20px 0 0
+      transform: none
+    .social-link
+      display: inline-block
+      margin: 0 20px 0 0
   +sm
     padding: 40px 0
+    .row
+      margin-left: 0
+      margin-right: 0
+    .col
+      float: none
+      width: auto
+      padding: 0
+      &:not(:first-child)
+        margin-top: 30px
     .section-contacts__cell
       float: none
       width: auto
@@ -594,6 +639,8 @@ a:not([class])
   right: 50%
   top: 73px
   margin-right: percentage(218/1200)
+  +md
+    margin-right: 200px
 
 .motion
   top: 246px
@@ -640,6 +687,8 @@ a:not([class])
     animation: spinback 3.5s linear infinite
     &:before
       transform: scale(-0.34, 0.34)
+  +md
+    margin-left: 180px
 
 @keyframes spin
   to
@@ -667,6 +716,8 @@ a:not([class])
   &.animate
     &:before
       transform: translate(0, 0)
+  +md
+    margin-right: 150px
 
 
 .mobile-app
@@ -690,11 +741,12 @@ a:not([class])
       svg path
         stroke-dashoffset: 0
         transition-delay: 0.5s
+  +md
+    margin-left: 140px
 
 .clouds
   top: 60px
   right: 50%
-  // margin-right: percentage(230/1200)
   margin-right: percentage(140/1200)
   width: 500px
   height: 300px
@@ -774,6 +826,8 @@ a:not([class])
     left: 80px
     // transform: scale(0.7)
     background-size: 70%
+  +md
+    margin-right: 140px
 
 @keyframes cloud
   0%, 100%
@@ -801,6 +855,8 @@ a:not([class])
     top: 50%
     left: 50%
     margin: -47px 0 0 -44px
+  +md
+    margin-right: 200px
 
 .hdd
   top: 495px
@@ -819,6 +875,8 @@ a:not([class])
     height: 100%
     background: img-url('hdd-lights.png') no-repeat center
     animation: blink 2s ease-in-out infinite
+  +md
+    margin-left: 196px
 
 @keyframes blink
   0%, 100%
@@ -852,6 +910,8 @@ a:not([class])
   &.animate
     .lego__brick-upper
       transform: translateY(0)
+  +md
+    margin-left: 200px
 
 .form
   .btn
@@ -935,7 +995,12 @@ textarea.input
 .customers
   +sm
     .customers__list
+      column-count: 2
+  +xs
+    .customers__list
       margin: 0
+      column-count: initial
+      column-gap: initial
     .customers__list-item
       display: block
       width: auto
@@ -944,17 +1009,18 @@ textarea.input
 
 .customers__list
   font-size: 0
-  margin: 0 -15px -40px
+  margin: 0 0 -50px
+  column-count: 3
+  column-gap: 60px
 
 .customers__list-item
   display: inline-block
   vertical-align: top
   font-size: 16px
   font-size: 1.6rem
-  width: 33.33%
+  width: 100%
   box-sizing: border-box
-  padding: 0 15px
-  margin-bottom: 40px
+  margin-bottom: 50px
 
 .customer
   +sm
@@ -1008,22 +1074,25 @@ textarea.input
   vertical-align: middle
   text-decoration: none
   margin-right: 20px
-  min-width: 36px
   text-align: center
-  +trans(opacity)
+  color: inherit
+  +trans
+  transition-property: color, opacity
   &:last-child
     margin-right: 0
   .svg-icon
     fill: currentColor
+    display: block
+    margin: auto
   .svg-facebook
-    font-size: 36px
-    font-size: 3.6rem
+    font-size: 34px
+    font-size: 3.4rem
   .svg-twitter
-    font-size: 30px
-    font-size: 3rem
+    font-size: 28px
+    font-size: 2.8rem
   .svg-youtube-play
-    font-size: 26px
-    font-size: 2.6rem
+    font-size: 24px
+    font-size: 2.4rem
   &:hover
     color: inherit
     opacity: 0.8
@@ -1049,7 +1118,7 @@ textarea.input
   color: $color-blue
   +f(l, 12)
   line-height: 1.5
-  border: 1px solid rgba($color-blue, 0.3)
+  // border-top: 1px solid rgba($color-blue, 0.3)
   +clr
   +xs
     text-align: center
@@ -1058,12 +1127,16 @@ textarea.input
       margin-top: 10px
     .footer__right
       float: none
+      width: auto
+    .site-maker
+      left: 0
 
 .footer__left
   float: left
 
 .footer__right
   float: right
+  width: 50%
 
 .partners
   padding: 29px 0 33px
@@ -1090,18 +1163,39 @@ textarea.input
   a
     border: none
 
+.partner-logo
+  display: inline-block
+  vertical-align: middle
+  opacity: 0.4
+  cursor: pointer
+  +trans()
+  margin: 10px 10px 0 0
+  > img
+    display: block
+  &:hover
+    opacity: 1
+
 
 .site-maker
   +clr
   min-width: 278px
-  > img
+  position: relative
+  left: -45px
+  > img,
+  .art-lebedev-logo
     float: left
     margin: 4px 12px 0 0
   +xs
-    > img
+    > img,
+    .art-lebedev-logo
       float: none
       display: block
       margin: 0 auto 10px
+
+.art-lebedev-logo
+  width: 90px
+  height: 37px
+  background: img-url('art-lebedev.png') no-repeat center
 
 %dot
   position: absolute

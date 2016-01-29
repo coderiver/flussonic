@@ -136,6 +136,9 @@ a:not([class])
       .nav
         opacity: 1
         visibility: visible
+  +sm
+    .hero-btn
+      font-size: 14px
 
 .header__inner
   position: relative
@@ -300,7 +303,6 @@ a:not([class])
   visibility: hidden
   opacity: 0
   width: 420px
-  // > svg:not(.drawsvg-animating)
   > svg
     width: 100%
     .dashed-line
@@ -309,17 +311,11 @@ a:not([class])
   &-iptv
     .hero-figure__text
       width: 330px
-    // > svg
-    //   width: 75rem
-    //   height: 58rem
   &-ipcam
     top: -24px
     right: 40px
     .hero-figure__text
       width: 380px
-    // > svg
-    //   width: 75rem
-    //   height: 55rem
   &.is-active
     visibility: visible
     opacity: 1
@@ -382,6 +378,8 @@ a:not([class])
   line-height: 1.1
   &_bold
     +f(l)
+  +md
+    font-size: 45px
   +sm
     font-size: 34px
     font-size: 3.4rem

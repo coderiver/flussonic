@@ -282,7 +282,7 @@ function scrollTo(target, duration = 1000, shift = 100) {
 }
 
 function activateScrollToAnchor() {
-    $('.nav__link').on('click', function(e) {
+    $('a').filter('[href^="#"]').on('click', function(e) {
         let name = this.hash.slice(1);
         let $target = name.length ? $(`a[name='${name}']`) : null;
         e.preventDefault();

@@ -341,45 +341,45 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
 
-.clouds__cloud:nth-child(1) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
 .clouds__cloud:nth-child(2) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
 .clouds__cloud:nth-child(19) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -714,6 +714,7 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
 @media only screen and (max-width: 1023px) {
  .lang { right: 0; }
  .hero-figure { top: -20px; right: -30px; }
+ .title { font-size: 45px; }
  .onvif { margin-right: 200px; }
  .motion { margin-left: 180px; }
  .web-access { margin-right: 150px; }
@@ -733,6 +734,7 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
  .header .nav__link { line-height: 2; }
  .header.is-show-menu .logo { z-index: 5; }
  .header.is-show-menu .nav { opacity: 1; visibility: visible; }
+ .header .hero-btn { font-size: 14px; }
  .menu-button { display: block; }
  .toparea { padding-top: 100px; padding-bottom: 40px; }
  .hero { padding-right: 0; }

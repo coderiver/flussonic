@@ -273,6 +273,7 @@ a:not([class])
 .toparea
   padding-top: 130px
   padding-bottom: 95px
+  overflow: hidden
   +sm
     padding-top: 100px
     padding-bottom: 40px
@@ -282,7 +283,6 @@ a:not([class])
   +f(el, 16)
   line-height: 1.526
   padding: 0 45% 0 0
-  position: relative
   p
     margin: 1em 0
   .btn
@@ -299,8 +299,10 @@ a:not([class])
   right: 0
   visibility: hidden
   opacity: 0
+  width: 420px
   // > svg:not(.drawsvg-animating)
   > svg
+    width: 100%
     .dashed-line
       stroke-dasharray: 3px !important
       transition: stroke-dasharray 0.5s linear
@@ -335,6 +337,11 @@ a:not([class])
 
 .hero-links
   margin: 23px 0
+
+.hero-text
+  display: none
+  &.is-active
+    display: block
 
 .hero-btn
   display: inline-block
@@ -562,6 +569,7 @@ a:not([class])
   width: 100%
   height: 100%
   z-index: 0
+  transform: translate(0.5px, 0.5px)
   pointer-events: none
   transition: opacity 0.5s ease
   +sm
@@ -1420,3 +1428,7 @@ textarea.input
     transform: rotate(40deg)
   50%
     transform: rotate(25deg)
+
+.safari
+  #lightning-shape path
+    filter: none

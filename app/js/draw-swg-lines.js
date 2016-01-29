@@ -55,7 +55,7 @@ function getIpCamPoints() {
 
     return [
         {
-            x: $figureIpCam.offset().left + 321,
+            x: $figureIpCam.offset().left,
             y: containerOffset.top
         },
         {
@@ -103,7 +103,7 @@ function getIpTvPoints() {
 
     return [
         {
-            x: $figureIpTv.offset().left + 321,
+            x: $figureIpTv.offset().left,
             y: containerOffset.top
         },
         {

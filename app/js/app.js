@@ -11,7 +11,7 @@ import './draw-svg';
 import svg4everybody from 'svg4everybody';
 
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-console.log(isSafari);
+
 const scrollController = new ScrollMagic.Controller({
     container: 'body',
     loglevel: 2
@@ -36,14 +36,18 @@ $.extend($.easing, {
     }
 });
 
-// morhOnvif();
-// morphLightning();
+if (isSafari) {
+    $('html').addClass('safari');
+}
+
+morhOnvif();
+morphLightning();
 initTextareaAutoresize();
 buildHeaderScrollScene();
 buildContentFadeScenes();
 buildCommonScrollScenes();
 setTimeout(setFeaturesHeight, 200);
-// initMap('#map');
+initMap('#map');
 svg4everybody();
 drawHeroSvg('.hero-figure.is-active svg', 300);
 activateScrollToAnchor();
@@ -79,14 +83,16 @@ function toggleSection(e) {
 
     if (targetBtn.hasClass('is-active')) return;
 
-
-    const sectionName  = targetBtn.data('section');
-    const targetFigure = $(`.hero-figure-${sectionName}`);
+    const sectionName    = targetBtn.data('section');
+    const targetFigure   = $(`.hero-figure-${sectionName}`);
     const targetFeatures = $(`.features-${sectionName}`);
+    const targetHeroText = $(`.hero-text-${sectionName}`);
 
     dispatcher.trigger(actions.BEGIN_CHANGE_SECTION, sectionName);
 
-    $('.hero-btn.is-active, .hero-figure.is-active, .features.is-active').removeClass('is-active');
+    $('.hero-btn, .hero-figure, .features, .hero-text')
+        .filter('.is-active')
+        .removeClass('is-active');
 
     targetFeatures.parent().addClass('is-changing');
 
@@ -94,6 +100,7 @@ function toggleSection(e) {
         .add(`.hero-btn[data-section='${sectionName}']`)
         .add(targetFigure)
         .add(targetFeatures)
+        .add(targetHeroText)
         .addClass('is-active');
 
     setFeaturesHeight(targetFeatures);

@@ -29,19 +29,19 @@
     },
     {
       "name": "Pskov Line TV",
-      "img": "pskov-line-tv.jpg",
+      "img": "pskovlinetv.png",
       "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
       "link": "Case study"
     },
     {
       "name": "Ufa Net",
-      "img": "ufanet.jpg",
+      "img": "ufanet.png",
       "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
       "link": ""
     },
     {
       "name": "Sibirian Networks",
-      "img": "sibirian-networks.jpg",
+      "img": "siberian.png",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
       "link": ""
     }

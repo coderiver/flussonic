@@ -1,5 +1,7 @@
 .l
   padding: 0 percentage(70/1200) 0 percentage(245/1200)
+  +r(1400)
+    padding-left: percentage(170/1200)
   +lg
     padding-left: 40px
     padding-right: 40px
@@ -17,7 +19,13 @@
   padding: 0 30px
   width: 100%
 
-$col-sizes: 80, 75, 66, 60, 50, 33, 25, 20
+$col-sizes: 80, 75, 60, 50, 25, 20
 @each $size in $col-sizes
   .col-#{$size}
     width: #{$size}%
+
+.col-66
+  width: 66.66%
+
+.col-33
+  width: 33.33%

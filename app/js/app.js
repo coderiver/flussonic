@@ -10,6 +10,8 @@ window.$ = window.jQuery = $;
 import './draw-svg';
 import svg4everybody from 'svg4everybody';
 
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+console.log(isSafari);
 const scrollController = new ScrollMagic.Controller({
     container: 'body',
     loglevel: 2
@@ -34,14 +36,14 @@ $.extend($.easing, {
     }
 });
 
-morhOnvif();
-morphLightning();
+// morhOnvif();
+// morphLightning();
 initTextareaAutoresize();
 buildHeaderScrollScene();
 buildContentFadeScenes();
 buildCommonScrollScenes();
 setTimeout(setFeaturesHeight, 200);
-initMap('#map');
+// initMap('#map');
 svg4everybody();
 drawHeroSvg('.hero-figure.is-active svg', 300);
 activateScrollToAnchor();
@@ -168,6 +170,10 @@ function initTextareaAutoresize() {
     let el = $('textarea').filter('[data-autoresize]');
     if (el.length) {
         autosize(el);
+
+        $(window).on('resize', () => {
+            autosize.update(el);
+        });
     }
 }
 

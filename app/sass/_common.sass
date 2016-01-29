@@ -241,12 +241,14 @@ a:not([class])
   top: 50%
   margin-top: -0.55em
   right: 100%
-  margin-right: 75px
+  margin-right: percentage(75/1200)
   color: black
   +f(b, 16, 100)
   text-decoration: none
   text-transform: uppercase
   line-height: 1
+  +r(1400)
+    margin-right: percentage(45/1200)
   +lg
     position: relative
     top: auto
@@ -447,7 +449,7 @@ a:not([class])
   .social-link
     display: block
     text-align: center
-    margin: 0 auto 32px
+    margin: 0 auto 37px
     &:last-child
       margin-bottom: 0
   +lg
@@ -457,7 +459,7 @@ a:not([class])
       transform: none
     .social-link
       display: inline-block
-      margin: 0 20px 0 0
+      margin: 0 30px 0 0
   +sm
     padding: 40px 0
     .row
@@ -584,10 +586,8 @@ a:not([class])
   &-ipcam
     overflow: hidden
     min-height: 950px
-    min-height: 95rem
   &-iptv
     min-height: 980px
-    min-height: 98rem
   &.is-active
     visibility: visible
     opacity: 1
@@ -632,6 +632,16 @@ a:not([class])
 .feature-pic
   position: absolute
   z-index: 1
+  +rmin(1650)
+    margin-top: 1rem
+  +rmin(1700)
+    margin-top: 2rem
+  +rmin(1800)
+    margin-top: 4.5rem
+    .features-iptv &
+      margin-top: 6rem
+  +rmin(1950)
+    margin-top: 6rem
   +sm
     display: none
 
@@ -938,6 +948,8 @@ a:not([class])
     margin: -47px 0 0 -44px
   +md
     margin-right: 200px
+  +rmin(1800)
+    margin-right: percentage(240/1200)
 
 .hdd
   top: 495px
@@ -968,7 +980,7 @@ a:not([class])
   &__brick-upper
     position: absolute
     z-index: 1
-    top: -90px
+    top: -92px
     left: 65px
     +image(267,202,lego-blue)
     transform: translateY(-100px)
@@ -991,19 +1003,28 @@ a:not([class])
       margin-top: 20px
 
 .field
+  position: relative
   margin: 20px 0
   &:first-child
     margin-top: 0
   &:last-child
     margin-bottom: 0
 
+.field__label
+  position: absolute
+  top: em(11,16)
+  left: 0
+  +f(l, 16, 150)
+  text-transform: uppercase
+  color: #9D9CA7
+
 .input
   display: block
   box-sizing: border-box
   height: 40px
   height: 4rem
-  padding: 10px 0 9px
-  padding: 1rem 0 0.9rem
+  padding: 10px 0 9px 120px
+  padding: 1rem 0 0.9rem 12rem
   width: 100%
   appearance: none
   background: none
@@ -1020,7 +1041,10 @@ a:not([class])
 
 textarea.input
   max-height: 200px
-  line-height: 20px
+  line-height: 1.3
+  padding-top: 0.7rem
+  padding-bottom: 0.6rem
+  +smooth-scroll
 
 
 .news
@@ -1053,6 +1077,7 @@ textarea.input
 
 .message
   display: block
+  margin-top: 35px
   padding: 10px
   padding: 1rem
   box-sizing: border-box
@@ -1174,14 +1199,14 @@ textarea.input
     display: block
     margin: auto
   .svg-facebook
-    font-size: 34px
-    font-size: 3.4rem
+    font-size: 32px
+    font-size: 3.2rem
   .svg-twitter
-    font-size: 28px
-    font-size: 2.8rem
-  .svg-youtube-play
     font-size: 24px
     font-size: 2.4rem
+  .svg-youtube-play
+    font-size: 20px
+    font-size: 2rem
   &:hover
     color: inherit
     opacity: 0.8
@@ -1259,7 +1284,7 @@ textarea.input
 .partner-logo
   display: inline-block
   vertical-align: middle
-  opacity: 0.4
+  opacity: 0.6
   cursor: pointer
   +trans()
   margin: 10px 10px 0 0
@@ -1395,4 +1420,3 @@ textarea.input
     transform: rotate(40deg)
   50%
     transform: rotate(25deg)
-

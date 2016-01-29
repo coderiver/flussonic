@@ -17,8 +17,10 @@ const $figureIpCam       = $('.hero-figure-ipcam');
 
 let currentState = 'ipcam'; // ipcam or iptv;
 
-const svgTag = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-const pathTag = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+const ns = 'http://www.w3.org/2000/svg';
+
+const svgTag = document.createElementNS(ns, 'svg');
+const pathTag = document.createElementNS(ns, 'path');
 
 const svg = $(svgTag);
 const path = $(pathTag);

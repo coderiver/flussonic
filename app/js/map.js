@@ -1,10 +1,10 @@
 var map, pointsOnMap, mapStyle = require('./map-style.json');
 
 pointsOnMap = [
-    [55.754658, 37.790919, 1, {
-        'head'    : 'Учебный центр «QAStartUP»',
-        'address' : 'Адрес: Вадима Гетьмана, 1-Б',
-        'tel'     : 'Телефон: (096) 255-45-49, (093) 615-30-90'
+    [55.977731, 37.171968, 1, {
+        'head'    : 'офис Эрливидео',
+        'address' : 'Адрес: Россия, Москва, Зеленоград, 1 Мая, д.1, офис 6',
+        'tel'     : 'Телефон: +7 (499) 499-34-04'
     }],
 ];
 
@@ -65,7 +65,7 @@ function initMap(el) {
         zoom: 14,
         disableDefaultUI: false,
         scrollwheel: false,
-        center: new google.maps.LatLng(55.754658, 37.790919),
+        center: new google.maps.LatLng(55.977731, 37.171968),
         styles: mapStyle
     };
 

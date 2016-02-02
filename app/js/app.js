@@ -89,6 +89,8 @@ function toggleSection(e) {
     const targetHeroText = $(`.hero-text-${sectionName}`);
 
     dispatcher.trigger(actions.BEGIN_CHANGE_SECTION, sectionName);
+    $("head #favicon1").attr('href', 'img/favicon-'+sectionName+'.png');
+    $("#project_type").val(sectionName == "iptv" ? "iptv" : sectionName == "ipcam" ? "vsaas" : "broadcasting");
 
     $('.hero-btn, .hero-figure, .features, .hero-text')
         .filter('.is-active')
@@ -292,3 +294,40 @@ function activateScrollToAnchor() {
         }
     });
 }
+
+
+$(function() {
+    $("#create_trial_form").submit(function(e) {
+        e.preventDefault();
+        $("#error_message").css({opacity: 0, display: "none"}).html("");
+
+        var name = $(this).find("#name").val();
+        var email = $(this).find("#email").val();
+        if(email) {
+            email = email.toLowerCase().replace(" ","");
+            $(this).find("#email").val(email);
+        }
+        var comment = $(this).find("#comment").val();
+
+        if(!name || name.length < 1) {
+            $("#error_message").html("Enter your name please").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);
+            return false;
+        }
+
+        if(!email || email.length < 1 || email.indexOf("@") == -1) {
+            $("#error_message").html("We need your correct email to give you a key").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);
+            return false;
+        }
+
+        if(!comment || comment.length < 1) {
+            $("#error_message").html("Give a brief project description, please").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);
+            return false;
+        }
+
+        console.log($(this).serialize());
+        $("#success_message").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);
+        return false;
+    });
+});
+
+

@@ -6,10 +6,14 @@
     {% for customer in customers %}
       <li class="customers__list-item customer">
         <div class="customer__pic">
-          <a href="#"><img src="img/customers/{{customer.img}}"></a>
+          {% if customer.href %}
+          <a href="{{customer.href}}"><img src="img/customers/{{customer.img}}"></a>
+          {% else %}
+          <img src="img/customers/{{customer.img}}">
+          {% endif %}
         </div>
         <p class="customer__text text">{{customer.text}}</p>
-        {% if customer.link %}<a class="customer__link lnk" href="#">{{customer.link}}</a>{% endif %}
+        {% if customer.href %}<a class="customer__link lnk" href="{{customer.href}}">{{customer.link}}</a>{% endif %}
       </li>
     {% endfor %}
   </ul>

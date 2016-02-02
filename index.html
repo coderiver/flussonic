@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Main page</title>
+    <title>Flussonic streaming server</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
@@ -763,21 +763,24 @@
           <h2 class="title">Request a free trial</h2>
           <div class="row">
             <div class="col col-50">
-              <form class="form" novalidate>
+              <form class="form" id="create_trial_form" method="post" action="https://talks.erlyvideo.ru/create_trial" novalidate>
+                <input name="utf8" type="hidden" value="&#x2713;" />
+                <input name="project_type" id="project_type" type="hidden" value="vsaas" />
                 <div class="field">
                   <label for="name" class="field__label">Your name:</label>
-                  <input class="input" type="text" id="name">
+                  <input class="input" type="text" name="name" id="name">
                 </div>
                 <div class="field">
                   <label for="email" class="field__label">E-mail:</label>
-                  <input class="input" type="email" id="email">
+                  <input class="input" type="email" name="email" id="email">
                 </div>
                 <div class="field">
                   <label for="comment" class="field__label">Comment:</label>
-                  <textarea class="input" rows="1" id="comment" data-autoresize></textarea>
+                  <textarea class="input" rows="1" name="comment" id="comment" data-autoresize></textarea>
                 </div>
                 <button class="btn btn_solid btn_fluid" type="submit">Get a trial key</button>
-                <div class="message">Your request has been sent. Thank you!</div>
+                <div id="success_message" style="display: none" class="message">Your request has been sent. Thank you!</div>
+                <div id="error_message" style="display: none" class="message message_error"></div>
               </form>
             </div>
 

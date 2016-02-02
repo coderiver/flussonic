@@ -48,5 +48,26 @@
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
       "link": ""
     }
-  ]
+  ],
+  "posts": [
+    {
+      "first" : true,
+      "href" : "/post/2015-11-15-alloverip",
+      "title": "Erlyvideo at «All Over IP Moscow»",
+      "date" : "15.11.2015",
+      "teaser" : "We look forward to seeing you at Sokolniki Exhibition and Convention Centre on November 18th."
+    },
+    {
+      "href": "/post/2015-05-30-watcher",
+      "title": "Flussonic Watcher",
+      "date": "30.05.2015",
+      "teaser": "iOS compatibility for Watcher"
+    },
+    {
+      "href": "/post/2015-05-12-version-4-5",
+      "title": "Flussonic 4.5",
+      "date": "12.05.2015",
+      "teaser": "Recent update with Verimatrix support, read more in our documentation"
+    }
+  ]  
 }

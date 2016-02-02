@@ -89,7 +89,7 @@ function toggleSection(e) {
     const targetHeroText = $(`.hero-text-${sectionName}`);
 
     dispatcher.trigger(actions.BEGIN_CHANGE_SECTION, sectionName);
-    $("head #favicon1").attr('href', 'img/icons/'+sectionName+'.png');
+    $("head #favicon1").attr('href', 'img/favicon-'+sectionName+'.png');
     $("#project_type").val(sectionName == "iptv" ? "iptv" : sectionName == "ipcam" ? "vsaas" : "broadcasting");
 
     $('.hero-btn, .hero-figure, .features, .hero-text')

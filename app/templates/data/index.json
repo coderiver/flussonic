@@ -5,15 +5,16 @@
     {"name": "Clients", "href": "#clients", "external": false},
     {"name": "Support", "href": "#support", "external": false},
     {"name": "About us", "href": "#about", "external": false},
-    {"name": "Documentation", "href": "#", "external": true},
-    {"name": "My account", "href": "#", "external": true}
+    {"name": "Documentation", "href": "/doc", "external": true},
+    {"name": "My account", "href": "https://manage.erlyvideo.org/", "external": true}
   ],
   "customers": [
     {
       "name": "Lukoil",
       "img": "lukoil.gif",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
-      "link": "Case study"
+      "link": "Case study",
+      "href": "/clients/lukoil"
     },
     {
       "name": "Kiev Boryspil",
@@ -25,7 +26,8 @@
       "name": "Gazprom",
       "img": "gazprom.png",
       "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
-      "link": ""
+      "href": "/clients/gazprom",
+      "link": "Case study"
     },
     {
       "name": "Pskov Line TV",
@@ -37,7 +39,8 @@
       "name": "Ufa Net",
       "img": "ufanet.png",
       "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
-      "link": ""
+      "href": "/clients/ufanet",
+      "link": "Case study"
     },
     {
       "name": "Sibirian Networks",

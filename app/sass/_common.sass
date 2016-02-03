@@ -614,6 +614,11 @@ a:not([class])
   box-sizing: content-box
   position: relative
   z-index: 1
+  > .title
+    white-space: nowrap
+  +sm
+    > .title
+      white-space: initial
 
 .feature
   margin-top: 60px

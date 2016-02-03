@@ -2,12 +2,12 @@
 <section class="section section-contacts fade-in">
   <a name="about" data-shift="130"></a>
   <div class="l">
-    <h2 class="title">Who we are</h2>
+    <h2 class="title">{{contacts.whoweare}}</h2>
     <div class="row">
       <div class="col col-66">
         <div class="section-contacts__left text">
-          <p>Erlyvideo, a company located in Moscow and developing video streaming software since 2010</p>
-          <p>{{mixins.svgIcon('map-marker-o')}} 124575, Russia, Moscow, Zelenograd, 1 maya 1, of. 6</p>
+          <p>{{contacts.description}}</p>
+          <p>{{mixins.svgIcon('map-marker-o')}} {{contacts.address}}</p>
         </div>
         <div class="social-media">
           <a href="https://facebook.com/flussonic" class="social-link" title="Facebook">
@@ -20,7 +20,7 @@
       </div>
 
       <div class="col col-33">
-        <p>Our partners</p>
+        <p>{{contacts.partners}}</p>
         <p>
           <a href="/partners/iptvportal" class="partner-logo logo-iptvportal"></a>
           <a href="/partners/yisp" class="partner-logo logo-yisp"></a>

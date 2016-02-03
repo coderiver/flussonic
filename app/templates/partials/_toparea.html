@@ -2,39 +2,32 @@
 <section class="toparea l fade-in slide-up">
 
   <div class="hero">
-    <h1 class="title hero-text hero-text-ipcam is-active">Flussonic in<br> video surveillance</h1>
+    <h1 class="title hero-text hero-text-ipcam is-active">{{toparea.ipcams|safe}}</h1>
 
-    <h2 class="title hero-text hero-text-iptv">Flussonic for<br> IPTV</h2>
+    <h2 class="title hero-text hero-text-iptv">{{toparea.iptv|safe}}</h2>
 
     {% include "_hero-links.html" %}
 
-    <p class="hero-text hero-text-ipcam is-active">
-      Flussonic works with almost all H264/H265 cameras, record video,
-      capture motion events, provide multi user access via browser and mobile apps
+    <p class="hero-text hero-text-ipcam is-active">{{toparea.ipcams_info}}
     </p>
 
     <p class="hero-text hero-text-iptv">
-      Flussonic can take video from headends, transcode it,
-      record for catchup and timeshift and playout on hundreds
-      of different devices ingesting advert directly into stream.
+      {{toparea.iptv_info}}
     </p>
 
-    <a href="#trial" class="btn">Try it for free</a>
+    <a href="#trial" class="btn">{{toparea.trial}}</a>
 
     <div class="hero-figure hero-figure-ipcam is-active">
       {% include "../../img/svg/ipcam.svg" %}
       <p class="hero-figure__text">
-        Supported protocols
-        <br>RTSP  RTMP  HLS
-        <br>MPEG-TS
+        {{toparea.ipcams_info2|safe}}
       </p>
     </div>
 
     <div class="hero-figure hero-figure-iptv">
       {% include "../../img/svg/iptv.svg" %}
       <p class="hero-figure__text">
-        Getting the stream through
-        <br>a satellite receiver or a PC
+        {{toparea.iptv_info2|safe}}
       </p>
     </div>
   </div>

@@ -1,43 +1,40 @@
 <!-- BEGIN request -->
 <section class="section section-request fade-in slide-up">
   <a name="trial"></a>
-  <h2 class="title">Request a free trial</h2>
+  <h2 class="title">{{trial.request}}</h2>
   <div class="row">
     <div class="col col-50">
       <form class="form" id="create_trial_form" method="post" action="https://talks.erlyvideo.ru/create_trial" novalidate>
         <input name="utf8" type="hidden" value="&#x2713;" />
         <input name="project_type" id="project_type" type="hidden" value="vsaas" />
         <div class="field">
-          <label for="name" class="field__label">Your name:</label>
+          <label for="name" class="field__label">{{trial.name}}:</label>
           <input class="input" type="text" name="name" id="name">
         </div>
         <div class="field">
-          <label for="email" class="field__label">E-mail:</label>
+          <label for="email" class="field__label">{{trial.email}}:</label>
           <input class="input" type="email" name="email" id="email">
         </div>
         <div class="field">
-          <label for="comment" class="field__label">Comment:</label>
+          <label for="comment" class="field__label">{{trial.comment}}:</label>
           <textarea class="input" rows="1" name="comment" id="comment" data-autoresize></textarea>
         </div>
-        <button class="btn btn_solid btn_fluid" type="submit">Get a trial key</button>
-        <div id="success_message" style="display: none" class="message">Your request has been sent. Thank you!</div>
+        <button class="btn btn_solid btn_fluid" type="submit">{{trial.get}}</button>
+        <div id="success_message" style="display: none" class="message">{{trial.sent}}</div>
         <div id="error_message" style="display: none" class="message message_error"></div>
       </form>
     </div>
 
     <div class="col col-50">
       <div class="request__text text">
+        <p>{{trial.info1}}</p>
+        <p>{{trial.info2}}</p>
         <p>
-          Please fill this form to receive a trial key for
-          your copy of our software. We usually reply within two days.
-          You will get a fully functional 30-day trial.
+          {{trial.info3}} <a class="lnk lnk_black" href="https://manage.erlyvideo.org/">{{trial.signin}}</a> 
+          {{trial.info4}}
         </p>
         <p>
-          Subscription starts from $50 per month. Please <a class="lnk lnk_black" href="https://manage.erlyvideo.org/">sign in</a> to buy
-          a license if you have already tried Flussonic.
-        </p>
-        <p>
-          <a class="lnk lnk_black" href="/doc/installation">How to install Flussonic</a>
+          <a class="lnk lnk_black" href="/doc/installation">{{trial.install}}</a>
         </p>
       </div>
     </div>

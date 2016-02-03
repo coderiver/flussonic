@@ -38,6 +38,9 @@ module.exports = {
         lib: destPath + '/lib'
     },
 
+    locales: ['en', 'ru'],
+    defaultLocale: 'en',
+
     // misc
     errorHandler: require('./util/handle-errors')
 };

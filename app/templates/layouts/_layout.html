@@ -1,6 +1,6 @@
 {% import "_mixins.html" as mixins %}
 <!DOCTYPE html>
-<html>
+<html{% if LANG %} lang="{{LANG}}"{% endif %}>
   <head>
     {% include "_head.html" %}
     {# {% include "_media-tags.html" %} #}

@@ -1,0 +1,73 @@
+{
+  "navigation": [
+    {"name": "Обзор", "href": "#overview", "external": false},
+    {"name": "Триал", "href": "#trial", "external": false},
+    {"name": "Клиенты", "href": "#clients", "external": false},
+    {"name": "Поддержка", "href": "#support", "external": false},
+    {"name": "О нас", "href": "#about", "external": false},
+    {"name": "Документация", "href": "/doc", "external": true},
+    {"name": "Мой кабинет", "href": "https://manage.erlyvideo.org/", "external": true}
+  ],
+  "customers": [
+    {
+      "name": "Lukoil",
+      "img": "lukoil.gif",
+      "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
+      "link": "Case study",
+      "href": "/clients/lukoil"
+    },
+    {
+      "name": "Kiev Boryspil",
+      "img": "kyiv-boryspil.jpg",
+      "text": "The company currently manages its media library and streaming live events, offering a reliable and always available experience",
+      "link": ""
+    },
+    {
+      "name": "Gazprom",
+      "img": "gazprom.png",
+      "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
+      "href": "/clients/gazprom",
+      "link": "Case study"
+    },
+    {
+      "name": "Pskov Line TV",
+      "img": "pskovlinetv.png",
+      "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
+      "link": "Case study"
+    },
+    {
+      "name": "Ufa Net",
+      "img": "ufanet.png",
+      "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
+      "href": "/clients/ufanet",
+      "link": "Case study"
+    },
+    {
+      "name": "Sibirian Networks",
+      "img": "siberian.png",
+      "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
+      "link": ""
+    }
+  ],
+  "posts": [
+    {
+      "first" : true,
+      "href" : "/post/2015-11-15-alloverip",
+      "title": "Erlyvideo at «All Over IP Moscow»",
+      "date" : "15.11.2015",
+      "teaser" : "We look forward to seeing you at Sokolniki Exhibition and Convention Centre on November 18th."
+    },
+    {
+      "href": "/post/2015-05-30-watcher",
+      "title": "Flussonic Watcher",
+      "date": "30.05.2015",
+      "teaser": "iOS compatibility for Watcher"
+    },
+    {
+      "href": "/post/2015-05-12-version-4-5",
+      "title": "Flussonic 4.5",
+      "date": "12.05.2015",
+      "teaser": "Recent update with Verimatrix support, read more in our documentation"
+    }
+  ]
+}

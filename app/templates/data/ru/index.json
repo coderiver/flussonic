@@ -65,40 +65,40 @@
   },
   "customers": [
     {
-      "name": "Lukoil",
+      "name": "Лукойл",
       "img": "lukoil.gif",
-      "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
-      "link": "Case study",
+      "text": "Используют наш софт для просмотра с камер, находящихся на их объектах по всему миру.",
+      "link": "История",
       "href": "/clients/lukoil"
     },
     {
-      "name": "Kiev Boryspil",
+      "name": "Аэропорт Борисполь",
       "img": "kyiv-boryspil.jpg",
-      "text": "The company currently manages its media library and streaming live events, offering a reliable and always available experience",
+      "text": "Трансляция на сайте с камер видеонаблюдения",
       "link": ""
     },
     {
-      "name": "Gazprom",
+      "name": "Газпром",
       "img": "gazprom.png",
-      "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
+      "text": "Подразделение спутниковой связи передает видео с камер нашим ПО",
       "href": "/clients/gazprom",
       "link": "Case study"
     },
     {
-      "name": "Pskov Line TV",
+      "name": "Псковлайн ТВ",
       "img": "pskovlinetv.png",
-      "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
+      "text": "Предоставляют расширенный IPTV сервис своим клиентам",
       "link": "Case study"
     },
     {
-      "name": "Ufa Net",
+      "name": "Уфанет",
       "img": "ufanet.png",
-      "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
+      "text": "Одна из крупнейших инсталяций в серии безопасных городов в России: дорожные камеры со всей Уфы",
       "href": "/clients/ufanet",
       "link": "Case study"
     },
     {
-      "name": "Sibirian Networks",
+      "name": "Сибирские сети",
       "img": "siberian.png",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
       "link": ""

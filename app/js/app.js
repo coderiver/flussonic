@@ -40,10 +40,13 @@ if (isSafari) {
     $('html').addClass('safari');
 }
 
-morhOnvif();
-morphLightning();
+
+// morhOnvif();
+// morphLightning();
 initTextareaAutoresize();
-buildHeaderScrollScene();
+if (!$('.header_inner').length) {
+    buildHeaderScrollScene();
+}
 buildContentFadeScenes();
 buildCommonScrollScenes();
 setTimeout(setFeaturesHeight, 200);

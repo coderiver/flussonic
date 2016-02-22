@@ -343,45 +343,45 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
 
-.clouds__cloud:nth-child(1) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
 .clouds__cloud:nth-child(19) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -670,6 +670,26 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
 .logo-yisp { width: 82px; height: 30px; background: url("../img/partner-yisp.png") no-repeat center; background-size: contain; }
 
 .logo-als { width: 90px; height: 38px; background: url("../img/als-logo.png") no-repeat center; background-size: contain; }
+
+.header_inner { background: #001484; }
+
+.header_inner .logo { color: #fff; }
+
+.header_inner .nav__item:last-child { line-height: 1.5; }
+
+.header_inner .nav__item:last-child a { position: relative; top: 5px; border-bottom: none; }
+
+.header_inner .nav__item .link { color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+
+.header_inner .nav__item .link:hover { color: red; border-color: rgba(255, 0, 0, 0.3); }
+
+.header_inner .lang a { color: rgba(255, 255, 255, 0.3); text-decoration: underline; }
+
+.header_inner .lang a:hover { color: red; }
+
+.toparea_inner { background: #001484; color: #fff; }
+
+.toparea_inner .toparea__in { padding: 174px 0 138px 183px; }
 
 @media only screen and (min-width: 767px) {
  .news_important .news__title { font-size: 25px; font-size: 2.5rem; }

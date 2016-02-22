@@ -13,7 +13,8 @@ gulp.task('build', ['clean'],  function(cb) {
         'imagemin',
         'sass',
         'swig',
-        'browserify',
+        // 'browserify',
+        'webpack',
         'copy'
     );
     cb();
@@ -23,6 +24,7 @@ gulp.task('watch', [
     'swig:watch',
     'sprite:svg:watch',
     'imagemin:watch',
-    'browserify:watch',
+    // 'browserify:watch',
+    'webpack:watch',
     'sass:watch'
 ]);

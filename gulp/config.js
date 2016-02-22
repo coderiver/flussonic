@@ -6,6 +6,7 @@ var destPath = production ? 'dist' : '_tmp';
 module.exports = {
     // environment (by default development)
     production: production,
+    env: production ? 'production' : 'development',
 
     // paths
     src: {

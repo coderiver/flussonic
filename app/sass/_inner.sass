@@ -1,8 +1,18 @@
 // styles for inner pages
 .header_inner
-	background: $blue
+	background: transparent
+	+trans(background, box-shadow)
+	& > .l
+		+lg
+			padding: 0 20px 
+	&.scrolled
+		background: $blue
+		box-shadow: 0 0 10px 0 rgba(black, 0.3)
 	.logo
 		color: #fff
+	.nav
+		+lg
+			padding-top: 10px	
 	.nav__item
 		&:last-child
 			line-height: 1.5 
@@ -16,6 +26,18 @@
 			&:hover
 				color: red
 				border-color: rgba(red, 0.3)
+			+sm
+				color: #003CFF
+				border-color: rgba(0, 60, 255, 0.3)
+		a
+			svg
+				path
+					fill: #003CFF
+					transition: fill 200ms
+			&:hover
+				svg
+					path
+						fill: red	 	
 	.lang
 		a
 			color: rgba(#fff, 0.3)
@@ -23,8 +45,260 @@
 			&:hover
 				color: red
 .toparea_inner
+	background: $blue url(../img/features-cubes.svg) 110% 0 no-repeat
+	background-size: auto 120% 
+	color: #fff
+	+r(568)
+		min-height: 100vh
+		text-align: center
+		box-sizing: border-box
+		background-position: 50% 0 
+	.toparea__in
+		max-width: 640px
+		padding: 100px 0 
+		.title
+			font-size: 7rem
+			margin-bottom: 20px
+			+lg
+				font-size: 5rem
+		p
+			font-size: 1.6rem
+.about
+	.about__in
+		+lg
+			padding: 0 20px
+		+sm
+			padding: 0 	 
+	.about__list
+		font-size: 0
+		padding: 77px 0
+		+sm
+			padding: 40px 40px 0
+		+r(568)
+			padding: 40px 0 0 	 
+	.about__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		width: 50%
+		margin-bottom: 70px
+		font-size: 18px
+		&:hover
+			.star
+				opacity: 1
+		+r(568)
+			width: 100%
+			box-sizing: border-box
+			padding-left: 40px
+			margin-bottom: 40px 
+		ul
+			max-width: 360px
+			+sm
+				font-size: 1.6rem
+			li
+				position: relative
+				margin-bottom: 10px
+				&:before
+					content: ""
+					position: absolute
+					top: 10px
+					left: -20px
+					width: 3px
+					height: 3px
+					border-radius: 50%
+					background: #003cff
+	.star
+		position: absolute
+		top: 5px
+		left: -55px
+		opacity: 0
+		transition: opacity 200ms
+		+lg
+			top: 0
+		+sm
+			display: none	
+	.about__link
+		position: relative
+		max-width: 360px
+		margin-bottom: 30px
+		.lnk
+			font-size: 3.5rem
+			+lg
+				font-size: 2.5rem
+
+@keyframes pulse
+	0%
+		transform: scale(0.4)
+	50%
+		transform: scale(1.2)	
+	100%
+		transform: scale(0.4)
+@keyframes pulse-in
+	0%
+		transform: scale(0.4)
+	15%
+		transform: scale(1)	
+	50%
+		transform: scale(2)
+	85%
+		transform: scale(1)	
+	100%
+		transform: scale(0.4)			
+.star
+	position: relative
+	width: 40px
+	height: 40px
+	border-radius: 50%
+	.star__lines
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		border-radius: 50%
+		animation: pulse 1s infinite
+	.star__center
+		position: absolute
+		top: 12px
+		left: 12px
+		width: 16px
+		height: 16px
+		border-radius: 50%
+		background: #fff
+		animation: pulse-in 1s infinite
+		z-index: 2	
+	.star__lr
+		position: absolute
+		top: 19px
+		left: 0
+		width: 40px
+		transform: rotate(45deg)
+		transform-origin: 50% 50%
+		height: 2px
+		background: #003CFF
+	.star__rl
+		position: absolute
+		top: 19px
+		left: 0
+		width: 40px
+		transform: rotate(-45deg)
+		transform-origin: 50% 50%
+		height: 2px
+		background: #003CFF	 
+	.star__vertical
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 19px
+		width: 2px
+		background: #003CFF
+	.star__horizontal
+		position: absolute
+		left: 0
+		right: 0
+		top: 19px
+		height: 2px
+		background: #003CFF
+
+.offer
+	.title
+		margin-bottom: 45px
+		+sm
+			text-align: center
+			
+	.offer__list
+		+clr
+		+sm
+			padding: 0 20px 
+	.offer__item
+		position: relative
+		float: left
+		width: 50%
+		font-size: 18px
+		&:first-child
+			margin-left: -16%
+			margin-right: 16%
+			+lg
+				margin: 0
+			+sm
+				margin-bottom: 40px	
+		+sm
+			float: none
+			width: 100%
+			clear: both
+			margin-bottom: 40px 		 
+		a
+			display: inline-block
+			margin-bottom: 10px
+			font-size: 18px
+			font-weight: 300
+			color: #003cff	
+		p
+			color: #000
+		+r(568)
+			text-align: center
+			a
+				display: inline
+			p
+				padding-top: 10px	
+						   
+	.offer__icon
+		float: left
+		margin-right: 22px
+		.svg-cam, .svg-antenna
+			font-size: 8.4rem
+			fill: #000
+		+r(568)
+			float: none
+			display: block
+			margin-bottom: 20px
+.blue
 	background: $blue
 	color: #fff
-	.toparea__in
-		padding: 174px 0 138px 183px  						   
+.section-request
+	&.blue
+		padding: 120px 0
+		.input, textarea.input
+			border-color: #fff
+		+lg
+			padding: 100px 0
+		+sm
+			padding: 80px 0
+		+r(568)
+			padding: 60px 0 	  	
+.footer_inner
+	background: $blue
+	border-top: none
+	.l
+		+clr
+	.footer__left
+		+sm
+			float: none
+			width: 100%
+			text-align: center
+			margin-bottom: 20px 	
+	.footer__right
+		width: auto
+		float: left
+		margin-left: 125px
+		+sm
+			width: 100%
+			float: none
+			text-align: center
+			margin-left: 0  
+	.footer__nav
+		ul
+			font-size: 0
+			li
+				display: inline-block
+				vertical-align: middle
+				margin-left: 10px
+				&:first-child
+					margin-left: 0 
+				a
+					font-size: 12px
+					font-weight: 300
+					color: #999
+					&:hover
+						color: red 
 

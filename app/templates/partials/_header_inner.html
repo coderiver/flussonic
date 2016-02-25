@@ -8,9 +8,15 @@
       <nav class="nav">
         <ul class="nav__list">
           {% for link in navigation %}
-          <li class="nav__item">
-            <a href="{{link.href}}" class="nav__link link{% if link.external %} link_solid-line{% endif %}">{{link.name}}</a>
-          </li>
+          {% if loop.first %} 
+            <li class="nav__item is-active">
+              <a href="{{link.href}}" class="nav__link link{% if link.external %} link_solid-line{% endif %}">{{link.name}}</a>
+            </li>
+          {% else %}
+            <li class="nav__item">
+              <a href="{{link.href}}" class="nav__link link{% if link.external %} link_solid-line{% endif %}">{{link.name}}</a>
+            </li>
+          {% endif %}
           {% endfor %}
           <li class="nav__item">
             <a href="#">

@@ -1,0 +1,16 @@
+---
+title: {{head.title}}
+PAGE_SCRIPTS:
+  - inner-page
+---
+
+{% extends "layouts/_layout-type.html" %}
+
+{% block content %}
+
+  {% include "partials/_header_inner.html" %}
+  {% include "partials/_toparea_type.html" %}
+  {% include "partials/_content.html" %}
+  {% include "partials/_footer_inner.html" %}
+
+{% endblock %}

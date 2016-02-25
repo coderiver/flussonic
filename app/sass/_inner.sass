@@ -14,6 +14,14 @@
 		+lg
 			padding-top: 10px	
 	.nav__item
+		&.is-active
+			a
+				border-bottom: none
+				&:hover
+					&:before
+						border-color: red 
+				&:before
+					display: block
 		&:last-child
 			line-height: 1.5 
 			a
@@ -30,9 +38,24 @@
 				color: #003CFF
 				border-color: rgba(0, 60, 255, 0.3)
 		a
+			position: relative
+			&:before
+				position: absolute
+				content: ""
+				top: -6px
+				left: -10px
+				right: -10px
+				bottom: -6px
+				border-radius: 2px
+				border: 2px solid #003cff
+				transition: border-color .3s
+				display: none
+				+sm
+					top: 0
+					bottom: 0
 			svg
 				path
-					fill: #003CFF
+					fill: #fff
 					transition: fill 200ms
 			&:hover
 				svg
@@ -255,6 +278,8 @@
 .blue
 	background: $blue
 	color: #fff
+	.input
+		color: #FFF 
 .section-request
 	&.blue
 		padding: 120px 0

@@ -1,0 +1,148 @@
+body.is-cont
+	.toparea
+		padding-top: 140px
+		padding-bottom: 130px
+		color: #fff 
+		background-repeat: no-repeat
+		background-position: 67% 100%
+		background-color: #001484
+
+// content
+.content
+	padding: 90px 0 65px
+	h2,h3,h4
+		line-height: 1.2
+	h1, h2, h3, h4, p, pre
+		&:first-child
+			margin-top: 0
+	h2
+		margin: 90px 0 20px
+		+f(el, 50)
+	h3
+		margin: 65px 0 20px
+		+f(el, 35)
+	h4
+		margin: 40px 0 20px
+		+f(m, 18)
+	p
+		margin-top: 20px
+	a
+		color: inherit
+		line-height: 1.1
+		border-color: inherit
+		display: inline-block
+		&:hover
+			color: #FF5858
+hr
+	margin: 35px -30vw 35px 0 
+	padding: 0
+	height: 1px
+	border: none
+	background: #E7E7E7 
+	& + .inf
+		margin-top: -25px
+
+// center
+.center
+	width: 86%
+	+r(1200)
+		width: 100%
+	
+// pre
+.pre
+	position: relative
+	margin: 30px -38px
+	padding: 25px 36px
+	background-color: #f0f1f3
+	border-radius: 2px
+	pre
+		-ms-overflow-x: auto
+		overflow-x: auto
+	+r(1200)
+		margin-left: 0
+		margin-right: 0
+	.code-copy
+		position: absolute
+		top: 11px
+		right: 12px 
+		color: #787879 
+		line-height: 1.1
+		transition: opacity .3s
+		border-bottom: 1px dotted #969698
+		display: inline-block
+		+f(r, 13)
+
+// series
+.series
+	+clr
+	[class^="col"]
+		float: left
+
+// accord
+.accord
+	margin-top: 40px
+	&:hover
+		.accord__top
+			color: red
+			svg
+				path
+					stroke: red
+	& + .accord
+		margin-top: 20px
+	&:first-child
+		margin-top: 0
+	&.is-active
+		.accord__top
+			color: #000 
+			svg
+				path
+					stroke: #000
+			.icon
+				+rotate(-180)
+	&__top
+		position: relative
+		+f(m)
+		cursor: pointer
+		user-select: none
+		color: #003cff 
+		transition: color .3s
+		.icon
+			position: absolute
+			left: -15px
+			top: 10px
+			line-height: 1
+			font-size: 0
+			transition: transform .3s
+		svg
+			display: block
+			path
+				stroke: #003cff
+				transition: stroke .3s
+		span
+			border-bottom: 1px dotted
+	&__block
+		padding-top: 20px
+		display: none
+
+// warn
+.warn
+	margin-top: 20px
+	position: relative
+	&:first-child
+		margin-top: 0
+	.icon
+		position: absolute
+		content: ""
+		top: 0
+		left: -35px
+	strong
+		+f(m)
+	p
+		margin-top: 0
+
+
+// inf
+.inf
+	margin-top: 8px
+	font-size: 15px
+	color: #888 

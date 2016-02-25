@@ -279,6 +279,13 @@ a:not([class])
   padding-top: 130px
   padding-bottom: 95px
   overflow: hidden
+  &__left
+    max-width: 710px
+    line-height: 1.9
+    .title
+      margin-bottom: 15px
+      font-size: 6.9rem
+      line-height: 1.2
   +sm
     padding-top: 100px
     padding-bottom: 40px
@@ -375,11 +382,13 @@ a:not([class])
       opacity: 1
 
 
-.title
+.title 
   +f(el, 50)
   line-height: 1.1
   &_bold
     +f(l)
+  &_small
+    +f(el, 35)
   +md
     font-size: 45px
   +sm

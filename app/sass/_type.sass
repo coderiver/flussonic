@@ -9,7 +9,8 @@ body.is-cont
 
 // content
 .content
-	padding: 90px 0 65px
+	padding-bottom: 65px
+	font-size: 1.8rem
 	h2,h3,h4
 		line-height: 1.2
 	h1, h2, h3, h4, p, pre
@@ -24,15 +25,185 @@ body.is-cont
 	h4
 		margin: 40px 0 20px
 		+f(m, 18)
+	.title
+		font-size: 5rem
+		&_small
+		  +f(el, 35)
 	p
 		margin-top: 20px
 	a
 		color: inherit
 		line-height: 1.1
-		border-color: inherit
+		border-color: rgba(#000, .2)
 		display: inline-block
 		&:hover
 			color: #FF5858
+	ul,
+	ol
+		padding-right: 25px
+		+r(768)
+			margin-left: 18px
+			padding-right: 0
+		li
+			margin-top: 18px
+			&:before
+				position: absolute
+			&:first-child
+				margin-top: 0
+	ul
+		li
+			position: relative
+			&:before
+				content: "" 
+				top: 10px
+				left: -15px
+				width: 4px
+				height: 4px
+				border-radius: 4px
+				background: #003CFF 
+	ol
+		counter-reset: list
+		li
+			position: relative
+			&:before
+				top: 0
+				left: -18px
+				content: counter(list)
+				counter-increment: list
+				color: #003cff 
+	table
+		min-width: 900px
+		thead
+			tr
+				&:hover
+					color: inherit
+					background: inherit
+		tr
+			transition: background .2s, color .2s
+			&:hover
+				color: #fff 
+				background: #003CFF 
+				td
+					&:first-child,
+					&:last-child
+						&:before
+							background: #003CFF
+		th,
+		td
+			&:first-child
+				+r(900)
+					padding-left: 5px
+			&:nth-child(4),
+			&:nth-child(5)
+				text-align: right
+		th
+			position: relative
+			text-align: left
+			opacity: 0.5
+			+f(el)
+			&:before
+				position: absolute
+				content: ""
+				bottom: 0 
+				left: 0
+				right: 0
+				opacity: 0.5
+				border-bottom: 1px solid
+			a
+				color: #467aff
+				border-bottom: none 
+		td
+			position: relative
+			padding: 9px
+			padding-left: 0
+			vertical-align: top
+			&:first-child,
+			&:last-child
+				&:before
+					position: absolute
+					content: ""
+					top: 0
+					bottom: 0
+					width: 40vw
+					transition: background .2s
+					background: transparent
+					+r(900)
+						display: none
+			&:first-child
+				&:before
+					right: 100%
+			&:last-child
+				&:before
+					left: 100%
+			&.is-w21
+				width: 21%
+			&.is-w24
+				width: 24%
+			&.is-w15
+				width: 15%
+			&.is-w16
+				width: 16%
+			&.is-w55
+				width: 55%
+				+r(900)
+					width: 0
+		strong
+			+f(m)
+	.btn,
+	a.btn
+		display: inline-block
+		box-sizing: border-box
+		height: 45px
+		height: 4.5rem
+		min-width: 140px
+		min-width: 14rem
+		padding: 0 20px
+		padding: 0 2rem
+		line-height: 43px
+		line-height: 4.3rem
+		border: 1px dotted
+		border-radius: 3px
+		border-radius: 0.3rem
+		background: none
+		+f(el, 16)
+		color: $color-blue
+		+trans
+		transition-property: color, background
+		text-decoration: none
+		text-align: center
+		cursor: pointer
+		&:hover
+			color: red
+		&_fluid
+			display: block
+			width: 100%
+		&_solid
+			background: $color-blue
+			border: none
+			color: white
+			height: 50px
+			height: 5rem
+			line-height: 50px
+			line-height: 5rem
+			+f(eb, 14, 150)
+			text-transform: uppercase
+			&:hover
+				color: white
+				background: #002fc8
+		&_big
+			height: 50px
+			height: 5rem
+			line-height: 50px
+			line-height: 5rem
+		&_long
+			padding-left: 40px
+			padding-left: 4rem
+			padding-right: 40px
+			padding-right: 4rem
+		&_bord
+			border-style: solid
+
+// line
 hr
 	margin: 35px -30vw 35px 0 
 	padding: 0
@@ -41,6 +212,12 @@ hr
 	background: #E7E7E7 
 	& + .inf
 		margin-top: -25px
+
+// table
+.table
+	+r(900)
+		overflow-x: auto
+
 
 // center
 .center
@@ -74,9 +251,56 @@ hr
 
 // series
 .series
+	margin: 38px 0 0 -8px
+	padding-left: 8px
+	overflow: hidden
 	+clr
+	&:first-child
+		margin-top: 0
+	&.is-mod
+		margin-top: 8px
+		margin-bottom: -3rem
+		+r(768)
+			margin-bottom: 0
+	&__in
+		margin-top: -3rem
 	[class^="col"]
 		float: left
+	.col-right
+		float: right
+	.col-50
+		+r(768)
+			margin-top: 40px
+			width: 100%
+			float: none
+			&:first-child
+				margin-top: 0
+	.col-26
+		margin-top: 3rem
+		float: none
+		padding-right: 10px
+		min-width: 190px
+		vertical-align: top
+		box-sizing: border-box
+		display: inline-block
+
+// images
+.images
+	margin: -3% -3% 0 0
+	+clr
+	[class^="col"]
+		margin: 3% 3% 0 0
+		padding: 0
+		width: calc(30.3%)
+		box-sizing: border-box
+		+r(768)
+			width: 100%
+			margin: 3rem 0 0
+			&:first-child
+				margin-top: 0
+	img
+		width: 100%
+		display: block
 
 // accord
 .accord
@@ -128,6 +352,8 @@ hr
 .warn
 	margin-top: 20px
 	position: relative
+	+r(768)
+		margin-left: 35px
 	&:first-child
 		margin-top: 0
 	.icon
@@ -144,5 +370,148 @@ hr
 // inf
 .inf
 	margin-top: 8px
-	font-size: 15px
+	font-size: 1.5rem
 	color: #888 
+	&:first-child
+		margin-top: 0
+	h5
+		color: #000 
+		font-size: 1.5rem
+		+f(l)
+	p
+		margin-top: 12px
+		&:first-child
+			margin-top: 0
+
+// sort
+.sort
+	position: relative
+	&:hover
+		svg
+			path
+				stroke: #FF5858
+	&.is-active
+		.icon
+			+rotate(180)
+	.icon
+		position: absolute
+		top: 5px
+		right: -15px
+		line-height: 1
+		font-size: 0
+		transition: transform .3s
+		svg
+			path
+				transition: stroke .3s
+
+// field
+.file
+	width: 100%
+	font-size: 18px
+	+clr
+	&:hover
+		.file__name
+			border-color: rgba(#FF5858, 0.5) 
+	svg,
+	img
+		float: left
+		margin: 2px 10px 0 -8px
+		display: block
+	&__heft
+		margin-top: 4px
+		font-size: 15px
+		color: #888
+		display: block
+	&__name 
+		transition: border-color .3s
+		border-bottom: 1px dotted rgba(#000, .5)
+		display: inline-block
+
+// full-img
+.full-img
+	padding-bottom: 38.4% 
+
+// img
+.img 
+	min-width: 100%
+
+// label
+.label
+	margin-bottom: 15px
+	color: #9D9CA7 
+	display: block
+	&:last-child
+		margin-bottom: 0
+
+// checkbox
+.checkbox
+	span
+		&:before
+			border: 1px solid #003cff
+			border-radius: 2px
+		&:after
+			top: 3px
+			left: 4px
+			width: 14px
+			height: 15px
+			background: url(../img/svg/check-arr.svg) no-repeat 0 0
+			will-change: opacity
+			opacity: 0
+	input:checked
+		& + span
+			&:after
+				opacity: 1
+
+// radiobox
+.radiobox
+	span
+		&:before
+			border-radius: 50%
+			border: 1px solid #003cff
+		&:after
+			top: 10px
+			left: 6px
+			width: 6px
+			height: 6px
+			border-radius: 50%
+			background: #FFF 
+
+.checkbox,
+.radiobox
+	position: relative
+	margin-bottom: 18px
+	padding-left: 25px
+	line-height: 1.2
+	width: 100%
+	cursor: pointer
+	user-select: none
+	display: inline-block
+	&:last-child
+		margin-top: 0
+	span:before,
+	input
+		position: absolute
+		content: ""
+		top: 4px
+		left: 0 
+		width: 16px
+		height: 16px
+		transition: 
+	span:after
+		position: absolute
+		content: ""
+	input
+		opacity: 0
+		z-index: 2
+		cursor: pointer
+		&:checked
+			& + span
+				&:before
+					background: #003cff
+.alert
+	padding: 16px
+	text-align: center
+	border-radius: 2px 
+	background: #AEFFC9 
+	&.is-error
+		background: #FFCAC3 

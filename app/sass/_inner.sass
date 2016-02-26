@@ -1,23 +1,19 @@
 // styles for inner pages
 .header_inner
-	position: absolute
 	background: transparent
 	+trans(background, box-shadow)
-	// &.scrolled
-		// position: absolute
-		// background: $blue
-		// box-shadow: 0 0 10px 0 rgba(black, 0.3)
+	& > .l
+		+lg
+			padding: 0 20px 
+	&.scrolled
+		background: $blue
+		box-shadow: 0 0 10px 0 rgba(black, 0.3)
 	.logo
 		color: #fff
 	.nav
-		margin-left: 10px
 		+lg
 			padding-top: 10px	
 	.nav__item
-		+r(900)
-			margin-right: 18px
-			&:last-child
-				margin-right: 0
 		&.is-active
 			a
 				border-bottom: none
@@ -68,25 +64,19 @@
 	.lang
 		a
 			color: rgba(#fff, 0.3)
-			transition: border-color .2s, color .2s
-			line-height: 1.2
-			border-bottom: 1px solid rgba(#fff, .2) 
-			display: inline-block
+			text-decoration: underline
 			&:hover
 				color: red
-				border-color: rgba(red, .5) 
 .toparea_inner
-	position: relative
-	background: $blue 
-	// url(../img/features-cubes.svg) 110% 0 no-repeat
-	// background-size: auto 120% 
+	background: $blue url(../img/features-cubes.svg) 110% 0 no-repeat
+	background-size: auto 120% 
 	color: #fff
 	+r(568)
+		min-height: 100vh
 		text-align: center
 		box-sizing: border-box
 		background-position: 50% 0 
 	.toparea__in
-		position: relative
 		max-width: 640px
 		padding: 100px 0 
 		.title
@@ -96,10 +86,6 @@
 				font-size: 5rem
 		p
 			font-size: 1.6rem
-	.toparea__svg
-		position: absolute
-		right: -50px
-		bottom: -20px
 .about
 	.about__in
 		+lg
@@ -110,33 +96,27 @@
 		font-size: 0
 		padding: 77px 0
 		+sm
-			padding: 40px 0 10px	 
+			padding: 40px 40px 0
+		+r(568)
+			padding: 40px 0 0 	 
 	.about__item
 		position: relative
-		padding-right: 20px
 		display: inline-block
 		vertical-align: top
 		width: 50%
-		max-width: 500px
-		margin-top: 50px
+		margin-bottom: 70px
 		font-size: 18px
-		box-sizing: border-box
-		&:first-child
-			margin-top: 0
-			& + .about__item
-				margin-top: 0
-				+r(560)
-					margin-top: 40px
 		&:hover
 			.star
 				opacity: 1
-		+r(560)
+		+r(568)
 			width: 100%
-			margin-top: 40px 
+			box-sizing: border-box
+			padding-left: 40px
+			margin-bottom: 40px 
 		ul
 			max-width: 360px
 			+sm
-				max-width: 100%
 				font-size: 1.6rem
 			li
 				position: relative
@@ -150,8 +130,6 @@
 					height: 3px
 					border-radius: 50%
 					background: #003cff
-					+r(900)
-						display: none
 	.star
 		position: absolute
 		top: 5px
@@ -165,7 +143,7 @@
 	.about__link
 		position: relative
 		max-width: 360px
-		margin-bottom: 25px
+		margin-bottom: 30px
 		.lnk
 			font-size: 3.5rem
 			+lg
@@ -246,7 +224,6 @@
 		background: #003CFF
 
 .offer
-	margin-top: 33px
 	.title
 		margin-bottom: 45px
 		+sm
@@ -260,12 +237,14 @@
 		position: relative
 		float: left
 		width: 50%
-		max-width: 500px
-		padding-right: 18vh
 		font-size: 18px
-		box-sizing: border-box
-		+r(1200)
-			padding-right: 15px
+		&:first-child
+			margin-left: -16%
+			margin-right: 16%
+			+lg
+				margin: 0
+			+sm
+				margin-bottom: 40px	
 		+sm
 			float: none
 			width: 100%
@@ -277,8 +256,6 @@
 			font-size: 18px
 			font-weight: 300
 			color: #003cff	
-			&:hover
-				color: red
 		p
 			color: #000
 		+r(568)
@@ -289,16 +266,8 @@
 				padding-top: 10px	
 						   
 	.offer__icon
-		position: absolute
-		top: 0
-		right: 100%
-		margin-right: 20px
+		float: left
 		margin-right: 22px
-		opacity: 0.5
-		+r(1200)
-			position: relative
-			float: left
-			right: auto
 		.svg-cam, .svg-antenna
 			font-size: 8.4rem
 			fill: #000
@@ -306,32 +275,23 @@
 			float: none
 			display: block
 			margin-bottom: 20px
-.blue 
+.blue
 	background: $blue
 	color: #fff
 	.input
 		color: #FFF 
-		border-bottom-color: rgba(#fff, .5) 
-	a
-		border-color: rgba(#fff, .5) 
-		transition: opacity .2s, border-color .2s
-		&:hover
-			color: #FFF 
-			opacity: 0.7
-			border-color: rgba(#fff, .4) 
 .section-request
 	&.blue
 		padding: 120px 0
 		.input, textarea.input
-			border-color: rgba(#fff, 0.5)
+			border-color: #fff
 		+lg
 			padding: 100px 0
 		+sm
 			padding: 80px 0
 		+r(568)
 			padding: 60px 0 	  	
-.footer_inner,
-.footer_type
+.footer_inner
 	background: $blue
 	border-top: none
 	.l
@@ -366,6 +326,4 @@
 					color: #999
 					&:hover
 						color: red 
-.footer_type
-	background: #FFF 
 

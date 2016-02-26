@@ -1,511 +1,448 @@
 <!-- content -->
-<section class="content">
-	<section class="section fade-in slide-up">
-		<!-- l -->
-		<div class="l">
-			<div class="center">
-				<h2>H2 heading text styles</h2>
-				<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be <a href="#" title="requested from us">requested from us</a> . Amazing.</p>
-				<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at <a href="#" title="Digital Ocean">Digital Ocean</a>. Further instructions will be for Ubuntu.</p>
-				<p>Open the configuration file «/etc/flussonic/flussonic.conf» and add this code snippet:</p>
-				<div class="pre">
-					<pre>wget -q -O - http://debian.erlyvideo.org/binary/gpg.key | apt-key add - 
+<section class="content fade-in slide-up">
+	<!-- l -->
+	<div class="l">
+		<div class="center">
+			<h2>H2 heading text styles</h2>
+			<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be <a href="#" title="requested from us">requested from us</a> . Amazing.</p>
+			<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at <a href="#" title="Digital Ocean">Digital Ocean</a>. Further instructions will be for Ubuntu.</p>
+			<p>Open the configuration file «/etc/flussonic/flussonic.conf» and add this code snippet:</p>
+			<div class="pre">
+				<pre>wget -q -O - http://debian.erlyvideo.org/binary/gpg.key | apt-key add - 
 echo "deb http://debian.erlyvideo.org binary/" > /etc/apt/sources.list.d/erlyvideo.list
 apt-get update
 apt-get -y install flussonic flussonic-ffmpeg flussonic-python</pre>
-					<a href="#" class="code-copy">Copy</a>
+				<a href="#" class="code-copy">Copy</a>
+			</div>
+			<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key.  Here is a <a href="#" title="">link</a>     to an external resource and a <a href="#" title="">link</a>     that opens in a new window.</p>
+			<h3>H3 heading</h3>
+			<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+			<h4>H4 heading</h4>
+			<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+			<!-- accord -->
+			<div class="accord js-accord">
+				<div class="accord__top js-accord-top">
+					<div class="icon">
+						{% include "../../img/svg/arr.svg" %}
+					</div>
+					<span>Drop-down item</span>
 				</div>
-				<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key.  Here is a <a href="#" title="">link</a>     to an external resource and a <a href="#" title="">link</a>     that opens in a new window.</p>
-				<h3>H3 heading</h3>
-				<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
-				<h4>H4 heading</h4>
-				<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
-				<!-- accord -->
-				<div class="accord js-accord">
-					<div class="accord__top js-accord-top">
-						<div class="icon">
+				<div class="accord__block js-accord-block">
+					<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
+					<p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+				</div>
+			</div>
+			<div class="accord js-accord is-active">
+				<div class="accord__top js-accord-top">
+					<div class="icon">
+						{% include "../../img/svg/arr.svg" %}
+					</div>
+					<span>Opened drop-down item</span>
+				</div>
+				<div class="accord__block js-accord-block">
+					<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
+					<p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+				</div>
+			</div>
+			<hr>
+			<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+			<!-- warn -->
+			<div class="warn">
+				<i class="icon">
+					{% include "../../img/svg/warn.svg" %}
+				</i>
+				<p><strong>This is something important.</strong> If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean.</p>
+			</div>
+			<hr>
+			<!-- inf -->
+			<div class="inf">This is a comment. Or a footnote. We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</div>
+			<h3 class="title">Lists and tables</h3>
+			<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
+			<div class="series">
+				<div class="col-50">
+					<h4>Beautiful unordered list</h4>
+					<ul class="list is-disc">
+						<li>Satellite capturing</li>
+						<li>Transcoding</li>
+						<li>IP cameras support</li>
+						<li>Stream thumbnails</li>
+						<li>Republishing between lots of unique different servers</li>
+						<li>MPEG-2 support</li>
+					</ul>
+				</div>
+				<div class="col-50">
+					<h4>Amazing ordered list and a very long heading that takes two lines</h4>
+					<ul class="list is-numb">
+						<li>Streaming from mp4 and flv files</li>
+						<li>RTMP, HLS, HDS, DASH, RTSP delivery</li>
+						<li>Multibitrate and multilanguage mp4 streaming</li>
+						<li>Support for HTTP storages like http server, Amazon S3, Swift</li>
+					</ul>
+				</div> 
+			</div>
+			<h3 class="title title_small">Simple table with multiple columns</h3>
+			<table>
+				<tbody>
+					<tr>
+						<td>RTMP</td>
+						<td>Satellite capturing</td>
+						<td>Short timeshift</td>
+					</tr>
+					<tr>
+						<td>AMF3</td>
+						<td>Transcoding</td>
+						<td>Long DVR (for many days and weeks)</td>
+					</tr>
+					<tr>
+						<td>MPEG-TS</td>
+						<td>IP cameras support</td>
+						<td>HLS streaming</td>
+					</tr>
+					<tr>
+						<td>MPEG-TS output</td>
+						<td>Stream thumbnails</td>
+						<td>FLV to HLS streaming</td>
+					</tr>
+					<tr>
+						<td>RTSP input</td>
+						<td>Republishing</td>
+						<td>Flexible catchup support</td>
+					</tr>
+					<tr>
+						<td>RTSP output</td>
+						<td>MPEG-2 support</td>
+						<td>Cache-aware HLS</td>
+					</tr> 
+				</tbody>
+			</table>
+			<h3 class="title title_small">Table with column headings, this heading is unusually long to show line-height</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>First column</th>
+						<th>Second column</th>
+						<th>Third column</th>
+						<th><a href="#" title="">Sortable column</a></th>
+						<th>
+							<a href="#" class="sort" title="">
+								Sorted column
+								{% include "../../img/svg/arr.svg" %}
+							</a>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>RTMP</td>
+						<td>Satellite capturing</td>
+						<td>Short timeshift</td>
+						<td>165</td>
+						<td>34</td>
+					</tr>
+					<tr>
+						<td>AMF3</td>
+						<td>Transcoding</td>
+						<td>Long DVR</td>
+						<td>34</td>
+						<td>165</td>
+					</tr>
+					<tr>
+						<td>MPEG-TS</td>
+						<td>IP cameras support</td>
+						<td>HLS streaming</td>
+						<td>345</td>
+						<td>234</td>
+					</tr>
+					<tr>
+						<td>MPEG-TS output</td>
+						<td>Stream thumbnails</td>
+						<td>FLV to HLS streaming</td>
+						<td>21 230</td>
+						<td>345</td>
+					</tr>
+					<tr>
+						<td>RTSP input</td>
+						<td>Republishing</td>
+						<td>Flexible catchup support</td>
+						<td>234</td>
+						<td>21 230</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="title title_small">Table with vertical headings</h3>
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<strong>RTMP</strong>
+						</td>
+						<td>Satellite capturing</td>
+						<td>Short timeshift</td>
+					</tr>
+					<tr> 
+						<td>
+							<strong>AMF3</strong>
+						</td>
+						<td>Transcoding</td>
+						<td>Long DVR (for many days and weeks)</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>MPEG-TS</strong>
+						</td>
+						<td>IP cameras support</td>
+						<td>HLS streaming</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>MPEG-TS output</strong>
+						</td>
+						<td>Stream thumbnails</td>
+						<td>FLV to HLS streaming</td>
+					</tr>
+					<tr>
+						<td>
+							<strong>RTSP input</strong>
+						</td>
+						<td>Republishing</td>
+						<td>Flexible catchup support</td> 
+					</tr>
+					<tr>
+						<td>
+							<strong>RTSP output</strong>
+						</td>
+						<td>MPEG-2 support</td>
+						<td>Cache-aware HLS</td>
+					</tr> 
+				</tbody>
+			</table>
+		</div>
+	</div>
+</section>
+<!-- section blue -->
+<section class="section blue fade-in slide-up">
+	<div class="l">
+		<h3 class="title">When something important needs to be highlighted</h3>
+		<p>Use this awesome blue content section. It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
+		<h3 class="title title_small">Table with valuable information</h3>
+		<table>
+			<thead>
+				<tr>
+					<th>First column</th>
+					<th>Second column</th>
+					<th>Third column</th>
+					<th><a href="#" title="">Sortable column</a></th>
+					<th>
+						<a href="#" class="sort" title="">
+							Sorted column
 							{% include "../../img/svg/arr.svg" %}
-						</div>
-						<span>Drop-down item</span>
-					</div>
-					<div class="accord__block js-accord-block">
-						<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
-						<p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
-					</div>
+						</a>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>RTMP</td>
+					<td>Satellite capturing</td>
+					<td>Short timeshift</td>
+					<td>165</td>
+					<td>34</td>
+				</tr>
+				<tr>
+					<td>AMF3</td>
+					<td>Transcoding</td>
+					<td>Long DVR</td>
+					<td>34</td>
+					<td>165</td>
+				</tr>
+				<tr>
+					<td>MPEG-TS</td>
+					<td>IP cameras support</td>
+					<td>HLS streaming</td>
+					<td>345</td>
+					<td>234</td>
+				</tr>
+				<tr>
+					<td>MPEG-TS output</td>
+					<td>Stream thumbnails</td>
+					<td>FLV to HLS streaming</td>
+					<td>21 230</td>
+					<td>345</td>
+				</tr>
+				<tr>
+					<td>RTSP input</td>
+					<td>Republishing</td>
+					<td>Flexible catchup support</td>
+					<td>234</td>
+					<td>21 230</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</section>
+<!-- section -->
+<section class="section fade-in slide-up">
+	<!-- l -->
+	<div class="l">
+		<h3 class="title">Sometimes columns can be used, but be careful with them</h3>
+		<div class="series">
+			<div class="col-left">
+				<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key.</p>
+				<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. </p>
+			</div>
+			<div class="col-right">
+				<div class="small-text">
+					<h5>Right column may contain secondary information</h5>
+					<p>Subscription starts from $50 per month. Please <a href="#" title="">sign in</a> to buy a license if you have already tried Flussonic.</p>
+					<p><a href="#" title="">How to install Flussonic</a> </p>
 				</div>
-				<div class="accord js-accord is-active">
-					<div class="accord__top js-accord-top">
-						<div class="icon">
-							{% include "../../img/svg/arr.svg" %}
-						</div>
-						<span>Opened drop-down item</span>
-					</div>
-					<div class="accord__block js-accord-block">
-						<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
-						<p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
-					</div>
+			</div>
+		</div>
+		<h3 class="title">Downloadable files</h3>
+		<div class="series">
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/pdf.svg" %}
+					<span class="file__name">Getting started</span>
+					<span class="file__heft">40.5 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/xls.svg" %}
+					<span class="file__name">Spreadsheet</span>
+					<span class="file__heft">40.5 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/zip.svg" %}
+					<span class="file__name">Archive</span>
+					<span class="file__heft">40.5 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/doc.svg" %}
+					<span class="file__name">Instructions</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/ppt.svg" %}
+					<span class="file__name">Presentation</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/rar.svg" %}
+					<span class="file__name">One more archive</span>
+					<span class="file__heft">40,5 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/png.svg" %}
+					<span class="file__name">Huge image file</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/tif.svg" %}
+					<span class="file__name">Huge image file</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/gif.svg" %}
+					<span class="file__name">Huge image file</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a> 
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/jpg.svg" %}
+					<span class="file__name">Huge image file</span>
+					<span class="file__heft">1.4 Mb</span>
+				</a>
+			</div>
+			<div class="col-33">
+				<a href="#" class="file">
+					{% include "../../img/svg/type_file/unknown.svg" %}
+					<span class="file__name">Unknown format</span>
+					<span class="file__heft">40.5 Mb</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section fade-in slide-up">
+	<div class="l">
+		<h3 class="title">Large full-width image</h3>
+	</div>
+	<div class="full-img" style="background-image: url('img/full-img.png')"></div>
+	<div class="l">
+		<div class="series">
+			<div class="col-right">
+				<div class="small">Image description with its left edge aligned to the center of the image</div>
+			</div>
+		</div>	
+	</div>
+</section>
+<section class="section fade-in slide-up">
+	<div class="l">
+		<h3 class="title">A few smaller images</h3>
+		<div class="series">
+			<div class="col-33">
+				<img src="img/img-1.png" alt="img" class="img img_100">
+			</div>
+			<div class="col-33">
+				<img src="img/img-2.png" alt="img" class="img img_100">
+			</div>
+			<div class="col-33">
+				<img src="img/img-3.png" alt="img" class="img img_100">
+			</div>
+		</div>
+		<h3 class="title">This is a form</h3>
+		<form class="form" action="" method="">
+			<div class="form__left">
+				<div class="field">
+					<label for="name" class="field__label">Your name:</label>
+					<input class="input" type="text" name="name" id="name" value="My name">
 				</div>
-				<hr>
-				<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
-				<!-- warn -->
-				<div class="warn">
-					<i class="icon">
-						{% include "../../img/svg/warn.svg" %}
-					</i>
-					<p><strong>This is something important.</strong> If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean.</p>
-				</div>
-				<hr>
-				<!-- inf -->
-				<div class="inf">This is a comment. Or a footnote. We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</div>
-				<h3 class="title">Lists and tables</h3>
-				<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
 				<div class="series">
 					<div class="col-50">
-						<h4>Beautiful unordered list</h4>
-						<ul>
-							<li>Satellite capturing</li>
-							<li>Transcoding</li>
-							<li>IP cameras support</li>
-							<li>Stream thumbnails</li>
-							<li>Republishing between lots of unique different servers</li>
-							<li>MPEG-2 support</li>
-						</ul>
+						<div class="field">
+							<label for="choice_1" class="field__label">Your choice:</label>
+							<select name="choice_1" id="choice_1" class="select js-select">s
+								<option value="var1">var1</option>
+								<option value="var2" selected>Blue pill</option>
+								<option value="var3">var3</option>
+								<option value="var4">var4</option>
+							</select>
+						</div>
 					</div>
 					<div class="col-50">
-						<h4>Amazing ordered list and a very long heading that takes two lines</h4>
-						<ol>
-							<li>Streaming from mp4 and flv files</li>
-							<li>RTMP, HLS, HDS, DASH, RTSP delivery</li>
-							<li>Multibitrate and multilanguage mp4 streaming</li>
-							<li>Support for HTTP storages like http server, Amazon S3, Swift</li>
-						</ol>
-					</div> 
-				</div>
-				<h3 class="title title_small">Simple table with multiple columns</h3>
-				<div class="table">
-					<table>
-						<tbody>
-							<tr>
-								<td class="is-w21">RTMP</td>
-								<td class="is-w24">Satellite capturing</td>
-								<td class="is-w55">Short timeshift</td>
-							</tr>
-							<tr>
-								<td class="is-w21">AMF3</td>
-								<td class="is-w24">Transcoding</td>
-								<td class="is-w55">Long DVR (for many days and weeks)</td>
-							</tr>
-							<tr>
-								<td class="is-w21">MPEG-TS</td>
-								<td class="is-w24">IP cameras support</td>
-								<td class="is-w55">HLS streaming</td>
-							</tr>
-							<tr>
-								<td class="is-w21">MPEG-TS output</td>
-								<td class="is-w24">Stream thumbnails</td>
-								<td class="is-w55">FLV to HLS streaming</td>
-							</tr>
-							<tr>
-								<td class="is-w21">RTSP input</td>
-								<td class="is-w24">Republishing</td>
-								<td class="is-w55">Flexible catchup support</td>
-							</tr>
-							<tr>
-								<td class="is-w21">RTSP output</td>
-								<td class="is-w24">MPEG-2 support</td>
-								<td class="is-w55">Cache-aware HLS</td>
-							</tr> 
-						</tbody>
-					</table>
-				</div>
-				<h3 class="title title_small">Table with column headings, this heading is unusually long to show line-height</h3>
-				<div class="table">
-					<table>
-						<thead>
-							<tr>
-								<th>First column</th>
-								<th>Second column</th>
-								<th>Third column</th>
-								<th><a href="#" title="">Sortable column</a></th>
-								<th>
-									<a href="#" class="sort js-sort" title="">
-										Sorted column
-										<i class="icon">{% include "../../img/svg/arr.svg" %}</i>
-									</a>
-								</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="is-w21">RTMP</td>
-								<td class="is-w24">Satellite capturing</td>
-								<td class="is-w24">Short timeshift</td>
-								<td class="is-w15">165</td>
-								<td class="is-w16">34</td>
-							</tr>
-							<tr>
-								<td class="is-w21">AMF3</td>
-								<td class="is-w24">Transcoding</td>
-								<td class="is-w24">Long DVR</td>
-								<td class="is-w15">34</td>
-								<td class="is-w16">165</td>
-							</tr>
-							<tr>
-								<td class="is-w21">MPEG-TS</td>
-								<td class="is-w24">IP cameras support</td>
-								<td class="is-w24">HLS streaming</td>
-								<td class="is-w15">345</td>
-								<td class="is-w16">234</td>
-							</tr>
-							<tr>
-								<td class="is-w21">MPEG-TS output</td>
-								<td class="is-w24">Stream thumbnails</td>
-								<td class="is-w24">FLV to HLS streaming</td>
-								<td class="is-w15">21 230</td>
-								<td class="is-w16">345</td>
-							</tr>
-							<tr>
-								<td class="is-w21">RTSP input</td>
-								<td class="is-w24">Republishing</td>
-								<td class="is-w24">Flexible catchup support</td>
-								<td class="is-w15">234</td>
-								<td class="is-w16">21 230</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<h3 class="title title_small">Table with vertical headings</h3>
-				<div class="table">
-					<table>
-						<tbody>
-							<tr>
-								<td class="is-w21">
-									<strong>RTMP</strong>
-								</td>
-								<td class="is-w24">Satellite capturing</td>
-								<td class="is-w55">Short timeshift</td>
-							</tr>
-							<tr> 
-								<td class="is-w21">
-									<strong>AMF3</strong>
-								</td>
-								<td class="is-w24">Transcoding</td>
-								<td class="is-w55">Long DVR (for many days and weeks)</td>
-							</tr>
-							<tr>
-								<td class="is-w21">
-									<strong>MPEG-TS</strong>
-								</td>
-								<td class="is-w24">IP cameras support</td>
-								<td class="is-w55">HLS streaming</td>
-							</tr>
-							<tr>
-								<td class="is-w21">
-									<strong>MPEG-TS output</strong>
-								</td>
-								<td class="is-w24">Stream thumbnails</td>
-								<td class="is-w55">FLV to HLS streaming</td>
-							</tr>
-							<tr>
-								<td class="is-w21">
-									<strong>RTSP input</strong>
-								</td>
-								<td class="is-w24">Republishing</td>
-								<td class="is-w55">Flexible catchup support</td> 
-							</tr>
-							<tr>
-								<td class="is-w21">
-									<strong>RTSP output</strong>
-								</td>
-								<td class="is-w24">MPEG-2 support</td>
-								<td class="is-w55">Cache-aware HLS</td>
-							</tr> 
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- section blue -->
-	<section class="section is-pad blue fade-in slide-up">
-		<div class="l">
-			<h3 class="title">When something important needs to be highlighted</h3>
-			<p>Use this awesome blue content section. It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
-			<h3 class="title title_small">Table with valuable information</h3>
-			<div class="table">
-				<table>
-					<thead>
-						<tr>
-							<th>First column</th>
-							<th>Second column</th>
-							<th>Third column</th>
-							<th><a href="#" title="">Sortable column</a></th>
-							<th>
-								<a href="#" class="sort js-sort" title="">
-									Sorted column
-									<i class="icon">{% include "../../img/svg/arr.svg" %}</i>
-								</a>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td class="is-w21">RTMP</td>
-							<td class="is-w24">Satellite capturing</td>
-							<td class="is-w24">Short timeshift</td>
-							<td class="is-w15">165</td>
-							<td class="is-w16">34</td>
-						</tr>
-						<tr>
-							<td class="is-w21">AMF3</td>
-							<td class="is-w24">Transcoding</td>
-							<td class="is-w24">Long DVR</td>
-							<td class="is-w15">34</td>
-							<td class="is-w16">165</td>
-						</tr>
-						<tr>
-							<td class="is-w21">MPEG-TS</td>
-							<td class="is-w24">IP cameras support</td>
-							<td class="is-w24">HLS streaming</td>
-							<td class="is-w15">345</td>
-							<td class="is-w16">234</td>
-						</tr>
-						<tr>
-							<td class="is-w21">MPEG-TS output</td>
-							<td class="is-w24">Stream thumbnails</td>
-							<td class="is-w24">FLV to HLS streaming</td>
-							<td class="is-w15">21 230</td>
-							<td class="is-w16">345</td>
-						</tr>
-						<tr>
-							<td class="is-w21">RTSP input</td>
-							<td class="is-w24">Republishing</td>
-							<td class="is-w24">Flexible catchup support</td>
-							<td class="is-w15">234</td>
-							<td class="is-w16">21 230</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</section>
-	<!-- section -->
-	<section class="section fade-in slide-up">
-		<!-- l -->
-		<div class="l">
-			<h3 class="title">Sometimes columns can be used, but be careful with them</h3>
-			<div class="series">
-				<div class="col-left">
-					<p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key.</p>
-					<p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. </p>
-				</div>
-				<div class="col-right">
-					<div class="inf">
-						<h5>Right column may contain secondary information</h5>
-						<p>Subscription starts from $50 per month. <br>Please <a href="#" title="">sign in</a> to buy a license if you have already tried Flussonic.</p>
-						<p><a href="#" title="">How to install Flussonic</a> </p>
-					</div>
-				</div>
-			</div>
-			<h3 class="title">Downloadable files</h3>
-			<div class="series">
-				<div class="series__in">
-					<div class="col-26">
-						<a href="#" class="file">
-							<img src="img/svg/type_file/pdf.svg" alt="">
-							<span class="file__name">Getting started</span>
-							<span class="file__heft">40.5 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/xls.svg" %}
-							<span class="file__name">Spreadsheet</span>
-							<span class="file__heft">40.5 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/zip.svg" %}
-							<span class="file__name">Archive</span>
-							<span class="file__heft">40.5 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/doc.svg" %}
-							<span class="file__name">Instructions</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/ppt.svg" %}
-							<span class="file__name">Presentation</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/rar.svg" %}
-							<span class="file__name">One more archive</span>
-							<span class="file__heft">40,5 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/png.svg" %}
-							<span class="file__name">Huge image file</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/tif.svg" %}
-							<span class="file__name">Huge image file</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/gif.svg" %}
-							<span class="file__name">Huge image file</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a> 
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/jpg.svg" %}
-							<span class="file__name">Huge image file</span>
-							<span class="file__heft">1.4 Mb</span>
-						</a>
-					</div>
-					<div class="col-26">
-						<a href="#" class="file">
-							{% include "../../img/svg/type_file/unknown.svg" %}
-							<span class="file__name">Unknown format</span>
-							<span class="file__heft">40.5 Mb</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section fade-in slide-up">
-		<div class="l">
-			<h3 class="title">Large full-width image</h3>
-		</div>
-		<div class="full-img" style="background-image: url('img/full-img.png')"></div>
-		<div class="l">
-			<div class="series is-mod">
-				<div class="col-right">
-					<div class="inf">Image description with its left edge aligned to the center of the image</div>
-				</div>
-			</div>	
-		</div>
-	</section>
-	<section class="section fade-in slide-up">
-		<div class="l">
-			<h3 class="title">A few smaller images</h3>
-			<div class="series">
-				<div class="images">
-					<div class="col">
-						<img src="img/img-1.png" alt="img">
-					</div>
-					<div class="col">
-						<img src="img/img-2.png" alt="img">
-					</div>
-					<div class="col">
-						<img src="img/img-3.png" alt="img">
-					</div>
-				</div>
-			</div>
-			<h3 class="title">This is a form</h3>
-			<form class="form is-mod" action="" method="">
-				<div class="form__left">
-					<div class="field">
-						<label for="name" class="field__label">Your name:</label>
-						<input class="input" type="text" name="name" id="name" value="My name">
-					</div>
-					<div class="form__row">
-						<div class="col-50">
-							<div class="select-field">
-								<label for="choice_1" class="field__label">Your choice:</label>
-								<select name="choice_1" id="choice_1" class="js-select">
-									<option value="Blue pill">Blue pill</option>
-									<option value="Blue pill Blue pill Blue pill">Blue pill Blue pill Blue pill</option>
-									<option value="var3">var3</option>
-									<option value="var4">var4</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-50">
-							<div class="select-field">
-								<label for="choice_2" class="field__label">Your choice:</label>
-								<select name="choice_2" id="choice_2" class="js-select">s
-									<option value="Orange bottle">Orange bottle</option>
-									<option value="Blue pill">Blue pill</option>
-									<option value="Red button">Red button</option>
-									<option value="Green apple">Green apple</option>
-								</select>
-							</div>
+						<div class="field">
+							<label for="choice_2" class="field__label">Your choice:</label>
+							<select name="choice_2" id="choice_2" class="select js-select">s
+								<option value="var1">var1</option>
+								<option value="var2" selected>Blue pill</option>
+								<option value="var3">var3</option>
+								<option value="var4">var4</option>
+							</select>
 						</div>
 					</div>
 				</div>
-				<div class="field is-textarea">
+				<div class="field">
 					<label for="textarea" class="field__label">Your choice:</label>
-					<textarea name="textarea" id="textarea" class="input">It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</textarea>
-				</div>
-			</form>
-			<div class="series">
-				<div class="col-25 is-mob">
-					<label class="label">Checkboxes</label>
-					<label class="checkbox">
-						<input type="checkbox" checked></input>
-						<span>Satellite capturing</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox"></input>
-						<span>Transcoding</span>
-					</label>
-					<label class="checkbox">
-						<input type="checkbox"></input>
-						<span>IP cameras support</span>
-					</label>
-				</div>
-				<div class="col-25 is-mob">
-					<label class="label">Radio buttons</label>
-					<label class="radiobox">
-						<input type="radio" name="radio"></input>
-						<span>Satellite capturing</span>
-					</label>
-					<label class="radiobox">
-						<input type="radio" name="radio" checked></input>
-						<span>Transcoding</span>
-					</label>
-					<label class="radiobox">
-						<input type="radio" name="radio"></input>
-						<span>IP cameras support</span>
-					</label>
+					<textarea name="textarea" id="textarea" class="textarea">t is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</textarea>
 				</div>
 			</div>
-			<div class="series">
-				<div class="col-25 is-mob">
-					<button class="btn btn_solid btn_long" type="button">Action button</button>
-				</div>
-				<div class="col-25 is-mob">
-					<a href="#" class="btn btn_bord btn_big">Link button</a>
-				</div>
-				<div class="col-25 is-mob">
-					<button class="btn btn_big" type="button">Pseudo-link button</button>
-				</div>
-			</div>
-			<div class="series">
-				<div class="alert">Message of success takes the width of the form above it. Thank you!</div>
-			</div>
-			<div class="series">
-				<div class="alert is-error">Message of error takes the width of the form above it. Something went wrong.</div>
-			</div>
-		</div>
-	</section>
-</div>
+		</form>
+	</div>
+</section>

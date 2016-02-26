@@ -1,7 +1,5 @@
 .l
   padding: 0 percentage(70/1200) 0 percentage(245/1200)
-  & + .full-img
-    margin-top: -1rem
   +r(1400)
     padding-left: percentage(170/1200)
   +lg
@@ -18,40 +16,13 @@
 .col
   float: left
   box-sizing: border-box
-  padding: 0 30px 
+  padding: 0 30px
   width: 100%
 
-.col-right
-  float: right
-  padding-right: 10px
-  width: 33.6%
-  box-sizing: border-box
-  +r(768)
-    margin-top: 20px
-    padding-right: 0
-    width: 100%
-    &:first-child
-      margin-top: 0
-   
-.col-left
-  float: left
-  padding-right: 60px
-  width: 66.4%
-  box-sizing: border-box
-  +r(768)
-    padding-right: 0
-    width: 100%
-
-$col-sizes: 80, 75, 60, 50, 26, 25, 20
+$col-sizes: 80, 75, 60, 50, 25, 20
 @each $size in $col-sizes
   .col-#{$size}
     width: #{$size}%
-    &.is-mob
-      +r(768)
-        margin-top: 20px
-        width: 100%
-        &:first-child
-          margin-top: 0
 
 .col-66
   width: 66.66%

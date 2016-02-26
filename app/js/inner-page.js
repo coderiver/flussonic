@@ -1,6 +1,7 @@
 import $ from 'jquery';
 window.$ = window.jQuery = $;
 import ScrollMagic from 'scrollmagic';
+import './draw-svg';
 import buildContentFadeScenes from './fade-in-scenes.js';
 import svg4everybody from 'svg4everybody';
 
@@ -12,26 +13,26 @@ $('.menu-button').on('click touchend', function(e) {
     $(this).parents('.header').toggleClass('is-show-menu');
 });
 
-function innerHeaderScroll() {
+// function innerHeaderScroll() {
 
-    var controller = new ScrollMagic.Controller({
-        container: 'body',
-        loglevel: 2
-    });
+//     var controller = new ScrollMagic.Controller({
+//         container: 'body',
+//         loglevel: 2
+//     });
 
-	var header = $('.header');
+// 	var header = $('.header');
 
-	const scene = new ScrollMagic.Scene({
-	    offset: 100,
-	    triggerElement: 'body',
-	    triggerHook: 'onLeave'
-	}).on('start', () => {
-	    header.toggleClass('scrolled');
-	}).addTo(controller);
+// 	const scene = new ScrollMagic.Scene({
+// 	    offset: 100,
+// 	    triggerElement: 'body',
+// 	    triggerHook: 'onLeave'
+// 	}).on('start', () => {
+// 	    header.toggleClass('scrolled');
+// 	}).addTo(controller);
 
-}
+// }
 
-innerHeaderScroll();
+// innerHeaderScroll();
 
 // accord
 var acord 		= $('.js-accord'),
@@ -147,3 +148,23 @@ $('.js-select').each(function () {
 	});
 
 });
+
+// anim svg
+var $svg = $('.js-svg-anim svg').drawsvg({
+	duration: 8000,
+	easing: 'linear'
+});
+
+setTimeout(function() {
+	$svg.drawsvg('animate');
+}, 500);
+
+// parallaxScroll
+$(window).on('scroll',function(e){
+    parallaxScroll();
+});
+function parallaxScroll(){
+	var scrolled 	= $(window).scrollTop(),
+		pos 		= 0 + (scrolled * .55) + 'px';
+	$svg.css('transform', 'translateY(' + pos + ')');
+};

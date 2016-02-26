@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Flussonic streaming server</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <link id="favicon1" rel="icon" href="img/favicon-ipcam.png" sizes="32x32" type="image/png">
+
+  </head>
+
+  <body class="is-cont">
+
+    <!-- BEGIN content -->
+    <div class="out">
+
+      <!-- BEGIN header -->
+      <header class="header header_inner">
+        <div class="l fade-in slide-up">
+          <div class="header__inner">
+
+            <span class="logo">Flussonic</span>
+
+            <nav class="nav">
+              <ul class="nav__list">
+
+                <li class="nav__item is-active">
+                  <a href="#overview" class="nav__link link">Overview</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#trial" class="nav__link link">Free trial</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#clients" class="nav__link link">Clients</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#support" class="nav__link link">Support</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#about" class="nav__link link">About us</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="/doc" class="nav__link link link_solid-line">Documentation</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="https://manage.erlyvideo.org/" class="nav__link link link_solid-line">My account</a>
+                </li>
+
+                <li class="nav__item">
+                  <a href="#">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.6.0 - http://avocode.com -->
+                    <svg height="17" width="16" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17">
+    <path fill="#ffffff" opacity="0.7" fill-rule="evenodd" d="M 10.9 6.83 C 10.9 9.23 8.95 11.18 6.55 11.18 C 4.15 11.18 2.18 9.23 2.18 6.83 C 2.18 4.41 4.13 2.46 6.55 2.46 C 8.95 2.46 10.9 4.43 10.9 6.83 Z M 11.94 10.53 C 12.69 9.45 13.09 8.14 13.09 6.83 C 13.09 3.21 10.16 0.28 6.55 0.28 C 2.93 0.28 0 3.21 0 6.83 C 0 10.45 2.93 13.38 6.55 13.38 C 7.86 13.38 9.17 12.96 10.26 12.22 C 10.26 12.22 14.33 16.29 14.33 16.29 C 14.33 16.29 16.01 14.61 16.01 14.61 C 16.01 14.61 11.94 10.53 11.94 10.53 Z" />
+</svg>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="lang">
+
+              <a href="index.html" class="lang__current">English</a>
+
+            </div>
+
+            <button type="button" class="menu-button"><span></span></button>
+
+            <div class="hero-links">
+              <span data-section="ipcam" class="hero-btn is-active">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="35px" viewBox="0 0 36 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-camera</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-camera" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" stroke="#231F20">
+            <path d="M22.572,23.441 L9.084,23.441 C7.215,23.441 4.818,21.788 4.818,17.575 C4.818,13.475 7.214,11.443 9.084,11.443 L27.229,11.443" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M25.448,12.096 C27.448,12.846 27.875,16.014 27.875,17.616 C27.875,20.577 26.563,23.552 24.158,23.552 C21.753,23.552 20.22,20.536 20.501,17.431 C20.697,15.266 23.132,13.213 24.81,12.372 C27.18,11.184 28.717,11.215 29.604,12.047 C30.026,12.443 29.241,14.645 27.782,16.221" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M24.577,15.667 C25.28,15.667 25.852,16.53 25.852,17.594 C25.852,18.658 25.28,19.522 24.577,19.522 C23.873,19.522 23.302,18.659 23.302,17.594 C23.302,16.53 23.873,15.667 24.577,15.667 L24.577,15.667 Z" id="Shape" stroke-width="0.7" sketch:type="MSShapeGroup"></path>
+            <path d="M5.26,19.441 L20.485,19.441" id="Shape" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
+            <path d="M5.947,21.191 L20.697,21.191" id="Shape" stroke-width="0.5" sketch:type="MSShapeGroup"></path>
+            <path d="M16.591,23.441 L16.591,28.021 L11.154,33.389" id="Shape" sketch:type="MSShapeGroup"></path>
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="17" cy="17.5" r="17"></circle>
+        </g>
+    </g>
+</svg>
+
+    <span>For IP Cameras</span>
+              </span>
+              <span data-section="iptv" class="hero-btn">
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-antenna</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon-antenna" sketch:type="MSLayerGroup" transform="translate(1.000000, 0.000000)" stroke="#231F20">
+            <circle id="Oval" sketch:type="MSShapeGroup" cx="17.173" cy="17.558" r="17"></circle>
+            <path d="M23.549,16.455 C26.686,20.502 27.985,24.393 26.463,25.906 C24.571,27.784 19.047,25.288 14.124,20.333 C9.201,15.377 6.742,9.837 8.633,7.958 C10.2,6.4 14.272,7.853 18.425,11.223" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M26.385,25.989 C24.414,29.084 16.609,29.407 10.791,23.768 C5.117,18.27 5.664,9.625 8.468,8.021" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M11.876,15.387 L22.692,11.231 C22.481,10.971 22.424,10.521 22.42,10.348 C22.389,9.209 23.287,8.262 24.426,8.231 C25.564,8.2 26.512,9.098 26.542,10.236 C26.573,11.374 25.676,12.322 24.537,12.353 C24.348,12.358 23.798,12.233 23.622,12.082 L19.716,22.75" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M15.18,19.686 L21.909,12.966" id="Shape" sketch:type="MSShapeGroup"></path>
+            <path d="M10.609,24.547 L8.377,26.768 L8.39,32.116" id="Shape" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
+    <span>For IPTV</span>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </header>
+      <!-- END header -->
+
+      <!-- BEGIN toparea -->
+      <section class="toparea l fade-in slide-up" style="background-image: url('img/type_top_svg.svg')">
+
+        <div class="toparea__in">
+          <div class="toparea__left">
+            <h1 class="title">Example type page with text styles</h1>
+            <p>Leading paragraph, in this article we will explain how to install Flussonic, <br>upload a video file and see a stream</p>
+          </div>
+        </div>
+
+      </section>
+      <!-- END toparea -->
+
+      <!-- content -->
+      <section class="content">
+        <section class="section fade-in slide-up">
+          <!-- l -->
+          <div class="l">
+            <div class="center">
+              <h2>H2 heading text styles</h2>
+              <p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be <a href="#" title="requested from us">requested from us</a> . Amazing.</p>
+              <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at <a href="#" title="Digital Ocean">Digital Ocean</a>.
+                Further instructions will be for Ubuntu.</p>
+              <p>Open the configuration file «/etc/flussonic/flussonic.conf» and add this code snippet:</p>
+              <div class="pre">
+                <pre>wget -q -O - http://debian.erlyvideo.org/binary/gpg.key | apt-key add - 
+echo "deb http://debian.erlyvideo.org binary/" > /etc/apt/sources.list.d/erlyvideo.list
+apt-get update
+apt-get -y install flussonic flussonic-ffmpeg flussonic-python</pre>
+                <a href="#" class="code-copy">Copy</a>
+              </div>
+              <p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Here is a <a href="#" title="">link</a> to an external resource and a <a href="#" title="">link</a> that opens in a new window.</p>
+              <h3>H3 heading</h3>
+              <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions
+                will be for Ubuntu.</p>
+              <h4>H4 heading</h4>
+              <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions
+                will be for Ubuntu.</p>
+              <!-- accord -->
+              <div class="accord js-accord">
+                <div class="accord__top js-accord-top">
+                  <div class="icon">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg height="6" width="9" viewBox="0 0 9 6">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.8" stroke="#509cff" fill="none" fill-rule="evenodd" d="M 7.99 6 C 7.99 6 4.5 2.01 4.5 2.01 C 4.5 2.01 1.01 6 1.01 6" />
+</svg>
+                  </div>
+                  <span>Drop-down item</span>
+                </div>
+                <div class="accord__block js-accord-block">
+                  <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
+                  <p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+                </div>
+              </div>
+              <div class="accord js-accord is-active">
+                <div class="accord__top js-accord-top">
+                  <div class="icon">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <svg height="6" width="9" viewBox="0 0 9 6">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.8" stroke="#509cff" fill="none" fill-rule="evenodd" d="M 7.99 6 C 7.99 6 4.5 2.01 4.5 2.01 C 4.5 2.01 1.01 6 1.01 6" />
+</svg>
+                  </div>
+                  <span>Opened drop-down item</span>
+                </div>
+                <div class="accord__block js-accord-block">
+                  <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter.</p>
+                  <p>It is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions will be for Ubuntu.</p>
+                </div>
+              </div>
+              <hr>
+              <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. Further instructions
+                will be for Ubuntu.</p>
+              <!-- warn -->
+              <div class="warn">
+                <i class="icon">
+						<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+<svg height="23" width="25" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 23">
+    <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAXCAYAAAD+4+QTAAABhklEQVRIS7XVv0tWURgH8M9DEEQEQTT0Y9PAKCiihiJw8A8IhxDFocUhaAjHgkKCgsAhgqaoQShpaOgPiMJFQRAlEi2olnATRCwoOXGqGy/5/rgv933PdrnP8/3c53LuuaHkSpzAI5zCW1wNvpZpjzJFiUNYxMGa+mWcDbZaZZRFXuBynbB7wY3KSOIiZhoEfcfx4HMzqOkkiXx/DueahEwHw1WQUUy1eh04H8w2qms4SWIPPuBICSQDF4JUr7YZcgsTJYCiZCR4XhpJHMYq9raBfPm7Cb7931N3ksRTXGkDKEpvBndbIokzmPdnZ7W7NnEsWKtt3BGUeIP+dtNr6h8HYw2RxCBeVgBya95hp4OlIuffJIndeI+eikhufx0M1EPGMdkBoIi4FLzKF78nSRzAR+zvIJI/gZPBjwJ5iGsdBIqo68GDSPThHXZ1AVlHb0byAZgPwm6t2xnZwL5uCVjIyM8uvariuVcy8kyLn07FKe9kJJ+0+UgfwtGKgUX7Nj7hCe7/AmcKTc1uKwnUAAAAAElFTkSuQmCC" height="23" width="25" y="0" x="0" />
+    <path fill="#ffffff" fill-rule="evenodd" d="M 12.49 15.49 C 12.49 15.49 10.07 9.41 10.07 7.27 C 10.07 6.13 11.25 4.88 12.49 4.88 C 13.73 4.88 14.91 6.13 14.91 7.27 C 14.91 9.58 12.49 15.49 12.49 15.49 Z M 12.49 16.65 C 13.52 16.65 14.35 17.47 14.35 18.49 C 14.35 19.5 13.52 20.33 12.49 20.33 C 11.46 20.33 10.63 19.5 10.63 18.49 C 10.63 17.47 11.46 16.65 12.49 16.65 Z" />
+</svg>
+					</i>
+                <p><strong>This is something important.</strong> If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean.</p>
+              </div>
+              <hr>
+              <!-- inf -->
+              <div class="inf">This is a comment. Or a footnote. We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server
+                at Digital Ocean. Further instructions will be for Ubuntu.</div>
+              <h3 class="title">Lists and tables</h3>
+              <p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
+              <div class="series">
+                <div class="col-50">
+                  <h4>Beautiful unordered list</h4>
+                  <ul>
+                    <li>Satellite capturing</li>
+                    <li>Transcoding</li>
+                    <li>IP cameras support</li>
+                    <li>Stream thumbnails</li>
+                    <li>Republishing between lots of unique different servers</li>
+                    <li>MPEG-2 support</li>
+                  </ul>
+                </div>
+                <div class="col-50">
+                  <h4>Amazing ordered list and a very long heading that takes two lines</h4>
+                  <ol>
+                    <li>Streaming from mp4 and flv files</li>
+                    <li>RTMP, HLS, HDS, DASH, RTSP delivery</li>
+                    <li>Multibitrate and multilanguage mp4 streaming</li>
+                    <li>Support for HTTP storages like http server, Amazon S3, Swift</li>
+                  </ol>
+                </div>
+              </div>
+              <h3 class="title title_small">Simple table with multiple columns</h3>
+              <div class="table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="is-w21">RTMP</td>
+                      <td class="is-w24">Satellite capturing</td>
+                      <td class="is-w55">Short timeshift</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">AMF3</td>
+                      <td class="is-w24">Transcoding</td>
+                      <td class="is-w55">Long DVR (for many days and weeks)</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">MPEG-TS</td>
+                      <td class="is-w24">IP cameras support</td>
+                      <td class="is-w55">HLS streaming</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">MPEG-TS output</td>
+                      <td class="is-w24">Stream thumbnails</td>
+                      <td class="is-w55">FLV to HLS streaming</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">RTSP input</td>
+                      <td class="is-w24">Republishing</td>
+                      <td class="is-w55">Flexible catchup support</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">RTSP output</td>
+                      <td class="is-w24">MPEG-2 support</td>
+                      <td class="is-w55">Cache-aware HLS</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 class="title title_small">Table with column headings, this heading is unusually long to show line-height</h3>
+              <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>First column</th>
+                      <th>Second column</th>
+                      <th>Third column</th>
+                      <th><a href="#" title="">Sortable column</a></th>
+                      <th>
+                        <a href="#" class="sort js-sort" title="">
+										Sorted column
+										<i class="icon"><?xml version="1.0" encoding="utf-8"?>
+<svg height="6" width="9" viewBox="0 0 9 6">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.8" stroke="#509cff" fill="none" fill-rule="evenodd" d="M 7.99 6 C 7.99 6 4.5 2.01 4.5 2.01 C 4.5 2.01 1.01 6 1.01 6" />
+</svg></i>
+									</a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="is-w21">RTMP</td>
+                      <td class="is-w24">Satellite capturing</td>
+                      <td class="is-w24">Short timeshift</td>
+                      <td class="is-w15">165</td>
+                      <td class="is-w16">34</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">AMF3</td>
+                      <td class="is-w24">Transcoding</td>
+                      <td class="is-w24">Long DVR</td>
+                      <td class="is-w15">34</td>
+                      <td class="is-w16">165</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">MPEG-TS</td>
+                      <td class="is-w24">IP cameras support</td>
+                      <td class="is-w24">HLS streaming</td>
+                      <td class="is-w15">345</td>
+                      <td class="is-w16">234</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">MPEG-TS output</td>
+                      <td class="is-w24">Stream thumbnails</td>
+                      <td class="is-w24">FLV to HLS streaming</td>
+                      <td class="is-w15">21 230</td>
+                      <td class="is-w16">345</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">RTSP input</td>
+                      <td class="is-w24">Republishing</td>
+                      <td class="is-w24">Flexible catchup support</td>
+                      <td class="is-w15">234</td>
+                      <td class="is-w16">21 230</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 class="title title_small">Table with vertical headings</h3>
+              <div class="table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>RTMP</strong>
+                      </td>
+                      <td class="is-w24">Satellite capturing</td>
+                      <td class="is-w55">Short timeshift</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>AMF3</strong>
+                      </td>
+                      <td class="is-w24">Transcoding</td>
+                      <td class="is-w55">Long DVR (for many days and weeks)</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>MPEG-TS</strong>
+                      </td>
+                      <td class="is-w24">IP cameras support</td>
+                      <td class="is-w55">HLS streaming</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>MPEG-TS output</strong>
+                      </td>
+                      <td class="is-w24">Stream thumbnails</td>
+                      <td class="is-w55">FLV to HLS streaming</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>RTSP input</strong>
+                      </td>
+                      <td class="is-w24">Republishing</td>
+                      <td class="is-w55">Flexible catchup support</td>
+                    </tr>
+                    <tr>
+                      <td class="is-w21">
+                        <strong>RTSP output</strong>
+                      </td>
+                      <td class="is-w24">MPEG-2 support</td>
+                      <td class="is-w55">Cache-aware HLS</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- section blue -->
+        <section class="section is-pad blue fade-in slide-up">
+          <div class="l">
+            <h3 class="title">When something important needs to be highlighted</h3>
+            <p>Use this awesome blue content section. It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</p>
+            <h3 class="title title_small">Table with valuable information</h3>
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>First column</th>
+                    <th>Second column</th>
+                    <th>Third column</th>
+                    <th><a href="#" title="">Sortable column</a></th>
+                    <th>
+                      <a href="#" class="sort js-sort" title="">
+									Sorted column
+									<i class="icon"><?xml version="1.0" encoding="utf-8"?>
+<svg height="6" width="9" viewBox="0 0 9 6">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="0.8" stroke="#509cff" fill="none" fill-rule="evenodd" d="M 7.99 6 C 7.99 6 4.5 2.01 4.5 2.01 C 4.5 2.01 1.01 6 1.01 6" />
+</svg></i>
+								</a>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="is-w21">RTMP</td>
+                    <td class="is-w24">Satellite capturing</td>
+                    <td class="is-w24">Short timeshift</td>
+                    <td class="is-w15">165</td>
+                    <td class="is-w16">34</td>
+                  </tr>
+                  <tr>
+                    <td class="is-w21">AMF3</td>
+                    <td class="is-w24">Transcoding</td>
+                    <td class="is-w24">Long DVR</td>
+                    <td class="is-w15">34</td>
+                    <td class="is-w16">165</td>
+                  </tr>
+                  <tr>
+                    <td class="is-w21">MPEG-TS</td>
+                    <td class="is-w24">IP cameras support</td>
+                    <td class="is-w24">HLS streaming</td>
+                    <td class="is-w15">345</td>
+                    <td class="is-w16">234</td>
+                  </tr>
+                  <tr>
+                    <td class="is-w21">MPEG-TS output</td>
+                    <td class="is-w24">Stream thumbnails</td>
+                    <td class="is-w24">FLV to HLS streaming</td>
+                    <td class="is-w15">21 230</td>
+                    <td class="is-w16">345</td>
+                  </tr>
+                  <tr>
+                    <td class="is-w21">RTSP input</td>
+                    <td class="is-w24">Republishing</td>
+                    <td class="is-w24">Flexible catchup support</td>
+                    <td class="is-w15">234</td>
+                    <td class="is-w16">21 230</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- section -->
+        <section class="section fade-in slide-up">
+          <!-- l -->
+          <div class="l">
+            <h3 class="title">Sometimes columns can be used, but be careful with them</h3>
+            <div class="series">
+              <div class="col-left">
+                <p>It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key.</p>
+                <p>We recommend Debian or Ubuntu, but it is possible and something like Centos, the main thing that would be 64 bits. If you don't have Linux or free server, does not matter, rent for a few days a small server at Digital Ocean. </p>
+              </div>
+              <div class="col-right">
+                <div class="inf">
+                  <h5>Right column may contain secondary information</h5>
+                  <p>Subscription starts from $50 per month. <br>Please <a href="#" title="">sign in</a> to buy a license if you have already tried Flussonic.</p>
+                  <p><a href="#" title="">How to install Flussonic</a> </p>
+                </div>
+              </div>
+            </div>
+            <h3 class="title">Downloadable files</h3>
+            <div class="series">
+              <div class="series__in">
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <img src="img/svg/type_file/pdf.svg" alt="">
+                    <span class="file__name">Getting started</span>
+                    <span class="file__heft">40.5 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#17ac4c" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#17ac4c" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>XLS</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Spreadsheet</span>
+                    <span class="file__heft">40.5 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#c048e8" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#c048e8" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>ZIP</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Archive</span>
+                    <span class="file__heft">40.5 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#0066ff" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.1 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.1 35 31 35 C 31 35 8 35 8 35 C 6.9 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.9 0 8 0 Z" />
+    <path fill="#0066ff" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.1 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.1 28 25 28 C 25 28 2 28 2 28 C 0.9 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.9 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>DOC</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Instructions</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff6d0c" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#ff6d0c" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="4">
+        <tspan>PPT</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Presentation</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#c048e8" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#c048e8" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="4">
+        <tspan>RAR</tspan>
+    </text>
+</svg>
+                    <span class="file__name">One more archive</span>
+                    <span class="file__heft">40,5 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff9c00" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.1 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.1 35 31 35 C 31 35 8 35 8 35 C 6.9 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.9 0 8 0 Z" />
+    <path fill="#ff9c00" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.1 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.1 28 25 28 C 25 28 2 28 2 28 C 0.9 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.9 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="4">
+        <tspan>PNG</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Huge image file</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff9c00" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#ff9c00" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>TIF</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Huge image file</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff9c00" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#ff9c00" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>GIF</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Huge image file</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#ff9c00" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.1 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.1 35 31 35 C 31 35 8 35 8 35 C 6.9 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.9 0 8 0 Z" />
+    <path fill="#ff9c00" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.1 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.1 28 25 28 C 25 28 2 28 2 28 C 0.9 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.9 15 2 15 Z" />
+    <text font-weight="500" font-size="10" font-family="FiraMono" fill="#ffffff" y="26" x="3">
+        <tspan>JPG</tspan>
+    </text>
+</svg>
+                    <span class="file__name">Huge image file</span>
+                    <span class="file__heft">1.4 Mb</span>
+                  </a>
+                </div>
+                <div class="col-26">
+                  <a href="#" class="file">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Avocode 2.3.2-ea60620 - http://avocode.com -->
+                    <svg height="35" width="33" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 35">
+    <path stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="#9a9a9a" fill="none" fill-rule="evenodd" d="M 8 0 C 8 0 31 0 31 0 C 32.11 0 33 0.9 33 2 C 33 2 33 33 33 33 C 33 34.1 32.11 35 31 35 C 31 35 8 35 8 35 C 6.89 35 6 34.1 6 33 C 6 33 6 2 6 2 C 6 0.9 6.89 0 8 0 Z" />
+    <path fill="#b3b3b3" fill-rule="evenodd" d="M 2 15 C 2 15 25 15 25 15 C 26.11 15 27 15.9 27 17 C 27 17 27 26 27 26 C 27 27.1 26.11 28 25 28 C 25 28 2 28 2 28 C 0.89 28 0 27.1 0 26 C 0 26 0 17 0 17 C 0 15.9 0.89 15 2 15 Z" />
+    <path fill="#ffffff" fill-rule="evenodd" d="M 19.5 23 C 18.67 23 18 22.33 18 21.5 C 18 20.67 18.67 20 19.5 20 C 20.33 20 21 20.67 21 21.5 C 21 22.33 20.33 23 19.5 23 Z M 13.5 23 C 12.67 23 12 22.33 12 21.5 C 12 20.67 12.67 20 13.5 20 C 14.33 20 15 20.67 15 21.5 C 15 22.33 14.33 23 13.5 23 Z M 7.5 23 C 6.67 23 6 22.33 6 21.5 C 6 20.67 6.67 20 7.5 20 C 8.33 20 9 20.67 9 21.5 C 9 22.33 8.33 23 7.5 23 Z" />
+</svg>
+                    <span class="file__name">Unknown format</span>
+                    <span class="file__heft">40.5 Mb</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section fade-in slide-up">
+          <div class="l">
+            <h3 class="title">Large full-width image</h3>
+          </div>
+          <div class="full-img" style="background-image: url('img/full-img.png')"></div>
+          <div class="l">
+            <div class="series is-mod">
+              <div class="col-right">
+                <div class="inf">Image description with its left edge aligned to the center of the image</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section fade-in slide-up">
+          <div class="l">
+            <h3 class="title">A few smaller images</h3>
+            <div class="series">
+              <div class="images">
+                <div class="col">
+                  <img src="img/img-1.png" alt="img">
+                </div>
+                <div class="col">
+                  <img src="img/img-2.png" alt="img">
+                </div>
+                <div class="col">
+                  <img src="img/img-3.png" alt="img">
+                </div>
+              </div>
+            </div>
+            <h3 class="title">This is a form</h3>
+            <form class="form is-mod" action="" method="">
+              <div class="form__left">
+                <div class="field">
+                  <label for="name" class="field__label">Your name:</label>
+                  <input class="input" type="text" name="name" id="name" value="My name">
+                </div>
+                <div class="form__row">
+                  <div class="col-50">
+                    <div class="select-field">
+                      <label for="choice_1" class="field__label">Your choice:</label>
+                      <select name="choice_1" id="choice_1" class="js-select">
+									<option value="Blue pill">Blue pill</option>
+									<option value="Blue pill Blue pill Blue pill">Blue pill Blue pill Blue pill</option>
+									<option value="var3">var3</option>
+									<option value="var4">var4</option>
+								</select>
+                    </div>
+                  </div>
+                  <div class="col-50">
+                    <div class="select-field">
+                      <label for="choice_2" class="field__label">Your choice:</label>
+                      <select name="choice_2" id="choice_2" class="js-select">s
+									<option value="Orange bottle">Orange bottle</option>
+									<option value="Blue pill">Blue pill</option>
+									<option value="Red button">Red button</option>
+									<option value="Green apple">Green apple</option>
+								</select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field is-textarea">
+                <label for="textarea" class="field__label">Your choice:</label>
+                <textarea name="textarea" id="textarea" class="input">It is easy to start and try Flussonic. You need a computer with linux at hand and license or trial key. Trial key can be requested from us.</textarea>
+              </div>
+            </form>
+            <div class="series">
+              <div class="col-25 is-mob">
+                <label class="label">Checkboxes</label>
+                <label class="checkbox">
+						<input type="checkbox" checked></input>
+						<span>Satellite capturing</span>
+					</label>
+                <label class="checkbox">
+						<input type="checkbox"></input>
+						<span>Transcoding</span>
+					</label>
+                <label class="checkbox">
+						<input type="checkbox"></input>
+						<span>IP cameras support</span>
+					</label>
+              </div>
+              <div class="col-25 is-mob">
+                <label class="label">Radio buttons</label>
+                <label class="radiobox">
+						<input type="radio" name="radio"></input>
+						<span>Satellite capturing</span>
+					</label>
+                <label class="radiobox">
+						<input type="radio" name="radio" checked></input>
+						<span>Transcoding</span>
+					</label>
+                <label class="radiobox">
+						<input type="radio" name="radio"></input>
+						<span>IP cameras support</span>
+					</label>
+              </div>
+            </div>
+            <div class="series">
+              <div class="col-25 is-mob">
+                <button class="btn btn_solid btn_long" type="button">Action button</button>
+              </div>
+              <div class="col-25 is-mob">
+                <a href="#" class="btn btn_bord btn_big">Link button</a>
+              </div>
+              <div class="col-25 is-mob">
+                <button class="btn btn_big" type="button">Pseudo-link button</button>
+              </div>
+            </div>
+            <div class="series">
+              <div class="alert">Message of success takes the width of the form above it. Thank you!</div>
+            </div>
+            <div class="series">
+              <div class="alert is-error">Message of error takes the width of the form above it. Something went wrong.</div>
+            </div>
+          </div>
+        </section>
+    </div>
+    <!-- BEGIN footer -->
+    <footer class="footer footer_type fade-in">
+      <div class="l">
+        <div class="footer__left">
+          <span class="copyright">© Erlyvideo 2013-2016</span>
+        </div>
+        <div class="footer__right">
+          <nav class="footer__nav">
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Free trial</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">My account</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </footer>
+    <!-- END footer -->
+
+    </div>
+    <!-- END content -->
+
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/common.js"></script>
+
+    <script type="text/javascript" src="js/inner-page.js"></script>
+
+    <!-- END scripts -->
+
+  </body>
+
+</html>

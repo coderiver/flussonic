@@ -235,6 +235,8 @@ a:not([class])
   vertical-align: top
   margin-right: 20px
   line-height: 1.7
+  &:last-child
+    margin-right: 0
 
 .nav__link
   display: inline-block
@@ -387,6 +389,8 @@ a:not([class])
   line-height: 1.1
   &_bold
     +f(l)
+  & + .series
+    margin-top: 3rem
   &_small
     +f(el, 35)
   +md
@@ -399,9 +403,14 @@ a:not([class])
 .section
   margin-top: 70px
   margin-top: 7rem
+  &.is-pad
+    padding: 95px 0
   .title
     margin-bottom: 30px
     margin-bottom: 3rem
+    & + .title
+      margin-top: 30px
+      margin-bottom: 3rem
   +sm
     margin-top: 40px
     .title
@@ -521,19 +530,21 @@ a:not([class])
       br
         display: none
 
-.btn
+.btn,
+a.btn
   display: inline-block
   box-sizing: border-box
   height: 45px
   height: 4.5rem
   min-width: 140px
   min-width: 14rem
-  padding: 0 10px
-  padding: 0 1rem
+  padding: 0 20px
+  padding: 0 2rem
   line-height: 43px
   line-height: 4.3rem
   border: 1px dotted
   border-radius: 3px
+  text-align: center
   border-radius: 0.3rem
   background: none
   +f(el, 16)
@@ -560,7 +571,17 @@ a:not([class])
     text-transform: uppercase
     &:hover
       color: white
-      background: red
+      background: #002fc8
+  &_big
+    height: 50px
+    height: 5rem
+  &_long
+    padding-left: 40px
+    padding-left: 4rem
+    line-height: 40px
+    line-height: 4rem
+  &_bord
+    border-style: solid
 
 .features-container
   position: relative
@@ -1018,27 +1039,62 @@ a:not([class])
     margin-left: 200px
 
 .form
+  &.is-mod
+    .field__label
+      text-transform: initial
+  &__row
+    +clr
+    [class^="col"]
+      float: left
+      width: 49%
+      margin-left: 2%
+      +r(768)
+        margin: 20px 0 0
+        width: 100%
+        &:first-child
+          margin: 0
+      &:first-child
+        margin-left: 0
+  &__left
+    width: 55% 
+    +r(1200)
+      width: 100%
   .btn
     margin-top: 44px
   +sm
     .btn
       margin-top: 20px
 
-.field
+.field,
+.select-field
   position: relative
   margin: 20px 0
+  &.is-textarea
+    textarea
+      padding-right: 55px
+      height: 66px 
+      height: 6.6rem
   &:first-child
     margin-top: 0
   &:last-child
     margin-bottom: 0
-
+  .field__label
+    position: absolute
+    top: em(11,16)
+    left: 0
+    
 .field__label
-  position: absolute
-  top: em(11,16)
-  left: 0
   +f(l, 16, 150)
   text-transform: uppercase
   color: #9D9CA7
+
+.select-field
+  padding: 10px 0 9px 120px
+  padding: 1rem 0 0.9rem 12rem
+  line-height: 1.2
+  box-sizing: border-box
+  border-bottom: 1px solid rgba(black, 0.2)
+
 
 .input
   display: block
@@ -1051,7 +1107,7 @@ a:not([class])
   appearance: none
   background: none
   border: none
-  border-bottom: 1px solid rgba(black, 0.5)
+  border-bottom: 1px solid rgba(black, 0.2)
   +f(r, 20)
   color: black
   resize: none

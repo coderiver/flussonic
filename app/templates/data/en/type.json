@@ -52,13 +52,13 @@
     "title": "News"
   },
   "navigation": [
-    {"name": "Overview", "href": "#overview", "external": false},
+    {"name": "Overview", "href": "index.html", "external": false},
     {"name": "Free trial", "href": "#trial", "external": false},
     {"name": "Clients", "href": "#clients", "external": false},
     {"name": "Support", "href": "#support", "external": false},
     {"name": "About us", "href": "#about", "external": false},
-    {"name": "Documentation", "href": "/doc", "external": true},
-    {"name": "My account", "href": "https://manage.erlyvideo.org/", "external": true}
+    {"name": "Documentation", "href": "about.html", "external": true},
+    {"name": "My account", "href": "type.html", "external": true}
   ],
   "customers1": {
     "ourcustomer": "Our customers"

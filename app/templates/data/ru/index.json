@@ -57,8 +57,8 @@
     {"name": "Клиенты", "href": "#clients", "external": false},
     {"name": "Поддержка", "href": "#support", "external": false},
     {"name": "О нас", "href": "#about", "external": false},
-    {"name": "Документация", "href": "/doc", "external": true},
-    {"name": "Мой кабинет", "href": "https://manage.erlyvideo.org/", "external": true}
+    {"name": "Документация", "href": "about-ru.html", "external": true},
+    {"name": "Мой кабинет", "href": "type-ru.html", "external": true}
   ],
   "customers1": {
     "ourcustomer": "Наши клиенты"

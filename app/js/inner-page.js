@@ -149,15 +149,21 @@ $('.js-select').each(function () {
 
 });
 
-// anim svg
+// anim svg 
 var $svg = $('.js-svg-anim svg').drawsvg({
-	duration: 8000,
+	duration: 16000,
+	easing: 'linear'
+});
+
+var $svgType = $('.js-svg-anim-type svg').drawsvg({
+	duration: 300,
 	easing: 'linear'
 });
 
 setTimeout(function() {
-	$svg.drawsvg('animate');
-}, 500);
+	$svg.fadeIn(300).drawsvg('animate');
+	$svgType.fadeIn(300).drawsvg('animate');
+}, 800);
 
 // parallaxScroll
 $(window).on('scroll',function(e){

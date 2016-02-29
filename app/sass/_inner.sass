@@ -12,7 +12,7 @@
 	.nav
 		margin-left: 10px
 		+lg
-			padding-top: 10px	
+			padding-top: 10px
 	.nav__item
 		+r(900)
 			margin-right: 18px
@@ -22,8 +22,7 @@
 			a
 				border-bottom: none
 				&:hover
-					&:before
-						border-color: red 
+					opacity: 1
 				&:before
 					display: block
 		&:last-child
@@ -34,15 +33,24 @@
 				border-bottom: none 
 		.link
 			color: #fff
-			border-color: rgba(#fff, 0.3) 
-			&:hover
-				color: red
-				border-color: rgba(red, 0.3)
+			border-color: rgba(#fff, 0.5) 
+			&:hover 
+				color: #fff
+				+sm
+					color: #003CFF
 			+sm
 				color: #003CFF
 				border-color: rgba(0, 60, 255, 0.3)
 		a
 			position: relative
+			transition: opacity .2s, border-color .2s
+			&:hover
+				color: #fff
+				opacity: .7 
+				border-color: rgba(#fff, 0.3) 
+				+sm
+					color: #003CFF
+					border-color: rgba(0, 60, 255, 0.3)
 			&:before
 				position: absolute
 				content: ""
@@ -60,14 +68,10 @@
 			svg
 				path
 					fill: #fff
-					transition: fill 200ms
-			&:hover
-				svg
-					path
-						fill: red	 	
+					transition: fill 200ms 	
 	.lang
 		a
-			color: rgba(#fff, 0.3)
+			color: rgba(#fff, 0.5)
 			transition: border-color .2s, color .2s
 			line-height: 1.2
 			border-bottom: 1px solid rgba(#fff, .2) 
@@ -96,37 +100,51 @@
 				font-size: 5rem
 		p
 			font-size: 1.6rem
-	.toparea__svg
-		position: absolute
-		right: -50px
-		bottom: -20px
+.toparea__svg
+	position: absolute
+	right: -50px
+	bottom: -20px
+	svg
+		display: none
+		
 .about
 	.about__in
 		+lg
 			padding: 0 20px
-		+sm
+		+r(1280)
+			padding-right: 65px
+		+r(900)
 			padding: 0 	 
 	.about__list
+		padding-left: 65px
+		margin-left: -65px
+		column-count: 3
+		column-gap: 10px
 		font-size: 0
-		padding: 77px 0
+		padding: 20px 0 77px
+		+r(1280)
+			column-count: 2
+			column-gap: 0
+		+r(900)
+			padding-left: 0
+			margin-left: 0
 		+sm
-			padding: 40px 0 10px	 
+			padding: 40px 0 10px
+		+r(560)
+			column-count: initial
+			column-gap: initial
 	.about__item
 		position: relative
+		padding-left: 65px
 		padding-right: 20px
 		display: inline-block
 		vertical-align: top
-		width: 50%
 		max-width: 500px
 		margin-top: 50px
 		font-size: 18px
 		box-sizing: border-box
-		&:first-child
-			margin-top: 0
-			& + .about__item
-				margin-top: 0
-				+r(560)
-					margin-top: 40px
+		+r(900)
+			padding-left: 0
 		&:hover
 			.star
 				opacity: 1
@@ -155,9 +173,15 @@
 	.star
 		position: absolute
 		top: 5px
-		left: -55px
+		left: 0
 		opacity: 0
 		transition: opacity 200ms
+		+r(1280)
+			left: 10px
+		+r(900)
+			display: none
+		span
+			will-change: transform
 		+lg
 			top: 0
 		+sm

@@ -155,10 +155,7 @@ var $svg = $('.js-svg-anim svg').drawsvg({
 	easing: 'linear'
 });
 
-var $svgType = $('.js-svg-anim-type svg').drawsvg({
-	duration: 300,
-	easing: 'linear'
-});
+var $svgType = $('.js-svg-anim-type svg').drawsvg();
 
 setTimeout(function() {
 	$svg.fadeIn(300).drawsvg('animate');
@@ -173,4 +170,5 @@ function parallaxScroll(){
 	var scrolled 	= $(window).scrollTop(),
 		pos 		= 0 + (scrolled * .55) + 'px';
 	$svg.css('transform', 'translateY(' + pos + ')');
+	$svgType.css('transform', 'translateY(' + pos + ')');
 };

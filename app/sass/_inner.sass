@@ -85,6 +85,9 @@
 	// url(../img/features-cubes.svg) 110% 0 no-repeat
 	// background-size: auto 120% 
 	color: #fff
+	+r(1400)
+		padding-top: 130px
+		padding-bottom: 95px
 	+r(568)
 		text-align: center
 		box-sizing: border-box
@@ -93,10 +96,12 @@
 		position: relative
 		max-width: 640px
 		padding: 100px 0 
+		+r(1400)
+			padding: 100px 0
 		.title
 			font-size: 7rem
 			margin-bottom: 20px
-			+lg
+			+r(900)
 				font-size: 5rem
 		p
 			font-size: 1.6rem
@@ -116,8 +121,8 @@
 		+r(900)
 			padding: 0 	 
 	.about__list
-		padding-left: 65px
-		margin-left: -65px
+		padding-left: 60px
+		margin-left: -60px
 		column-count: 3
 		column-gap: 10px
 		font-size: 0
@@ -135,7 +140,7 @@
 			column-gap: initial
 	.about__item
 		position: relative
-		padding-left: 65px
+		padding-left: 60px
 		padding-right: 20px
 		display: inline-block
 		vertical-align: top
@@ -163,7 +168,7 @@
 					content: ""
 					position: absolute
 					top: 10px
-					left: -20px
+					left: -15px
 					width: 3px
 					height: 3px
 					border-radius: 50%
@@ -178,7 +183,7 @@
 		transition: opacity 200ms
 		+r(1280)
 			left: 10px
-		+r(900)
+		+r(900) 
 			display: none
 		span
 			will-change: transform
@@ -192,7 +197,7 @@
 		margin-bottom: 25px
 		.lnk
 			font-size: 3.5rem
-			+lg
+			+r(900)
 				font-size: 2.5rem
 
 @keyframes pulse

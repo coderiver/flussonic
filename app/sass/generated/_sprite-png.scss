@@ -1,0 +1,404 @@
+$ico-doc: (
+  name: 'ico-doc',
+  x: 43px,
+  y: 0px,
+  offset-x: -43px,
+  offset-y: 0px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-gif: (
+  name: 'ico-gif',
+  x: 86px,
+  y: 45px,
+  offset-x: -86px,
+  offset-y: -45px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-jpg: (
+  name: 'ico-jpg',
+  x: 86px,
+  y: 0px,
+  offset-x: -86px,
+  offset-y: 0px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-pdf: (
+  name: 'ico-pdf',
+  x: 0px,
+  y: 45px,
+  offset-x: 0px,
+  offset-y: -45px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-png: (
+  name: 'ico-png',
+  x: 43px,
+  y: 45px,
+  offset-x: -43px,
+  offset-y: -45px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-ppt: (
+  name: 'ico-ppt',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-rar: (
+  name: 'ico-rar',
+  x: 129px,
+  y: 0px,
+  offset-x: -129px,
+  offset-y: 0px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-tif: (
+  name: 'ico-tif',
+  x: 129px,
+  y: 45px,
+  offset-x: -129px,
+  offset-y: -45px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-unknown: (
+  name: 'ico-unknown',
+  x: 0px,
+  y: 90px,
+  offset-x: 0px,
+  offset-y: -90px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-xls: (
+  name: 'ico-xls',
+  x: 43px,
+  y: 90px,
+  offset-x: -43px,
+  offset-y: -90px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-zip: (
+  name: 'ico-zip',
+  x: 86px,
+  y: 90px,
+  offset-x: -86px,
+  offset-y: -90px,
+  width: 33px,
+  height: 35px,
+  total-width: 162px,
+  total-height: 125px,
+  image: '../img/sprite.png'
+);
+$ico-doc-2x: (
+  name: 'ico-doc-@2x',
+  x: 86px,
+  y: 0px,
+  offset-x: -86px,
+  offset-y: 0px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-gif-2x: (
+  name: 'ico-gif-@2x',
+  x: 172px,
+  y: 90px,
+  offset-x: -172px,
+  offset-y: -90px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-jpg-2x: (
+  name: 'ico-jpg-@2x',
+  x: 172px,
+  y: 0px,
+  offset-x: -172px,
+  offset-y: 0px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-pdf-2x: (
+  name: 'ico-pdf-@2x',
+  x: 0px,
+  y: 90px,
+  offset-x: 0px,
+  offset-y: -90px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-png-2x: (
+  name: 'ico-png-@2x',
+  x: 86px,
+  y: 90px,
+  offset-x: -86px,
+  offset-y: -90px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-ppt-2x: (
+  name: 'ico-ppt-@2x',
+  x: 0px,
+  y: 0px,
+  offset-x: 0px,
+  offset-y: 0px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-rar-2x: (
+  name: 'ico-rar-@2x',
+  x: 258px,
+  y: 0px,
+  offset-x: -258px,
+  offset-y: 0px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-tif-2x: (
+  name: 'ico-tif-@2x',
+  x: 258px,
+  y: 90px,
+  offset-x: -258px,
+  offset-y: -90px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-unknown-2x: (
+  name: 'ico-unknown-@2x',
+  x: 0px,
+  y: 180px,
+  offset-x: 0px,
+  offset-y: -180px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-xls-2x: (
+  name: 'ico-xls-@2x',
+  x: 86px,
+  y: 180px,
+  offset-x: -86px,
+  offset-y: -180px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$ico-zip-2x: (
+  name: 'ico-zip-@2x',
+  x: 172px,
+  y: 180px,
+  offset-x: -172px,
+  offset-y: -180px,
+  width: 66px,
+  height: 70px,
+  total-width: 324px,
+  total-height: 250px,
+  image: '../img/sprite@2x.png'
+);
+$spritesheet: (
+  width: 162px,
+  height: 125px,
+  image: '../img/sprite.png',
+  sprites: ($ico-doc, $ico-gif, $ico-jpg, $ico-pdf, $ico-png, $ico-ppt, $ico-rar, $ico-tif, $ico-unknown, $ico-xls, $ico-zip, )
+);
+$retina-spritesheet: (
+  width: 324px,
+  height: 250px,
+  image: '../img/sprite@2x.png',
+  sprites: ($ico-doc-2x, $ico-gif-2x, $ico-jpg-2x, $ico-pdf-2x, $ico-png-2x, $ico-ppt-2x, $ico-rar-2x, $ico-tif-2x, $ico-unknown-2x, $ico-xls-2x, $ico-zip-2x, )
+);
+$ico-doc-group: (
+  name: 'ico-doc',
+  normal: $ico-doc,
+  retina: $ico-doc-2x
+);
+$ico-gif-group: (
+  name: 'ico-gif',
+  normal: $ico-gif,
+  retina: $ico-gif-2x
+);
+$ico-jpg-group: (
+  name: 'ico-jpg',
+  normal: $ico-jpg,
+  retina: $ico-jpg-2x
+);
+$ico-pdf-group: (
+  name: 'ico-pdf',
+  normal: $ico-pdf,
+  retina: $ico-pdf-2x
+);
+$ico-png-group: (
+  name: 'ico-png',
+  normal: $ico-png,
+  retina: $ico-png-2x
+);
+$ico-ppt-group: (
+  name: 'ico-ppt',
+  normal: $ico-ppt,
+  retina: $ico-ppt-2x
+);
+$ico-rar-group: (
+  name: 'ico-rar',
+  normal: $ico-rar,
+  retina: $ico-rar-2x
+);
+$ico-tif-group: (
+  name: 'ico-tif',
+  normal: $ico-tif,
+  retina: $ico-tif-2x
+);
+$ico-unknown-group: (
+  name: 'ico-unknown',
+  normal: $ico-unknown,
+  retina: $ico-unknown-2x
+);
+$ico-xls-group: (
+  name: 'ico-xls',
+  normal: $ico-xls,
+  retina: $ico-xls-2x
+);
+$ico-zip-group: (
+  name: 'ico-zip',
+  normal: $ico-zip,
+  retina: $ico-zip-2x
+);
+$retina-groups: ($ico-doc-group, $ico-gif-group, $ico-jpg-group, $ico-pdf-group, $ico-png-group, $ico-ppt-group, $ico-rar-group, $ico-tif-group, $ico-unknown-group, $ico-xls-group, $ico-zip-group, );
+
+
+@mixin sprite-width($sprite) {
+  width: map-get($sprite, 'width');
+}
+
+@mixin sprite-height($sprite) {
+  height: map-get($sprite, 'height');
+}
+
+@mixin sprite-position($sprite) {
+  background-position: map-get($sprite, 'offset-x') map-get($sprite, 'offset-y');
+}
+
+@mixin sprite-image($sprite) {
+  background-image: url(map-get($sprite, 'image'));
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+@mixin sprites {
+  $sprites: map-get($spritesheet, 'sprites');
+  @each $sprite in $sprites {
+    $sprite-name: map-get($sprite, 'name');
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//  It should be used with a "retina group" variable.
+
+// $icon-home-group: (
+//   name: 'icon-home',
+//   normal: $icon-home,
+//   retina: $icon-home-2x
+// );
+
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+
+@mixin sprite-background-size($sprite) {
+  background-size: map-get($sprite, 'total-width') map-get($sprite, 'total-height');
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: map-get($retina-group, 'normal');
+  $retina-sprite: map-get($retina-group, 'retina');
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+@mixin retina-sprites {
+  @each $retina-group in $retina-groups {
+    $sprite-name: map-get($retina-group, 'name');
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

@@ -196,10 +196,15 @@ a:not([class])
   position: absolute
   z-index: 1
   top: 25px
-  // right: -33px
-  right: 0
+  right: -14.15% 
+  min-width: 85px
+  text-align: right
   +f(l, 16)
   color: $color-grey
+  +r(1200)
+    right: 0
+  +md
+    right: 0
   a
     border: none
     &:not(:hover)
@@ -209,9 +214,6 @@ a:not([class])
     .lang__list
       opacity: 1
       visibility: visible
-  +md
-    right: 0
-
 .lang__list
   opacity: 0
   visibility: hidden
@@ -281,6 +283,12 @@ a:not([class])
   padding-top: 130px
   padding-bottom: 95px
   overflow: hidden
+  &.l
+    padding-top: 130px
+    padding-bottom: 95px
+    +sm
+      padding-top: 100px
+      padding-bottom: 40px
   &__left
     max-width: 710px
     line-height: 1.9

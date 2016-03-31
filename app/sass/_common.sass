@@ -763,7 +763,7 @@ a.btn
   right: 50%
   margin-right: percentage(158/1200)
   &:before
-    content: ""
+    content: "" 
     display: block
     +image(393,288,mouse)
     transform: translate(-60px, -55px)
@@ -785,14 +785,14 @@ a.btn
     top: 0
     left: 0
     svg path
-      stroke-dasharray: 500px
-      stroke-dashoffset: 500px
+      stroke-dasharray: 500px !important
+      stroke-dashoffset: 500px !important
       transition: stroke-dashoffset 2s ease
   &.animate
-    .mobile-app__interface
+    .mobile-app__interface 
       svg path
-        stroke-dashoffset: 0
-        transition-delay: 0.5s
+        stroke-dashoffset: 0 !important
+        transition-delay: 0.5s !important
   +md
     margin-left: 140px
 

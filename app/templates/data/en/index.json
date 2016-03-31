@@ -7,7 +7,7 @@
     "iptv": "For IPTV"
   },
   "toparea": {
-    "ipcams": "Flussonic for<br> video surveillance",
+    "ipcams": "Video streaming<br> and recoding",
     "iptv": "Flussonic for<br> IPTV",
     "ipcams_info": "Flussonic works with almost all H264/H265 cameras, record video, capture motion events, provide multi user access via browser and mobile apps",
     "iptv_info": "Flussonic can take video from headends, transcode it, record for catchup and timeshift and play it out on all modern devices ingesting advert directly into stream.",

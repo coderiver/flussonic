@@ -321,23 +321,25 @@ a:not([class])
   right: 0
   visibility: hidden
   opacity: 0
-  width: 420px
+  width: 490px
   > svg
     width: 100%
     .dashed-line
       stroke-dasharray: 3px !important
       transition: stroke-dasharray 0.5s linear
   &-iptv
+    width: 430px
     .hero-figure__text
       width: 330px
   &-ipcam
-    top: -24px
+    top: -15px
     right: 40px
     .hero-figure__text
       width: 380px
   &.is-active
     visibility: visible
     opacity: 1
+    z-index: 1
   +md
     top: -20px
     right: -30px

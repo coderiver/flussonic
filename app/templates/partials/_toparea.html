@@ -1,10 +1,10 @@
 <!-- BEGIN toparea -->
 <section class="toparea l fade-in slide-up">
-
+  
   <div class="hero">
     <h1 class="title hero-text hero-text-ipcam is-active">{{toparea.ipcams|safe}}</h1>
 
-    <h2 class="title hero-text hero-text-iptv">{{toparea.iptv|safe}}</h2>
+    <h2 class="title hero-text hero-text-iptv">{{toparea.ipcams|safe}}</h2>
 
     {% include "_hero-links.html" %}
 
@@ -17,19 +17,19 @@
 
     <a href="#trial" class="btn">{{toparea.trial}}</a>
 
-    <div class="hero-figure hero-figure-ipcam is-active">
+    <a href="/watcher" class="hero-figure hero-figure-ipcam is-active">
       {% include "../../img/svg/ipcam.svg" %}
       <p class="hero-figure__text">
         {{toparea.ipcams_info2|safe}}
       </p>
-    </div>
+    </a>
 
-    <div class="hero-figure hero-figure-iptv">
+    <a href="/iptv" class="hero-figure hero-figure-iptv">
       {% include "../../img/svg/iptv.svg" %}
       <p class="hero-figure__text">
         {{toparea.iptv_info2|safe}}
       </p>
-    </div>
+    </a>
   </div>
 
  </section>

@@ -69,38 +69,44 @@
       "img": "lukoil.gif",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7",
       "link": "Case study",
+      "title": "Cloud security surveillance",
       "href": "/clients/lukoil"
     },
     {
       "name": "Kiev Boryspil",
       "img": "kyiv-boryspil.jpg",
       "text": "The company currently manages its media library and streaming live events, offering a reliable and always available experience",
-      "link": ""
+      "link": "",
+      "title": "Broadcasting live events"
     },
     {
       "name": "Gazprom",
       "img": "gazprom.png",
       "text": "The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience",
       "href": "/clients/gazprom",
+      "title": "Media library management",
       "link": "Case study"
     },
     {
       "name": "Pskov Line TV",
       "img": "pskovlinetv.png",
       "text": "Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees",
-      "link": "Case study"
+      "link": "Case study",
+      "title": "Cloud security surveillance"
     },
     {
       "name": "Ufa Net",
       "img": "ufanet.png",
       "text": "Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers",
       "href": "/clients/ufanet",
+      "title": "Live events boradcasting",
       "link": "Case study"
     },
     {
       "name": "Sibirian Networks",
       "img": "siberian.png",
       "text": "Cloud security surveillance using 150 IP cameras storing unlimited video archives",
+      "title": "Streaming live events",
       "link": ""
     }
   ],

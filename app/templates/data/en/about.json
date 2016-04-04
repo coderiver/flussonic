@@ -51,15 +51,6 @@
   "news": {
     "title": "News"
   },
-  "navigation": [
-    {"name": "Overview", "href": "index.html", "external": true},
-    {"name": "Free trial", "href": "#trial", "external": true},
-    {"name": "Clients", "href": "#clients", "external": true},
-    {"name": "Support", "href": "#support", "external": true},
-    {"name": "About us", "href": "#about", "external": true},
-    {"name": "Documentation", "href": "about.html", "external": true},
-    {"name": "My account", "href": "type.html", "external": true}
-  ],
   "customers1": {
     "ourcustomer": "Our customers"
   },

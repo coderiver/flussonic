@@ -51,15 +51,6 @@
   "news": {
     "title": "Новости"
   },
-  "navigation": [
-    {"name": "Обзор", "href": "#overview", "external": false},
-    {"name": "Триал", "href": "#trial", "external": false},
-    {"name": "Клиенты", "href": "#clients", "external": false},
-    {"name": "Поддержка", "href": "#support", "external": false},
-    {"name": "О нас", "href": "#about", "external": false},
-    {"name": "Документация", "href": "about-ru.html", "external": true},
-    {"name": "Мой кабинет", "href": "type-ru.html", "external": true}
-  ],
   "customers1": {
     "ourcustomer": "Наши клиенты"
   },

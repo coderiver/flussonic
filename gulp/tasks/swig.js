@@ -7,6 +7,22 @@ var changed     = require('gulp-changed');
 var prettify    = require('gulp-prettify');
 var frontMatter = require('gulp-front-matter');
 var config      = require('../config');
+var fs = require('fs');
+
+
+function extend(target) {
+  'use strict';
+  var sources = [].slice.call(arguments, 1);
+  sources.forEach(function(source) {
+    for (var prop in source) {
+      if (source.hasOwnProperty(prop)) {
+        target[prop] = source[prop];
+      }
+    }
+  });
+  return target;
+}
+
 
 function renderHtml(locale, onlyChanged) {
     locale = typeof locale === 'string' ? locale : '';
@@ -20,8 +36,10 @@ function renderHtml(locale, onlyChanged) {
         .pipe(swig({
             load_json: true,
             json_path: config.src.templatesData + '/' + locale,
-            data: {
-                LANG: locale
+            data: function() {
+                var l = {LANG: locale};
+                var default_path = config.src.templatesData + '/' + locale + "/data.json";
+                return extend(JSON.parse(fs.readFileSync(default_path)), l);
             },
             defaults: {
                 cache: false

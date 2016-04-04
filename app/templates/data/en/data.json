@@ -21,5 +21,9 @@
     "signin": "sign in",
     "info4": "to buy a license if you have already tried Flussonic.",
     "install": "How to install Flussonic"
+  },
+  "toparea": {
+    "title": "Example type page with text styles",
+    "description": "Leading paragraph, in this article we will explain how to install Flussonic, <br>upload a video file and see a stream"
   }
 }

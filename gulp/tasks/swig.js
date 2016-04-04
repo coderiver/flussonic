@@ -7,7 +7,12 @@ var changed     = require('gulp-changed');
 var prettify    = require('gulp-prettify');
 var frontMatter = require('gulp-front-matter');
 var config      = require('../config');
+
+// Reimports from gulp-swig
 var fs = require('fs');
+var path = require('path');
+var gutil = require('gulp-util');
+var ext = gutil.replaceExtension;
 
 
 function extend(target) {
@@ -34,12 +39,22 @@ function renderHtml(locale, onlyChanged) {
         .pipe(gulpif(onlyChanged, changed(config.dest.html)))
         .pipe(frontMatter({ property: 'data' }))
         .pipe(swig({
-            load_json: true,
-            json_path: config.src.templatesData + '/' + locale,
-            data: function() {
+            data: function(file) {
+                // Я отказался от использования механизма в gulp-swig, потому что он в неудобном
+                // порядке накатывает файлы. Мне хотелось что бы локальный файл переопределял глобальный,
+                // а в gulp-swig получалось наоборот
                 var l = {LANG: locale};
                 var default_path = config.src.templatesData + '/' + locale + "/data.json";
-                return extend(JSON.parse(fs.readFileSync(default_path)), l);
+                var global_data = l;
+                try {
+                    global_data = extend(JSON.parse(fs.readFileSync(default_path)), l);
+                } catch(err) {}
+                var jsonPath = config.src.templatesData + '/' + locale + "/" + ext(path.basename(file.path), '.json');
+                var localData = {};
+                try {
+                    localData = JSON.parse(fs.readFileSync(jsonPath));
+                } catch(err) {}
+                return extend(global_data, localData);
             },
             defaults: {
                 cache: false
@@ -74,7 +89,8 @@ gulp.task('swig:changed', function(cb) {
 
 gulp.task('swig:watch',  function() {
     gulp.watch([
-        config.src.templates + '/**/[^_]*.html'
+        config.src.templates + '/**/[^_]*.html',
+        config.src.templatesData + '/**/*.json'
     ], ['swig:changed']);
 
     gulp.watch([

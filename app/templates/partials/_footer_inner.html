@@ -1,69 +1,12 @@
-<div class="fade-in slide-up">
+<div class="fade-in slide-up blue">
   <!-- BEGIN request -->
   <section class="section section-request blue">
     <div class="l">
       <a name="trial"></a>
       <h2 class="title">Try Flussonic for free</h2>
-      <div class="row">
-        <div class="col col-50">
-          <form class="form" id="create_trial_form" method="post" action="https://talks.erlyvideo.ru/create_trial" novalidate>
-            <input name="utf8" type="hidden" value="&#x2713;" />
-            <input name="project_type" id="project_type" type="hidden" value="vsaas" />
-            <div class="field">
-              <label for="name" class="field__label">{{trial.name}}:</label>
-              <input class="input" type="text" name="name" id="name">
-            </div>
-            <div class="field">
-              <label for="email" class="field__label">{{trial.email}}:</label>
-              <input class="input" type="email" name="email" id="email">
-            </div>
-            <div class="field"> 
-              <label for="comment" class="field__label">{{trial.comment}}:</label>
-              <textarea class="input" rows="1" name="comment" id="comment" data-autoresize></textarea>
-            </div>
-            <button class="btn btn_solid btn_fluid" type="submit">{{trial.get}}</button>
-            <div id="success_message" style="display: none" class="message">{{trial.sent}}</div>
-            <div id="error_message" style="display: none" class="message message_error"></div>
-          </form>
-        </div> 
-
-        <div class="col col-50">
-          <div class="request__text text">
-            <p>{{trial.info1}}</p>
-            <p>{{trial.info2}}</p>
-            <p>
-              {{trial.info3}} <a class="lnk" href="https://manage.erlyvideo.org/">{{trial.signin}}</a> 
-              {{trial.info4}}
-            </p>
-            <p>
-              <a class="lnk" href="/doc/installation">{{trial.install}}</a>
-            </p>
-          </div>
-        </div>
-      </div>
+      {% include "../partials/_form.html" %}
     </div>
   </section>
   <!-- END request -->
-  <!-- BEGIN footer -->
-  <footer class="footer footer_inner">
-    <div class="l">
-      <div class="footer__left">
-        <span class="copyright">© Erlyvideo 2013-2016</span>
-      </div>
-      <div class="footer__right">
-        <nav class="footer__nav">
-          <ul>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Free trial</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">My account</a></li>
-          </ul>
-        </nav>
-      </div>  
-      
-    </div>
-  </footer>
-  <!-- END footer -->
+  {% include "../partials/_footer_type.html" %}
 </div>

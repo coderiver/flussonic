@@ -10,7 +10,7 @@
     "ipcams": "Video streaming<br> and recoding",
     "iptv": "Flussonic for<br> IPTV",
     "ipcams_info": "Flussonic works with almost all H264/H265 cameras, record video, capture motion events, provide multi user access via browser and mobile apps",
-    "iptv_info": "Flussonic can take video from headends, transcode it, record for catchup and timeshift and play it out on all modern devices ingesting advert directly into stream.",
+    "iptv_info": "Flussonic can take video from headends, transcode it, record for catchup and timeshift and play it out on all modern devices ingesting advert into stream.",
     "trial": "Try it for free",
     "ipcams_info2": "Supported protocols<br>RTSP  RTMP  HLS<br>Onvif",
     "iptv_info2": "Getting the stream through<br>a satellite receiver or a PC"
@@ -34,32 +34,9 @@
     "dvr": "Video archives",
     "dvr_info": "Flussonic has cloud and cluster capable DVR which is best on market"
   },
-  "trial": {
-    "request": "Request a free trial",
-    "name": "Your name",
-    "email": "E-mail",
-    "comment": "Comment",
-    "get": "Get a trial key",
-    "sent": "Your request has been sent. Thank you!",
-    "info1": "Please fill this form to receive a trial key for your copy of our software. We usually reply within one day. You will get a fully functional 30-day trial.",
-    "info2": "If you don't get any email from us, check in Spam box and add us to contacts",
-    "info3": "Subscription starts from $50 per month. Please",
-    "signin": "sign in",
-    "info4": "to buy a license if you have already tried Flussonic.",
-    "install": "How to install Flussonic"
-  },
   "news": {
     "title": "News"
   },
-  "navigation": [
-    {"name": "Overview", "href": "#overview", "external": false},
-    {"name": "Free trial", "href": "#trial", "external": false},
-    {"name": "Clients", "href": "#clients", "external": false},
-    {"name": "Support", "href": "#support", "external": false},
-    {"name": "About us", "href": "#about", "external": false},
-    {"name": "Documentation", "href": "about.html", "external": true},
-    {"name": "My account", "href": "type.html", "external": true}
-  ],
   "customers1": {
     "ourcustomer": "Our customers"
   },

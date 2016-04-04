@@ -1,0 +1,29 @@
+{
+  "navigation": [
+    {"name": "Overview", "href": "index.html", "external": false},
+    {"name": "Free trial", "href": "trial.html", "external": false},
+    {"name": "Clients", "href": "#clients", "external": false},
+    {"name": "Support", "href": "#support", "external": false},
+    {"name": "About us", "href": "about.html", "external": true},
+    {"name": "Documentation", "href": "type.html", "external": true},
+    {"name": "My account", "href": "type.html", "external": true}
+  ],
+  "trial": {
+    "request": "Request a free trial",
+    "name": "Your name",
+    "email": "E-mail",
+    "comment": "Comment",
+    "get": "Get a trial key",
+    "sent": "Your request has been sent. Thank you!",
+    "info1": "Please fill this form to receive a trial key for your copy of our software. We usually reply within one day. You will get a fully functional 30-day trial.",
+    "info2": "If you don't get any email from us, check in Spam box and add us to contacts",
+    "info3": "Subscription starts from $50 per month. Please",
+    "signin": "sign in",
+    "info4": "to buy a license if you have already tried Flussonic.",
+    "install": "How to install Flussonic"
+  },
+  "toparea": {
+    "title": "Example type page with text styles",
+    "description": "Leading paragraph, in this article we will explain how to install Flussonic, <br>upload a video file and see a stream"
+  }
+}

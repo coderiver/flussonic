@@ -1,0 +1,17 @@
+---
+title: {{head.title}}
+bodyClass: is-ip
+PAGE_SCRIPTS:
+  - inner-page
+---
+
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  {% include "partials/_header_inner.html" %}
+  {% include "partials/_toparea_ip.html" %}
+  {% include "partials/_cameras.html" %}
+  {% include "partials/_footer_ip.html" %}
+
+{% endblock %}

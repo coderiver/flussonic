@@ -155,12 +155,20 @@ var $svg = $('.js-svg-anim svg').drawsvg({
 	easing: 'linear'
 });
 
-var $svgType = $('.js-svg-anim-type svg').drawsvg();
+var $svgType = $('.js-svg-anim-type svg').drawsvg(),
+	$svgIp = $('.js-svg-anim-ip > svg').drawsvg( {
+		duration: 800,
+        stagger: 0
+	}),
+	$svgLine = $('.js-svg-anim-line svg');
 
 setTimeout(function() {
 	$svg.fadeIn(300).drawsvg('animate');
 	$svgType.fadeIn(300).drawsvg('animate');
-}, 800);
+	$svgIp.fadeIn(300).drawsvg('animate');
+}, 800); 
+
+setTimeout(function() { $svgLine.fadeIn(600); }, 1400);
 
 // parallaxScroll
 $(window).on('scroll',function(e){
@@ -172,3 +180,15 @@ function parallaxScroll(){
 	$svg.css('transform', 'translateY(' + pos + ')');
 	$svgType.css('transform', 'translateY(' + pos + ')');
 };
+
+var img = $('.img-anim img');
+img
+.addClass('is-hidden')
+.each(function () {
+	var img = $(this),
+		imgWidth = img.width();
+	img.width(imgWidth * 0.5);
+});
+setTimeout(function() { img.removeClass('is-hidden') }, 400);
+
+

@@ -1,0 +1,215 @@
+body.is-ip
+	color: #FFF 
+	background: #001484 
+	.toparea__svg
+		right: -21px
+		bottom: auto
+		top: -140px
+		&.is-aerial
+			top: -98px
+			right: -18px
+	.toparea__svg-bot
+		position: absolute
+		left: 79px
+		bottom: 8px
+		svg
+			display: block
+	.toparea__set
+		position: absolute
+		bottom: -120px
+		left: 91px
+		right: 575px
+		height: 2px
+		background: url(../img/svg/iptv-top-line1.svg) repeat-x 0 0
+	.toparea__line
+		position: absolute
+		top: 340px
+		left: -712px
+		width: 741px
+		height: 536px
+	.toparea
+		overflow: visible
+		&.l
+			padding-top: 165px
+	.toparea__in,
+	.toparea__left
+		position: relative
+	.toparea__left
+		z-index: 1
+	.col-right,
+	.col-left
+		position: relative
+		float: left
+		width: 76rem
+		padding: 0
+		line-height: 1.8
+	.col-right
+		padding-left: 285px
+	.col-left
+		padding-right: 330px 
+
+.section_iptv
+	.row
+		position: relative
+		margin: 170px 0 0 
+		letter-spacing: 0.059em 
+		&:first-child
+			margin-top: 130px
+		.title
+			margin-bottom: 20px
+			margin-bottom: 2rem
+
+// white
+.white
+	color: #000 
+	background: #FFF 
+
+// img-anim
+.img-anim
+	position: absolute
+	img
+		position: absolute
+		&.is-hidden
+			opacity: 0
+	&.is-cam
+		top: -153px
+		left: -540px
+		width: 735px
+		height: 615px
+		img
+			top: 0
+			left: 0
+			transition: opacity .3s
+	&.is-cub
+		top: -100px
+		right: -100px
+		width: 303px
+		height: 281px
+		img
+			position: absolute
+	&.is-trace
+		top: -130px
+		left: -107px
+	&.is-phone
+		top: -109px
+		right: -607px
+		width: 898px
+		height: 740px
+		img
+			position: absolute
+			top: 0
+			left: 0
+			will-change: opacity .2s
+			z-index: 1 
+			display: block
+			&:nth-child(2)
+				z-index: 2
+				animation: pulsephone 3s linear infinite
+	&.is-user
+		top: -148px
+		left: -143px
+		width: 390px
+		height: 506px
+	&.is-device
+		top: -185px
+		right: -711px
+		width: 1014px
+		height: 626px
+	&__fade
+		&:not(.is-hidden)
+			animation: pulse 2s cubic-bezier(0.420, 0.230, 0.460, 1.000) infinite
+	&__device
+		&:not(.is-hidden)
+			animation: pulse 2s ease-in-out infinite
+	&__overlay
+		position: absolute
+		top: 3px
+		left: 0
+		width: 301px
+		height: 0
+		animation: finger 8s cubic-bezier(0.395, 0.000, 0.495, 1.000) infinite
+		border-bottom: 1px solid #d400ac
+		background: url(../img/svg/finger2.svg) no-repeat 0 0 / cover
+	&__cub-2
+		left: 158px
+		top: -72px
+		transform: tanslate3d(0,0,0)
+		&:not(.is-hidden)
+			animation: clustertwo 6s ease-in-out infinite
+	&__cub-3
+		left: 188px
+		top: 112px
+		transform: tanslate3d(0,0,0)
+		&:not(.is-hidden)
+			animation: clusterthree 6s ease-in-out infinite
+	.img-anim__cub-1
+		position: relative
+		z-index: 3
+		
+
+@keyframes pulse 
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+
+
+@keyframes clustertwo 
+	0%
+		transform: translate(0,0)
+		opacity: 1 
+	10%
+		opacity: 0.8 
+		transform: translate(34px, -18px)
+	50%
+		opacity: 0.8 
+		transform: translate(34px, -18px)
+	60%
+		opacity: 1 
+		transform: translate(0,0)
+
+
+@keyframes clusterthree 
+	0%
+		transform: translate(0,0)
+		opacity: 1 
+	10%
+		opacity: 0.8 
+		transform: translate(27px,23px)
+	50%
+		opacity: 0.8 
+		transform: translate(27px,23px)
+	60%
+		transform: translate(0,0)
+		opacity: 1 
+
+@keyframes finger 
+	0%
+		opacity: 0
+		height: 0px
+	30%
+		opacity: 1
+	70%
+		opacity: 0
+		height: 430px
+	100%
+		opacity: 0
+		height: 430px
+
+@keyframes pulsephone
+	0%
+		opacity: 0
+	30%
+		opacity: 0
+	60%
+		opacity: 1
+	100%
+		opacity: 0
+
+		
+// #ddd
+// 	path
+// 		stroke-dashoffset: 30px
+// 		stroke-dasharray: 30px

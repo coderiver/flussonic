@@ -1,0 +1,31 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="601.5" height="400" viewBox="0 0 601.5 400">
+  <title>aerial</title>
+  <path d="M197.34,10.43C226.58-22.39,338.73,28.81,447.8,124.78S621.58,325.17,592.32,358s-141.4-18.38-250.47-114.36S168.08,43.25,197.34,10.43Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="2241.44 2241.44"/>
+  <path d="M234.86,368.85l67.51-41.07M260.56,292l-32.39,71.45" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="305.72 305.72"/>
+  <path d="M243.42,372.41l102.44-18.82M225.8,251.23l-0.63,105.33" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="402.1 402.1"/>
+  <path d="M589,361.09c-52.69,53.64-206.35,35.09-311.67-52.94C174.65,222.31,150.6,72.22,194.91,13.34" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="1296.87 1296.87"/>
+  <path d="M238,364a20.82,20.82,0,0,0-29.14-3.19,20.5,20.5,0,0,0-3.21,29A20.82,20.82,0,0,0,234.81,393,20.5,20.5,0,0,0,238,364v0Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="252.03 252.03"/>
+  <g>
+    <path d="M48.78,350.73a2,2,0,1,1-1.43,2.52,2,2,0,0,1-.08-0.55A1.79,1.79,0,0,1,48.78,350.73Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="25.16 25.16"/>
+    <path d="M43,351.86a2,2,0,0,1,2.49,1.45,2,2,0,0,1-1.46,2.47,2,2,0,0,1-2.56-2A1.8,1.8,0,0,1,43,351.86Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="24.93 24.93"/>
+    <path d="M54.5,349.38a2,2,0,1,1-1.43,2.52,2,2,0,0,1-.08-0.54A1.8,1.8,0,0,1,54.5,349.38Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="25.17 25.17"/>
+    <path d="M3,315.75l79.29-15.1a9.06,9.06,0,0,1,7.47,1.86L121.36,328c1.59,1.57.83,3.29-1.72,3.83L37.08,349.5a9.08,9.08,0,0,1-7.48-1.86L1.27,319.58C-0.33,318,.44,316.29,3,315.75Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="527.91 527.91"/>
+    <path d="M122.16,330.18V339c0,3.11-1.09,3.88-3.15,4.35L37.08,360.88A9.1,9.1,0,0,1,29.6,359L1.27,331c-0.83-.84-0.92-2.11-0.92-3.87v-8.61" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="308.42 308.42"/>
+  </g>
+  <g>
+    <path d="M359.82,233.24L489.76,95.55" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="367.48 367.48"/>
+    <path d="M264.38,91.42l215.81-8m23.87,20.63L509.2,301.6" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="802.46 802.46"/>
+    <path d="M512.3,88c3.42,4.76,4.66,9,3.55,11.29-1.27,2.65-12.45,0-21-7.43S482,75.46,484.93,72.4c1.78-1.83,6.26-1.05,11.57,1.82" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="138.71 138.71"/>
+    <path d="M511.91,104c-1.28,2.65-12.44,0-21-7.42S477.25,79.11,480.17,76" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="93.36 93.36"/>
+    <path d="M493.87,80.18l9.82-9.9m13,9.5L506.46,91.49" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="57.2 57.2"/>
+    <path d="M500.72,57.1l8.69-9.83c0.86,2.56,4.36,14.88,4.36,14.88L535.16,71c1.64,0.75,2.69,1.17,1.69,2.21l-8.24,9.58c-1,1-2.32.72-3.88-.07l-19.5-8.46Z" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="215.75 215.75"/>
+  </g>
+  <path d="M509.41,47.27l22.85,9.34,5,16.08" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="80.53 80.53"/>
+  <path d="M206.26,218.49c31,52.25,106.53,122.42,183.63,153.25" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="470.7 470.7" opacity="0.8" style="isolation: isolate"/>
+  <path d="M199.16,202.79c41,63.52,121.4,135.07,214,176.33" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="544.59 544.59" opacity="0.6" style="isolation: isolate"/>
+  <path d="M186.34,170C245.75,264.74,329.75,333,445,386.42" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="663.82 663.82" opacity="0.4" style="isolation: isolate"/>
+  <path d="M177.79,135.4C243.5,250.87,349,333.63,480.5,390.68" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="781.9 781.9" opacity="0.2" style="isolation: isolate"/>
+  <path d="M219.6,356.42c-7.18,11.77,13.63,27.46,22.95,21.43" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke-dasharray="75.88 75.88"/>
+  <path d="M194.55,15.1c35.31-23.54,141.85,27.24,245.6,118.55,102.25,90,165.87,187.76,149.27,226.62" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="1093.11 1093.11" opacity="0.7"/>
+  <path d="M192.1,21.22C231.79,5.05,333.43,55.29,432.52,142.5,530.83,229,593.1,322.37,583,364" transform="translate(0.65 1)" fill="none" stroke="#001eff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke-dasharray="1071.03 1071.03" opacity="0.5"/>
+</svg>

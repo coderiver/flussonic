@@ -7,12 +7,20 @@
 				<h3 class="title title_small">Пользователи</h3>
 				<p>Мы предоставляем веб-интерфейс для управления пользователями и их группами, а также API для автоматизированного провижнинга из вашего существующего биллинга. Наша система поможет организовать прием платежей и поминутную оплату доступа.</p>
 				<div class="img-anim is-user">
-					{% include "../../img/svg/users.svg" %}
+					<img src="img/svg/users.svg" class="is-hidden" alt="img">
+					<img src="img/svg/users-2.svg" class="is-hidden img-anim__user-1" alt="img">
+					<img src="img/svg/users-3.svg" class="is-hidden img-anim__user-2" alt="img">
+					<div class="img-anim__line js-bot-user-line">
+						{% include "../../img/svg/line-users.svg" %}
+					</div>
 				</div>
-			</div> 
+			</div>
+			<div class="img-anim-line is-user">
+				{% include "../../img/svg/line-users2.svg" %}
+			</div>
 		</div>
 		<!-- row -->
-		<div class="row fade-in slide-up">
+		<div class="row fade-in">
 			<div class="col-left">
 				<h3 class="title title_small">Устройства</h3>
 				<p>Flussonic IPTV предлагает разные варианты доступа с устройств к каналам: плейлисты для самых примитивных приставок, приложение для SmartTV и устройств на Android, веб-интерфейс для классических приставок типа Mag/Amino.</p>
@@ -23,13 +31,23 @@
 			</div>
 		</div>
 		<!-- row -->
-		<div class="row fade-in slide-up">
+		<div class="row fade-in">
 			<div class="col-right">
 				<h3 class="title title_small">Каналы</h3>
 				<p>Flussonic IPTV позволяет управлять списком доступных каналов, транскодированием их в кластере, расписанием передач (EPG), управлять пакетами каналов. Мы можем предоставить возможность самостоятельного выбора пакетов со стороны пользователей, чтобы они могли с пульта расширить свою подписку.</p>
-				<div class="img-anim ">
-					
+				<div class="img-anim is-channels">
+					{% include "../../img/svg/channels.svg" %}
+					<img src="img/channel-gap.png" class="channel-gap-1" alt="img">
+					<img src="img/channel-gap.png" class="channel-gap-2" alt="img">
+					<img src="img/channel-gap.png" class="channel-gap-3" alt="img">
+					<div class="img-anim-line is-channels">
+						{% include "../../img/svg/channels-line-bot.svg" %}
+					</div>
 				</div>
+				<div class="img-anim-line is-channels-top">
+					{% include "../../img/svg/channels-line-top.svg" %}
+				</div>
+				<div class="channels-set"></div>
 			</div>
 		</div>
 	</div>

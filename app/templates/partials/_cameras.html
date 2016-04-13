@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<!-- row -->
-		<div class="row fade-in slide-up">
+		<div class="row">
 			<div class="col-left">
 				<h3 class="title title_small">Кластеризация</h3>
 				<p>Если одного сервера не хватает, Watcher может работать с несколькими, обеспечивая резервирование и работоспособость всего сервиса при выходе из строя одного из серверов.</p>
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<!-- row -->
-		<div class="row fade-in slide-up">
+		<div class="row fade-in">
 			<div class="col-right">
 				<h3 class="title title_small">Пользователи</h3>
 				<p>Можно объединять пользователей в группы, импортировать из биллинга, пользоваться авторизацией через Radius-сервер, разграничивать доступ к просмотру камер и архивных видеофайлов.</p>
@@ -33,16 +33,25 @@
 					<div class="img-anim__overlay"></div>
 					{% include "../../img/svg/finger1.svg" %}
 				</div>
-			</div>
+				<div class="img-anim-line is-trace-right">
+					{% include "../../img/svg/channels-line-top.svg" %}
+				</div>
+				<div class="img-anim-line is-trace-left"> 
+					{% include "../../img/svg/channels-line-left.svg" %}
+				</div>
+			</div> 
 		</div>
 		<!-- row -->
-		<div class="row fade-in slide-up">
+		<div class="row fade-in">
 			<div class="col-left">
 				<h3 class="title title_small">Мобильный доступ</h3>
 				<p>Flussonic Watcher доступен из обычного браузера на мобильном телефоне. Кроме того, есть мобильные приложения для удобства работы.</p>
 				<div class="img-anim is-phone">
 					<img src="img/svg/phone1.svg" class="is-hidden" alt="img">
 					<img src="img/svg/phone2.svg" class="is-hidden" alt="img">
+				</div>
+				<div class="img-anim-line is-phone"> 
+					{% include "../../img/svg/line-phone.svg" %}
 				</div>
 			</div>
 		</div>

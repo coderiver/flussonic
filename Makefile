@@ -1,5 +1,5 @@
 
 
 all:
-	./node_modules/.bin/gulp --production build
+	./node_modules/.bin/gulp build --prod
 

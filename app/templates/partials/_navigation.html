@@ -1,0 +1,14 @@
+<nav class="nav">
+  <ul class="nav__list">
+    {% for link in navigation %}
+    <li class="nav__item {% if false %} is-active{% endif %}">
+      <a href="{{link.href}}" class="nav__link link link_solid-line">{{link.name}}</a>
+    </li>
+    {% endfor %}
+    <li class="nav__item">
+      <a href="#">
+        {% include "../../img/svg/search.svg" %}
+      </a>
+    </li>
+  </ul>
+</nav>

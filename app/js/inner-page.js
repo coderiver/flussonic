@@ -155,12 +155,20 @@ var $svg = $('.js-svg-anim svg').drawsvg({
 	easing: 'linear'
 });
 
-var $svgType = $('.js-svg-anim-type svg').drawsvg();
+var $svgType = $('.js-svg-anim-type svg').drawsvg(),
+	$svgIp = $('.js-svg-anim-ip > svg').drawsvg( {
+		duration: 800,
+        stagger: 0
+	}),
+	$svgLine = $('.js-svg-anim-line svg');
 
 setTimeout(function() {
 	$svg.fadeIn(300).drawsvg('animate');
 	$svgType.fadeIn(300).drawsvg('animate');
-}, 800);
+	$svgIp.fadeIn(300).drawsvg('animate');
+}, 800); 
+
+setTimeout(function() { $svgLine.fadeIn(600); }, 1400);
 
 // parallaxScroll
 $(window).on('scroll',function(e){
@@ -172,3 +180,77 @@ function parallaxScroll(){
 	$svg.css('transform', 'translateY(' + pos + ')');
 	$svgType.css('transform', 'translateY(' + pos + ')');
 };
+
+// img hidden
+function addHid(argument) {
+	var img = $('.img-anim img');
+	img.addClass('is-hidden')
+	setTimeout(function() { img.removeClass('is-hidden') }, 800);
+} addHid();
+
+
+// pos line
+const userLine = $('.img-anim-line.is-user'),
+	botUserLine = $('.js-bot-user-line'),
+	animDevice = $('.img-anim.is-device');
+function posLineTopLeft(anim, line, left, top) {
+	if (anim.length) {
+		var offset = anim.offset(),
+			offsetTop = offset.top,
+			offsetLeft = offset.left,
+			left = offsetLeft + anim.width() + left,
+			top = offsetTop + top;
+		console.log(' left ' + left + ' top ' + top);
+		line.css({
+			"top": top,
+			"left": left
+		});
+	}
+};
+
+function posLineBotRight(anim, line, pRight, height) {
+	if (anim.length) {
+		var offset = anim.offset(),
+			offsetTop = offset.top,
+			offsetLeft = offset.left,
+			height = anim.height(),
+			right = ($(document).width() - offsetLeft) - pRight;
+		console.log(' bottom ' + offsetTop + ' right ' + offsetLeft);
+		line.css({
+			"right": right,
+			"height": height
+		});
+	}
+};
+
+$(window).resize(function () {
+	// userLine
+	posLineTopLeft(botUserLine, userLine, 3, 12);
+	posLineBotRight(animDevice, userLine, 12, -300);
+});
+setTimeout(function() { 
+	// userLine
+	posLineTopLeft(botUserLine, userLine, 3, 12); 
+	posLineBotRight(animDevice, userLine, 12, -300);
+}, 1000);
+
+// setTimeout fade
+setTimeout(function() { 
+	$('.js-top-iptv-line, .img-anim.is-cam, .img-anim.is-user, .img-anim.is-cub').addClass('is-visible');
+	// $('.img-anim.is-cam').addClass('is-visible');
+	// $('.img-anim.is-user').addClass('is-visible');
+	// $('.img-anim.is-cub').addClass('is-visible');
+	userLine.addClass('is-visible');
+}, 1200);
+
+function chowchen() {
+	if (!$('.img-anim.is-channels').parents('.row').hasClass('fade-in')) {
+		$('.js-line-channels').addClass('is-visible');
+	}
+} chowchen();
+
+$(document).on('scroll', function () {
+	chowchen();
+});
+
+

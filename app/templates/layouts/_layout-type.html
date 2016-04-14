@@ -1,0 +1,24 @@
+{% import "_mixins.html" as mixins %}
+<!DOCTYPE html>
+<html{% if LANG %} lang="{{LANG}}"{% endif %}>
+  <head>
+    {% include "_head-type.html" %}
+    {# {% include "_media-tags.html" %} #}
+  </head>
+  <body class="is-cont">
+
+    <!-- BEGIN content -->
+    <div class="out">
+      {% block content %}{% endblock %}
+    </div>
+    <!-- END content -->
+
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/common.js"></script>
+    {% for script in PAGE_SCRIPTS %}
+    <script type="text/javascript" src="js/{{script}}.js"></script>
+    {% endfor %}
+    <!-- END scripts -->
+
+  </body>
+</html>

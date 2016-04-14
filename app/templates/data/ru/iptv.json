@@ -1,0 +1,28 @@
+{
+  "head": {
+    "title": "Flussonic IPTV"
+  },
+  "trial": {
+    "request": "Бесплатный триал",
+    "name": "Ваше имя",
+    "email": "E-mail",
+    "comment": "Описание",
+    "get": "Запросить ключ",
+    "sent": "Мы получили ваш запрос, спасибо!",
+    "info1": "Пожалуйста, заполните эту форму для получения триального ключа. Мы постараемся ответить сегодня же и вы сможете проверить все возможности Flussonic",
+    "info2": "Если вы не получите от нас письмо, проверьте в спаме и добавьте наш адрес в контакты.",
+    "info3": "Подписка стоит 3000 р. в месяц за сервер. Пожалуйста",
+    "signin": "залогиньтесь",
+    "info4": "что бы купить лицензию, если вы уже пробовали Flussonic",
+    "install": "как установить Flussonic"
+  },
+  "navigation": [
+    {"name": "Обзор", "href": "index-ru.html", "external": false},
+    {"name": "Триал", "href": "#trial", "external": false},
+    {"name": "Клиенты", "href": "#clients", "external": false},
+    {"name": "Поддержка", "href": "#support", "external": false},
+    {"name": "О нас", "href": "#about", "external": false},
+    {"name": "Документация", "href": "about-ru.html", "external": true},
+    {"name": "Мой кабинет", "href": "type-ru.html", "external": true}
+  ]
+}

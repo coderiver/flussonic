@@ -1,15 +1,15 @@
 <!-- BEGIN toparea -->
-<section class="toparea l">
-
-	<div class="toparea__svg js-svg-anim-type"> 
-		{% include "../../img/cam.svg" %}
-	</div> 
-	<div class="toparea__in fade-in slide-up"> 
-		<div class="toparea__left">
-			<h1 class="title">{{toparea.title}}</h1>
-			<p>{{toparea.description|safe}}</p>
+<section class="toparea ">
+	<div class="l">
+		<div class="toparea__svg js-svg-anim-type"> 
+			{% include "../../img/cam.svg" %}
+		</div> 
+		<div class="toparea__in fade-in slide-up"> 
+			<div class="toparea__left">
+				<h1 class="title">{{toparea_general.title}}</h1>
+				<p>{{toparea_general.description|safe}}</p>
+			</div>
 		</div>
 	</div>
-
  </section>
 <!-- END toparea -->

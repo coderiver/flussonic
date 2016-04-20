@@ -381,45 +381,45 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
 
-.clouds__cloud:nth-child(1) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
 .clouds__cloud:nth-child(3) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
 .clouds__cloud:nth-child(6) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
 .clouds__cloud:nth-child(11) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
 .clouds__cloud:nth-child(14) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
 .clouds__cloud:nth-child(17) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -1093,7 +1093,7 @@ hr + .inf { margin-top: -25px; }
 
 .file__name { transition: border-color .3s; border-bottom: 1px dotted rgba(0, 0, 0, 0.5); display: inline-block; }
 
-.full-img { padding-bottom: 38.4%; }
+.full-img { padding-bottom: 38.4%; background-size: cover; background-position: 50% 0; }
 
 .img { min-width: 100%; }
 
@@ -1143,7 +1143,7 @@ body.is-ip .toparea__set { position: absolute; bottom: -115px; left: 91px; right
 
 body.is-ip .toparea__set.is-visible { opacity: 1; }
 
-body.is-ip .toparea__line { position: absolute; top: 340px; left: -712px; width: 741px; height: 536px; }
+body.is-ip .toparea__line { position: absolute; top: 340px; left: -710px; width: 741px; height: 536px; }
 
 body.is-ip .toparea { overflow: visible; }
 
@@ -1153,13 +1153,13 @@ body.is-ip .toparea__in, body.is-ip .toparea__left { position: relative; }
 
 body.is-ip .toparea__left { z-index: 1; }
 
-body.is-ip .col-right, body.is-ip .col-left { position: relative; float: left; width: 76rem; padding: 0; line-height: 1.8; }
+body.is-ip .col-right, body.is-ip .col-left { position: relative; float: left; width: 100%; max-width: 760px; padding: 0; line-height: 1.8; }
 
 body.is-ip .col-right { padding-left: 285px; }
 
 body.is-ip .col-left { padding-right: 330px; }
 
-.section_iptv .row { margin: 170px 0 0; letter-spacing: 0.059em; }
+.section_iptv .row { margin: 170px 0 0; }
 
 .section_iptv .row:first-child { margin-top: 130px; }
 
@@ -1243,19 +1243,19 @@ body.is-ip .col-left { padding-right: 330px; }
 
 .img-anim-line.is-user { opacity: 0; }
 
-.img-anim-line.is-channels { top: -52px; right: -127px; }
+.img-anim-line.is-channels { top: -125px; right: -227px; }
 
 .img-anim-line.is-channels-top { top: -150px; right: 86px; }
 
 .img-anim-line.is-trace-right { top: -141.6px; right: 84px; }
 
-.img-anim-line.is-trace-left { top: -78px; left: 124px; right: 296px; overflow: hidden; }
+.img-anim-line.is-trace-left { top: -144px; left: 124px; right: 83px; overflow: hidden; }
 
 .img-anim-line.is-visible { opacity: 1; }
 
 .img-anim-line.is-phone { top: -138px; left: 160px; }
 
-.channels-set { position: absolute; left: 326px; top: -73px; right: 295px; height: 2px; background: url(../img/svg/channels-line-middle.svg) repeat-x 0 0; }
+.channels-set { position: absolute; left: 438px; top: -146px; right: 73px; height: 2px; background: url(../img/svg/channels-line-middle.svg) repeat-x 0 0; }
 
 .js-line-channels { opacity: 0; will-change: opacity; transition: opacity .3s; }
 
@@ -1441,7 +1441,8 @@ body.is-ip .col-left { padding-right: 330px; }
  .news_important .news__date { font-size: 16px; font-size: 1.6rem; } }
 
 @media only screen and (min-width: 1600px) {
- html { font-size: 0.625vw; } }
+ .l { margin: 0 auto; padding: 0 14.16%; max-width: 1100px; }
+ .title_small { font-size: 35px; } }
 
 @media only screen and (min-width: 1650px) {
  .feature-pic { margin-top: 1rem; } }
@@ -1464,13 +1465,9 @@ body.is-ip .col-left { padding-right: 330px; }
  .about .star { left: 10px; } }
 
 @media only screen and (max-width: 1200px) {
- .l { padding-left: 40px; padding-right: 40px; }
- .lang { right: 0; }
- .logo { position: relative; top: auto; right: auto; margin: 0; }
  .section-contacts .social-media { position: static; margin: 20px 0 0; -webkit-transform: none; -ms-transform: none; transform: none; }
  .section-contacts .social-link { display: inline-block; margin: 0 30px 0 0; }
  .form__left { width: 100%; }
- .header_inner .nav { padding-top: 10px; }
  .about .about__in { padding: 0 20px; }
  .about .star { top: 0; }
  .offer .offer__item { padding-right: 15px; }
@@ -1480,9 +1477,8 @@ body.is-ip .col-left { padding-right: 330px; }
  .pre { margin-left: 0; margin-right: 0; } }
 
 @media only screen and (max-width: 1023px) {
- .lang { right: 0; }
  .hero-figure { top: -20px; right: -30px; }
- .title { font-size: 45px; }
+ .title:not(.title_small) { font-size: 45px; }
  .onvif { margin-right: 200px; }
  .motion { margin-left: 180px; }
  .web-access { margin-right: 150px; }
@@ -1491,6 +1487,12 @@ body.is-ip .col-left { padding-right: 330px; }
  .transcoder { margin-right: 200px; }
  .hdd { margin-left: 196px; }
  .lego { margin-left: 200px; } }
+
+@media only screen and (max-width: 1000px) {
+ .l { padding-left: 40px; padding-right: 40px; }
+ .lang { right: 0; }
+ .logo { position: relative; top: auto; right: auto; margin: 0; }
+ .header_inner .nav { padding-top: 10px; } }
 
 @media only screen and (max-width: 900px) {
  .header_inner .nav__item { margin-right: 18px; }
@@ -1516,7 +1518,7 @@ body.is-ip .col-left { padding-right: 330px; }
  body.is-ip .toparea { text-align: center; }
  body.is-ip .toparea.l { padding-top: 210px; padding-bottom: 170px; }
  body.is-ip .toparea .title { font-size: 5rem; }
- body.is-ip .col-right, body.is-ip .col-left { width: 100%; }
+ body.is-ip .col-right, body.is-ip .col-left { max-width: 100%; }
  body.is-ip .col-right { padding-left: 0; }
  body.is-ip .col-left { padding-right: 0; }
  .section_iptv .row { margin: 30px 0 0; }

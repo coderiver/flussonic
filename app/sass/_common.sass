@@ -1,7 +1,7 @@
 html
   font-size: 62.5%
-  +rmin(1600)
-    font-size: 0.625vw
+  // +rmin(1600)
+  //   font-size: 0.625vw 
 
 body
   background: #FFF
@@ -201,9 +201,7 @@ a:not([class])
   text-align: right
   +f(l, 16)
   color: $color-grey
-  +r(1200)
-    right: 0
-  +md
+  +r(1000)
     right: 0
   a
     border: none
@@ -258,7 +256,7 @@ a:not([class])
   line-height: 1
   +r(1400)
     margin-right: percentage(45/1200)
-  +lg
+  +r(1000)
     position: relative
     top: auto
     right: auto
@@ -403,8 +401,11 @@ a:not([class])
     margin-top: 3rem
   &_small
     +f(el, 35)
+    +rmin(1600)
+      font-size: 35px
   +md
-    font-size: 45px
+    &:not(.title_small)
+     font-size: 45px
   +sm
     font-size: 34px
     font-size: 3.4rem

@@ -45,13 +45,15 @@ body.is-ip
 	.toparea__line
 		position: absolute
 		top: 340px
-		left: -712px
+		left: -710px
 		width: 741px
 		height: 536px
 		+r(899)
 			display: none
 	.toparea
 		overflow: visible
+		// +rmin(1600)
+		// 	font-size: 16px
 		+r(899)
 			text-align: center
 		&.l
@@ -61,6 +63,8 @@ body.is-ip
 				padding-top: 210px
 				padding-bottom: 170px
 		.title
+			// +rmin(1600)
+			// 	font-size: 69px
 			+r(899)
 				font-size: 5rem
 	.toparea__in,
@@ -72,11 +76,14 @@ body.is-ip
 	.col-left
 		position: relative
 		float: left
-		width: 76rem
+		width: 100%
+		max-width: 760px
 		padding: 0
 		line-height: 1.8
+		// +rmin(1600)
+		// 	font-size: 16px
 		+r(899)
-			width: 100%
+			max-width: 100%
 	.col-right
 		padding-left: 285px
 		+r(899)
@@ -89,7 +96,6 @@ body.is-ip
 .section_iptv
 	.row
 		margin: 170px 0 0 
-		letter-spacing: 0.059em 
 		+r(899)
 			margin: 30px 0 0
 		&:first-child
@@ -275,8 +281,8 @@ body.is-ip
 	// 	bottom: 145px
 	// 	left: 11px
 	&.is-channels
-		top: -52px
-		right: -127px
+		top: -125px
+		right: -227px
 	&.is-channels-top
 		top: -150px
 		right: 86px
@@ -284,9 +290,9 @@ body.is-ip
 		top: -141.6px
 		right: 84px
 	&.is-trace-left
-		top: -78px
+		top: -144px
 		left: 124px
-		right: 296px
+		right: 83px
 		overflow: hidden
 	&.is-visible
 		opacity: 1
@@ -297,9 +303,9 @@ body.is-ip
 // device-set
 .channels-set
 	position: absolute
-	left: 326px
-	top: -73px
-	right: 295px
+	left: 438px
+	top: -146px
+	right: 73px
 	height: 2px
 	background: url(../img/svg/channels-line-middle.svg) repeat-x 0 0
 	+r(899)

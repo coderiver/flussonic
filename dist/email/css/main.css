@@ -1,0 +1,28 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+a img {
+  border: none;
+  text-decoration: none;
+  display: block;
+  font-family: Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=main.css.map */

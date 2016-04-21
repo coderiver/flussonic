@@ -145,7 +145,15 @@ a:not([class])
 .header__inner
   position: relative
   padding: 22px 0
-
+  
+.header__right
+  position: absolute
+  z-index: 1
+  top: 25px
+  right: -14.15% 
+  text-align: right
+  +r(1000)
+    right: 0
 .header__buttons
   position: absolute
   top: 0
@@ -193,16 +201,11 @@ a:not([class])
     display: block
 
 .lang
-  position: absolute
-  z-index: 1
-  top: 25px
-  right: -14.15% 
   min-width: 85px
-  text-align: right
   +f(l, 16)
   color: $color-grey
-  +r(1000)
-    right: 0
+  vertical-align: top
+  display: inline-block
   a
     border: none
     &:not(:hover)
@@ -226,6 +229,19 @@ a:not([class])
   background: white
   box-shadow: 0 0 10px 0 rgba(black, 0.3)
   +trans
+
+.search
+  position: relative
+  margin-left: 15px
+  padding-top: 3px
+  vertical-align: top 
+  display: inline-block
+  &__btn
+    font-size: 0
+    background: transparent 
+  &__wrap
+    display: none
+  &__input
 
 .nav
   position: relative
@@ -255,7 +271,7 @@ a:not([class])
   text-transform: uppercase
   line-height: 1
   +r(1400)
-    margin-right: percentage(45/1200)
+    margin-right: 15px
   +r(1000)
     position: relative
     top: auto
@@ -1531,3 +1547,6 @@ textarea.input
 .safari
   #lightning-shape path
     filter: none
+
+.request__text
+  margin-top: 20px

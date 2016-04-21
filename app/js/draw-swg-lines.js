@@ -30,7 +30,7 @@ svg.append(path).attr({
 }).appendTo($featuresContainer);
 
 path.attr({
-    stroke: 'rgba(255, 255, 255, 0.8)',
+    stroke: '#003cff',
     'stroke-width': 1,
     'stroke-dasharray': 3,
     fill: 'none'

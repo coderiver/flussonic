@@ -1,0 +1,46 @@
+---
+title: notification
+link: #
+css: main.css
+
+bg: '#dfdfdf'
+footerbg: '#f7f8f9'
+width: 700px
+
+top_bg: url(./img/bg_notification.png)
+
+title_top: Здравствуйте, Александр
+
+text_top: Для продления вашей лицензии на сервер Flussonic необходимо внести оплату за май.
+
+text_first: У вас подключена автоматическая оплата, поэтому 28 апреля мы планируем списать 300 Р с вашей карты VISA ***1242. Пожалуйста, убедитесь в наличии денег на этой карте.
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	<tr>
+		<td align="left" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;border: 0;height: 100% !important; padding: 0 104px 50px 80px;line-height: 1.45; background: #fff;">
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;">
+				<tr>
+					<td align="left" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 0;border: 0;height: 100% !important;">
+						<div style="margin: -6px 0 0;padding: 0;border: 0; font-size: 18px; line-height: 0; font-weight: Bold;">{{ title_top }}</div>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 30px 0 0;border: 0;height: 100% !important;">
+						<div style="margin: 0;padding: 0;border: 0;">{{ text_top }}</div>
+					</td>
+				</tr>
+				<tr>
+					<td align="left" valign="top" style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;margin: 0;padding: 25px 0 0;border: 0;height: 100% !important;">
+						<div style="margin: 0;padding: 0;border: 0;">
+							{{ text_first }}
+						</div>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+{% endblock %} 

@@ -18,24 +18,28 @@
             </li>
           {% endif %}
           {% endfor %}
-          <li class="nav__item">
-            <a href="#">
-              {% include "../../img/svg/search.svg" %}
-            </a>
-          </li>
         </ul>
       </nav>
+      
+      <div class="header__right js-right-parent">
+        <div class="lang">
+          {% if LANG == "ru" %}
+            <a href="index.html" class="lang__current">English</a>
+          {% else %}
+            <a href="index-ru.html" class="lang__current">По-русски</a>
+          {% endif %}
+          {# <ul class="lang__list">
+            <li class="lang__list-item"><a href="#">По-русски</a></li>
+            <li class="lang__list-item"><a href="#">English</a></li>
+          </ul> #}
+        </div>
 
-      <div class="lang">
-        {% if LANG == "ru" %}
-          <a href="index.html" class="lang__current">English</a>
-        {% else %}
-          <a href="index-ru.html" class="lang__current">По-русски</a>
-        {% endif %}
-        {# <ul class="lang__list">
-          <li class="lang__list-item"><a href="#">По-русски</a></li>
-          <li class="lang__list-item"><a href="#">English</a></li>
-        </ul> #}
+        <div class="search">
+          <button class="search__btn js-search-btn" type="button">{% include "../../img/svg/search.svg" %}</button>
+          <div class="search__wrap">
+            <input type="text" class="search__input" placeholder="Search">
+          </div>
+        </div>
       </div>
 
       <button type="button" class="menu-button"><span></span></button>

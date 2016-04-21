@@ -1,0 +1,27 @@
+{% macro space(height, classes) %}
+<tr class="content {{ ' ' + classes if classes else ''}}">
+	<td height="{{height}}"></td>
+</tr>
+{% endmacro %}
+{% macro space_bg(height, bg_sp) %}
+<tr>
+	<td height="{{height}}" valign="top" style="background-color: {{bg_sp}};"></td>
+</tr>
+{% endmacro %}
+{% macro space3(height, colspan, classes) %}
+<tr  class="content {{ ' ' + classes if classes else ''}}"  colspan="3">
+	<td height="{{height}}"></td>
+</tr>
+{% endmacro %}
+
+{% macro button(height, text, link, classes) %}
+<table class="button {{ ' ' + classes if classes else ''}}">
+	<tr>
+		<td headers="{{height}}">
+			<a href="{{link if link else ''}}" target="_blank">{{text}}</a>
+		</td>
+	</tr>
+</table>
+{% endmacro %}
+
+

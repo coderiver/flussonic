@@ -105,10 +105,10 @@ a:not([class])
     .hero-links
       padding-left: 15px
       padding-right: 15px
-    .lang
+    .header__right
       top: 50%
       margin-top: -0.65em
-      right: 70px
+      right: 58px
     .nav
       visibility: hidden
       opacity: 0
@@ -154,6 +154,25 @@ a:not([class])
   text-align: right
   +r(1000)
     right: 0
+  .lang
+    transition: opacity .3s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+  &.is-active
+    .lang
+      opacity: 0
+      animation: lang_op .25s linear 
+    .search__btn
+      opacity: 1
+      svg path
+        fill: #000
+@keyframes lang_op
+  0%
+    opacity: 1
+  20%
+    opacity: 0
+  80%
+    opacity: 0
+  100%
+    opacity: 0
 .header__buttons
   position: absolute
   top: 0
@@ -239,10 +258,33 @@ a:not([class])
   &__btn
     font-size: 0
     background: transparent 
+    opacity: .5
+    transition: opacity .2s
+    &:active
+      opacity: 1
+    svg path
+      transition: fill .2s
   &__wrap
-    display: none
+    position: absolute
+    top: -5px
+    right: 16px
+    transition: width .2s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    width: 0
+    &.is-active
+      width: 214px
+      +r(1200)
+        width: 172px
+      +r(480)
+        width: 122px
   &__input
-
+    width: 100%
+    height: 30px
+    color: #999
+    +f(l, 16)
+    background: transparent 
+    border-bottom: 1px solid rgba(#000, 1) 
+    &::placeholder
+      color: rgba(#999, .5)
 .nav
   position: relative
 
@@ -1239,6 +1281,8 @@ textarea.input
   width: 100%
   box-sizing: border-box
   margin-bottom: 50px
+.customer__text
+  margin-top: 5px
 
 .customer
   &:hover

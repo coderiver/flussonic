@@ -4,7 +4,7 @@
   <h2 class="title">{{customers1.ourcustomers}}</h2>
   <ul class="customers__list">
     {% for customer in customers %}
-      <li class="customers__list-item customer">
+      <li class="customers__list-item customer"> 
         <div class="customer__pic">
           {% if customer.href %}
           <a href="{{customer.href}}"><img src="img/customers/{{customer.img}}"></a>
@@ -12,7 +12,7 @@
           <img src="img/customers/{{customer.img}}">
           {% endif %}
         </div>
-        <a href="#">{{customer.title}}</a>
+        <a href="#">{{customer.title_small}}</a>
         <p class="customer__text text">{{customer.text}}</p>
         {% if customer.href %}<a class="customer__link lnk" href="{{customer.href}}">{{customer.link}}</a>{% endif %}
       </li>

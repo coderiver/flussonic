@@ -252,5 +252,21 @@ function chowchen() {
 $(document).on('scroll', function () {
 	chowchen();
 });
+$('.js-search-btn').on('click', function () {
+	var btn = $(this),
+		parent = btn.parents('.js-right-parent'),
+		wrap = parent.find('.js-search-wrap');
+	parent.toggleClass('is-active');
+	wrap.toggleClass('is-active');
+});
+$('.js-right-parent').on('click', function (event) {
+	event.stopPropagation();
+});
+
+$('body').on('click', function () {
+	$('.js-right-parent').removeClass('is-active');
+	$('.js-search-wrap').removeClass('is-active');
+});
+
 
 

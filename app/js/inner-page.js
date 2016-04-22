@@ -253,11 +253,13 @@ $(document).on('scroll', function () {
 	chowchen();
 });
 $('.js-search-btn').on('click', function () {
-	var btn = $(this),
-		parent = btn.parents('.js-right-parent'),
-		wrap = parent.find('.js-search-wrap');
-	parent.toggleClass('is-active');
-	wrap.toggleClass('is-active');
+    var btn = $(this),
+        parent = btn.parents('.js-right-parent'),
+        input = parent.find('.js-search-input'),
+        wrap = parent.find('.js-search-wrap');
+    parent.toggleClass('is-active');
+    wrap.toggleClass('is-active');
+    input.focus();
 });
 $('.js-right-parent').on('click', function (event) {
 	event.stopPropagation();

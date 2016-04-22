@@ -155,11 +155,11 @@ a:not([class])
   +r(1000)
     right: 0
   .lang
-    transition: opacity .3s cubic-bezier(0.6, 0.04, 0.98, 0.335)
+    transition: opacity 0.5s ease-in
   &.is-active
     .lang
       opacity: 0
-      animation: lang_op .25s linear 
+      animation: lang_op 0.3s ease-out
     .search__btn
       opacity: 1
       svg path
@@ -227,6 +227,12 @@ a:not([class])
   display: inline-block
   a
     border: none
+    opacity: .7
+    transition: opacity .2s
+    &:hover,
+    &:focus
+      color: inherit
+      opacity: 1
     &:not(:hover)
       color: inherit
   &:hover,
@@ -260,6 +266,8 @@ a:not([class])
     background: transparent 
     opacity: .5
     transition: opacity .2s
+    &:hover
+      opacity: 0.7
     &:active
       opacity: 1
     svg path
@@ -268,7 +276,7 @@ a:not([class])
     position: absolute
     top: -5px
     right: 16px
-    transition: width .2s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+    transition: width 0.5s ease-out
     width: 0
     &.is-active
       width: 214px

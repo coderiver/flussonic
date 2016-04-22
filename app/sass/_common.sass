@@ -155,11 +155,23 @@ a:not([class])
   +r(1000)
     right: 0
   .lang
+    opacity: 1
     transition: opacity 0.5s ease-in
+    a
+      position: relative
+      will-change: opacity
+      transform: translate3d(0,0,0)
+      transition: opacity 0.5s ease-in
   &.is-active
     .lang
-      opacity: 0
-      animation: lang_op 0.3s ease-out
+      opacity: 0 
+      transition: opacity 0.3s ease-out
+      a
+        opacity: 0
+        -webkit-animation: lang_op 0.3s ease-out
+        -moz-animation: lang_op 0.3s ease-out
+        -o-animation: lang_op 0.3s ease-out
+        animation: lang_op 0.3s ease-out
     .search__btn
       opacity: 1
       svg path
@@ -287,7 +299,7 @@ a:not([class])
   &__input
     width: 100%
     height: 30px
-    color: #999
+    color: #000
     +f(l, 16)
     background: transparent 
     border-bottom: 1px solid rgba(#000, 1) 

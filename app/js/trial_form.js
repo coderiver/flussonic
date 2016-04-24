@@ -13,6 +13,7 @@ $(function() {
             $(this).find("#email").val(email);
         }
         var comment = $(this).find("#comment").val();
+        var authenticity_token = $(this).find("#authenticity_token").val();
 
         if(!name || name.length < 2) {
             $("#error_message").html("Enter your name please").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);
@@ -41,10 +42,12 @@ $(function() {
         $.ajax({
             url: $(this).attr('action'),
             method: "POST",
+            contentType: "application/json; charset=utf-8",
             data: JSON.stringify({
                 name: name,
                 email: email,
-                comment: comment
+                comment: comment,
+                authenticity_token: authenticity_token
             }),
             error: function() {
                 $("#error_message").html("Failed to request a trial. Please write on <a href='mailto:info@erlyvideo.org'>info@erlyvideo.org</a>").css({opacity: 0, display: "block"}).animate({opacity: 1.0}, 200);

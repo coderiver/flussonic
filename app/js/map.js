@@ -1,17 +1,17 @@
 var map, pointsOnMap, mapStyle = require('./map-style.json');
 
 pointsOnMap = [
-    [55.977731, 37.171968, 1, {
+    [55.98347,37.1719915, 1, {
         'head'    : 'офис Эрливидео',
-        'address' : 'Адрес: Россия, Москва, Зеленоград, 1 Мая, д.1, офис 6',
+        'address' : 'Адрес: Россия, Москва, Зеленоград, Гоголя, д. 2, офис 47',
         'tel'     : 'Телефон: +7 (499) 499-34-04'
     }],
 ];
 
 // Function return array of markers that was create from "locations" and added to "map"
-function setMarkers(map, locations) {
+function setMarkers(map, locations, marker_url) {
     var markers = [];
-    var image = new google.maps.MarkerImage('img/svg/map-marker.svg', null, null, null, new google.maps.Size(28,43));
+    var image = new google.maps.MarkerImage(marker_url, null, null, null, new google.maps.Size(28,43));
     for (var i = 0; i < locations.length; i++) {
         var point    = locations[i];
         var myLatlng = new google.maps.LatLng(point[0], point[1]);
@@ -71,7 +71,7 @@ function initMap(el) {
 
     map = new google.maps.Map(container, mapOptions);
 
-    var mapMarkers = setMarkers(map, pointsOnMap);
+    var mapMarkers = setMarkers(map, pointsOnMap, $(container).attr('data-marker-url'));
     // var mapInfoWindow = new google.maps.InfoWindow();
 
     // setInfoWindowContent(mapMarkers, mapInfoWindow);

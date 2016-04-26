@@ -2,7 +2,6 @@ import $ from 'jquery';
 window.$ = window.jQuery = $;
 import ScrollMagic from 'scrollmagic';
 import './draw-svg';
-import './trial_form.js';
 import buildContentFadeScenes from './fade-in-scenes.js';
 import svg4everybody from 'svg4everybody';
 

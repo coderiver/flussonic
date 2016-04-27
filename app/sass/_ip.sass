@@ -67,11 +67,15 @@ body.is-ip
 			// 	font-size: 69px
 			+r(899)
 				font-size: 5rem
+		.col-right,
+		.col-left
+			min-height: 0
 	.toparea__in,
 	.toparea__left
 		position: relative
 	.toparea__left
 		z-index: 1
+		min-height: 157px
 	.col-right,
 	.col-left
 		position: relative
@@ -86,12 +90,17 @@ body.is-ip
 			max-width: 100%
 	.col-right
 		padding-left: 285px
+		min-height: 198px
 		+r(899)
 			padding-left: 0
+			min-height: 0
 	.col-left
 		padding-right: 330px 
+		min-width: 198px
+		min-height: 170px
 		+r(899)
 			padding-right: 0
+			min-height: 0
 
 .section_iptv
 	.row
@@ -165,7 +174,7 @@ body.is-ip
 		top: -130px
 		left: -107px
 	&.is-phone
-		top: -110px
+		top: -104px
 		left: 467px
 		width: 898px
 		height: 740px
@@ -297,8 +306,11 @@ body.is-ip
 	&.is-visible
 		opacity: 1
 	&.is-phone
-		top: -138px
-		left: 160px
+		top: -135px
+		left: 139px
+		svg
+			width: 532px
+			height: 125px
 
 // device-set
 .channels-set

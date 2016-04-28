@@ -19,7 +19,7 @@ const scrollController = new ScrollMagic.Controller({
     loglevel: 2
 });
 
-const mq = window.matchMedia('(max-width: 767px)');
+// const mq = window.matchMedia('(max-width: 767px)');
 
 $('.hero-btn').on('click touchend', toggleSection);
 
@@ -53,10 +53,10 @@ setTimeout(setFeaturesHeight, 200);
 initMap('#map');
 svg4everybody();
 drawHeroSvg('.hero-figure.is-active svg', 300);
-activateScrollToAnchor();
+activateScrollToAnchor(); 
 
 function drawHeroSvg(el, timeout = 0, cb = $.noop) {
-    if (mq.matches) return;
+    if ($(window).width() <= 767) return;
 
     if (typeof el === 'string') {
         el = $(el);

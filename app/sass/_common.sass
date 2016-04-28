@@ -1596,8 +1596,14 @@ textarea.input
   transition: all 0.5s ease
   transition-property: opacity, transform
   opacity: 0
+  +r(768)
+    opacity: 1 !important
+    display: block !important
   &.slide-up
     transform: translateY(10px)
+    +r(768)
+      transform: translateY(0)
+      display: block !important
   &.animate
     opacity: 1
     transform: translateY(0)

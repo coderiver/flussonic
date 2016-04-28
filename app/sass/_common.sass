@@ -7,7 +7,7 @@ body
   background: #FFF
   color: black
   line-height: 1.4
-  min-width: 320px
+  min-width: 320px 
   +f(l, 16)
   +smooth-font
 
@@ -415,6 +415,8 @@ a:not([class])
   +sm
     padding-top: 100px
     padding-bottom: 40px
+  .breadcrumbs
+    margin-bottom: 22px
 
 .hero
   position: relative
@@ -1662,3 +1664,22 @@ textarea.input
   display: none
   +retina
     display: block
+    
+.is-hidden
+  display: none
+  
+.breadcrumbs
+  font-size: 12px
+  li
+    margin-left: 10px
+    vertical-align: top
+    display: inline-block
+    &:first-child
+      margin-left: 0
+  .link
+    color: #FFF
+    opacity: 0.7
+    transition: opacity .2s
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+    &:hover
+      opacity: 1

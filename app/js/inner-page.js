@@ -161,6 +161,10 @@ var $svgType = $('.js-svg-anim-type svg').drawsvg(),
 		duration: 800,
         stagger: 0
 	}),
+	$svgIp = $('.js-svg-anim-type.is-plate > svg').drawsvg( {
+		duration: 1400,
+        stagger: 0
+	}),
 	$svgLine = $('.js-svg-anim-line svg');
 
 setTimeout(function() {

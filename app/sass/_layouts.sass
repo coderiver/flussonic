@@ -49,7 +49,7 @@
 $col-sizes: 80, 75, 60, 50, 26, 25, 20
 @each $size in $col-sizes
   .col-#{$size}
-    width: #{$size}%
+    width: #{$size + %}
     &.is-mob
       +r(768)
         margin-top: 20px

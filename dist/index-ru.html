@@ -776,7 +776,7 @@
           <h2 class="title">Бесплатный триал</h2>
           <div class="row">
             <div class="col col-50">
-              <form class="form" id="create_trial_form" method="post" action="https://talks.erlyvideo.ru/create_trial" novalidate>
+              <form class="form" id="create_trial_form" method="post" action="/create_trial" novalidate>
                 <input name="utf8" type="hidden" value="&#x2713;" />
                 <input name="project_type" id="project_type" type="hidden" value="vsaas" />
                 <div class="field">
@@ -866,7 +866,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Используют наш софт для просмотра с камер, находящихся на их объектах по всему миру.</p>
-              <a class="customer__link lnk" href="/clients/lukoil">История</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -877,7 +876,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Трансляция на сайте с камер видеонаблюдения</p>
-
             </li>
 
             <li class="customers__list-item customer">
@@ -888,7 +886,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Подразделение спутниковой связи передает видео с камер нашим ПО</p>
-              <a class="customer__link lnk" href="/clients/gazprom">Case study</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -899,7 +896,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Предоставляют расширенный IPTV сервис своим клиентам</p>
-
             </li>
 
             <li class="customers__list-item customer">
@@ -910,7 +906,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Одна из крупнейших инсталяций в серии безопасных городов в России: дорожные камеры со всей Уфы</p>
-              <a class="customer__link lnk" href="/clients/ufanet">Case study</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -921,7 +916,6 @@
               </div>
               <a href="#"></a>
               <p class="customer__text text">Cloud security surveillance using 150 IP cameras storing unlimited video archives</p>
-
             </li>
 
           </ul>
@@ -994,7 +988,7 @@
           </div>
       </section>
 
-      <div class="map fade-in" id="map">
+      <div class="map fade-in" id="map" data-marker-url='img/svg/map-marker.svg'>
         <div class="map__placeholder"></div>
       </div>
       <!-- END contacts -->

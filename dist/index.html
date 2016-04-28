@@ -776,7 +776,7 @@
           <h2 class="title">Request a free trial</h2>
           <div class="row">
             <div class="col col-50">
-              <form class="form" id="create_trial_form" method="post" action="https://talks.erlyvideo.ru/create_trial" novalidate>
+              <form class="form" id="create_trial_form" method="post" action="/create_trial" novalidate>
                 <input name="utf8" type="hidden" value="&#x2713;" />
                 <input name="project_type" id="project_type" type="hidden" value="vsaas" />
                 <div class="field">
@@ -866,7 +866,6 @@
               </div>
               <a href="#">Cloud security surveillance</a>
               <p class="customer__text text">Cloud security surveillance using 150 IP cameras storing unlimited archives 24/7</p>
-              <a class="customer__link lnk" href="/clients/lukoil">Case study</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -877,7 +876,6 @@
               </div>
               <a href="#">Media library management</a>
               <p class="customer__text text">The company currently manages its media library and streaming live events, offering a reliable and always available experience</p>
-
             </li>
 
             <li class="customers__list-item customer">
@@ -888,7 +886,6 @@
               </div>
               <a href="#">live events broadcasting</a>
               <p class="customer__text text">The company currently managesits media library and streaming live events, offering a reliable, secure and always available viewing experience</p>
-              <a class="customer__link lnk" href="/clients/gazprom">Case study</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -899,7 +896,6 @@
               </div>
               <a href="#">Broadcasting live events</a>
               <p class="customer__text text">Broadcasting live events, offering a reliable, secure and always available viewing experience for its employees</p>
-
             </li>
 
             <li class="customers__list-item customer">
@@ -910,7 +906,6 @@
               </div>
               <a href="#">Cloud security surveillance</a>
               <p class="customer__text text">Broadcasting live events, offeringa reliable, secure and always available viewing experience for all customers</p>
-              <a class="customer__link lnk" href="/clients/ufanet">Case study</a>
             </li>
 
             <li class="customers__list-item customer">
@@ -921,7 +916,6 @@
               </div>
               <a href="#">Streaming live events</a>
               <p class="customer__text text">Cloud security surveillance using 150 IP cameras storing unlimited video archives</p>
-
             </li>
 
           </ul>
@@ -994,7 +988,7 @@
           </div>
       </section>
 
-      <div class="map fade-in" id="map">
+      <div class="map fade-in" id="map" data-marker-url='img/svg/map-marker.svg'>
         <div class="map__placeholder"></div>
       </div>
       <!-- END contacts -->

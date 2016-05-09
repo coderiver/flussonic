@@ -161,7 +161,7 @@ var $svgType = $('.js-svg-anim-type svg').drawsvg(),
 		duration: 800,
         stagger: 0
 	}),
-	$svgIp = $('.js-svg-anim-type.is-plate > svg').drawsvg( {
+	$svgIpPL = $('.js-svg-anim-type.is-plate > svg').drawsvg( {
 		duration: 1400,
         stagger: 0
 	}),
@@ -171,6 +171,7 @@ setTimeout(function() {
 	$svg.fadeIn(300).drawsvg('animate');
 	$svgType.fadeIn(300).drawsvg('animate');
 	$svgIp.fadeIn(300).drawsvg('animate');
+	$svgIpPL.fadeIn(300).drawsvg('animate');
 }, 800); 
 
 setTimeout(function() { $svgLine.fadeIn(600); }, 1400);

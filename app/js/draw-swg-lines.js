@@ -31,8 +31,8 @@ svg.append(path).attr({
 
 path.attr({
     stroke: '#003cff',
-    'stroke-width': 1,
-    'stroke-dasharray': 3,
+    'stroke-width': 1.5,
+    'stroke-dasharray': 4,
     fill: 'none'
 });
 

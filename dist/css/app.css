@@ -267,7 +267,7 @@ a:hover, a:focus { color: red; }
 
 .toparea__left .title { margin-bottom: 15px; font-size: 6.9rem; line-height: 1.2; }
 
-.toparea .breadcrumbs { margin-bottom: 22px; }
+.toparea .breadcrumbs { margin-bottom: 22px; margin-left: 3px; }
 
 .hero { position: relative; font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; line-height: 1.526; padding: 0 45% 0 0; }
 
@@ -453,41 +453,41 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud:nth-child(2) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
 .clouds__cloud:nth-child(18) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 10s; animation-delay: 10s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -638,6 +638,8 @@ a:hover, a:focus { color: red; }
 .input::-webkit-input-placeholder { font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #9D9CA7; }
 
 .input::placeholder { font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: #9D9CA7; }
+
+.input.input_ru { padding-left: 15rem; }
 
 textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; padding-bottom: 0.6rem; -webkit-overflow-scrolling: touch; }
 
@@ -809,6 +811,8 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
 
 .breadcrumbs .link:hover { opacity: 1; }
 
+.l .center.client-page p:first-child { font-size: 25px; }
+
 .logo-iptvportal { width: 82px; height: 30px; background: url("../img/partner-iptvportal.png") no-repeat center; background-size: contain; }
 
 .logo-yisp { width: 82px; height: 30px; background: url("../img/partner-yisp.png") no-repeat center; background-size: contain; }
@@ -857,7 +861,7 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
 
 .toparea_inner { position: relative; background: #001484; color: #fff; }
 
-.toparea_inner .toparea__in { position: relative; max-width: 640px; padding: 100px 0; }
+.toparea_inner .toparea__in { position: relative; max-width: 640px; padding: 0; }
 
 .toparea_inner .toparea__in .title { font-size: 7rem; margin-bottom: 20px; }
 
@@ -959,7 +963,7 @@ textarea.input { max-height: 200px; line-height: 1.3; padding-top: 0.7rem; paddi
 
 .section-request.blue .input, .section-request.blue textarea.input { border-color: rgba(255, 255, 255, 0.5); }
 
-.footer_inner, .footer_type { border-top: none; }
+.footer_inner, .footer_type { border-top: none; margin-top: 85px; }
 
 .footer_inner .l, .footer_type .l { *zoom: 1; }
 

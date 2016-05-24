@@ -451,43 +451,43 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud:nth-child(1) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
 .clouds__cloud:nth-child(7) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 10s; animation-delay: 10s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(20) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(20) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
 .clouds__cloud_2 { background-image: url("../img/cloud2.png"); }
 
@@ -1127,7 +1127,7 @@ hr + .inf { margin-top: -25px; }
 
 .series .col-right { float: right; }
 
-.series .row { margin: 0 0 0 -15px; }
+.series .row { margin: 0; }
 
 .series .col-26 { margin-top: 3rem; float: none; padding-right: 10px; min-width: 190px; vertical-align: top; box-sizing: border-box; display: inline-block; }
 
@@ -1598,7 +1598,7 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
  .pre { margin-left: 0; margin-right: 0; } }
 
 @media only screen and (max-width: 1180px) {
- .series .row { -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 10px; -moz-column-gap: 10px; column-gap: 10px; }
+ .series .row { margin: 0 0 0 -15px; -webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-gap: 10px; -moz-column-gap: 10px; column-gap: 10px; }
  .series .row .col-25 { float: none; margin-top: 40px; padding-left: 15px; width: 100%; }
  .series .row .col-25:first-child { margin-top: 0; }
  .series .row .col-25 h4:first-child { margin-top: 0; } }

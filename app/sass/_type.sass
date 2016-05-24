@@ -312,6 +312,26 @@ hr
 			float: none
 			&:first-child
 				margin-top: 0
+	.row
+		margin: 0 0 0 -15px
+		+r(1180)
+			column-count: 2
+			column-gap: 10px
+		+r(768)
+			column-count: 1
+			column-gap: 0
+		.col-25
+			+r(1180)
+				float: none
+				margin-top: 40px
+				padding-left: 15px
+				width: 100%
+				&:first-child
+					margin-top: 0
+				h4
+					&:first-child
+						margin-top: 0
+
 	.col-26
 		margin-top: 3rem
 		float: none

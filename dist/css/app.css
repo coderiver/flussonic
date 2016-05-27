@@ -275,7 +275,7 @@ a:hover, a:focus { color: red; }
 
 .hero .btn { margin-top: 15px; }
 
-.hero-figure { position: absolute; z-index: -1; top: -30px; right: 0; visibility: hidden; opacity: 0; width: 490px; }
+.hero-figure { position: absolute; z-index: -1; top: -30px; right: 0; visibility: hidden; opacity: 0; transition: opacity .4s, z-index .4s, visibility .4s; width: 490px; display: block; }
 
 .hero-figure > svg { width: 100%; }
 
@@ -296,8 +296,6 @@ a:hover, a:focus { color: red; }
 .hero-links { margin: 23px 0; }
 
 .hero-text { display: none; }
-
-.hero-text.is-active { display: block; }
 
 .hero-btn { display: inline-block; margin-right: 15px; text-decoration: none; font-family: "firasans-light"; font-weight: normal; font-size: 1.6rem; color: inherit; transition: color 0.2s ease; line-height: 1; color: #003CFF; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 
@@ -451,41 +449,41 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud:nth-child(1) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
 .clouds__cloud:nth-child(4) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
 .clouds__cloud:nth-child(5) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 6s; animation-delay: 6s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 8s; animation-delay: 8s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
 .clouds__cloud:nth-child(9) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(10) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(11) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(11) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
 .clouds__cloud:nth-child(13) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
 .clouds__cloud:nth-child(20) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 

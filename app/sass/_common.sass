@@ -440,7 +440,9 @@ a:not([class])
   right: 0
   visibility: hidden
   opacity: 0
+  transition: opacity .4s, z-index .4s, visibility .4s
   width: 490px
+  display: block
   > svg
     width: 100%
     .dashed-line
@@ -476,8 +478,8 @@ a:not([class])
 
 .hero-text
   display: none
-  &.is-active
-    display: block
+  // &.is-active
+  //   display: block
 
 .hero-btn
   display: inline-block

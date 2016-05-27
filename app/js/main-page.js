@@ -35,6 +35,9 @@ $('.menu-button').on('click touchend', function(e) {
 $.extend($.easing, {
     easeOutCubic: function(x, t, b, c, d) {
         return c * ((t = t / d - 1) * t * t + 1) + b;
+    },
+    easeInSine: function (x, t, b, c, d) {
+        return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
     }
 });
 
@@ -113,7 +116,20 @@ function toggleSection(e) {
         targetFeatures.parent().removeClass('is-changing');
         dispatcher.trigger(actions.END_CHANGE_SECTION, sectionName);
     });
+    showHero();
 }
+
+function showHero(){
+    $('.hero-text').each(function () {
+        var this_ = $(this);
+        if (this_.hasClass('is-active')) {
+            this_.fadeIn(400);
+        }
+        else {
+            this_.fadeOut(0);
+        }
+    });
+} showHero();
 
 function setFeaturesHeight(activeFeatures) {
     if (activeFeatures === undefined || activeFeatures === null) {
@@ -238,7 +254,7 @@ function buildCommonScrollScenes() {
 function scrollTo(target, duration = 1000, shift = 100) {
     $('html, body').animate({
         scrollTop: target.offset().top - shift
-    }, duration, 'easeOutCubic');
+    }, duration, 'easeInSine');
 }
 
 function activateScrollToAnchor() {

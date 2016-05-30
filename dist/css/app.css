@@ -447,43 +447,43 @@ a:hover, a:focus { color: red; }
 
 .clouds__cloud { position: absolute; top: 0; left: 0; width: 270px; height: 270px; background: url("../img/cloud.png") no-repeat center; background-size: contain; -webkit-animation: cloud 7s linear infinite; animation: cloud 7s linear infinite; }
 
-.clouds__cloud:nth-child(1) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(1) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(2) { -webkit-animation-delay: 4s; animation-delay: 4s; }
+.clouds__cloud:nth-child(2) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(3) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(3) { -webkit-animation-delay: 9s; animation-delay: 9s; }
 
-.clouds__cloud:nth-child(4) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(4) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(5) { -webkit-animation-delay: 9s; animation-delay: 9s; }
+.clouds__cloud:nth-child(5) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(6) { -webkit-animation-delay: 6s; animation-delay: 6s; }
+.clouds__cloud:nth-child(6) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(7) { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.clouds__cloud:nth-child(7) { -webkit-animation-delay: 3s; animation-delay: 3s; }
 
-.clouds__cloud:nth-child(8) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(8) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(9) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(9) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
 .clouds__cloud:nth-child(10) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
 .clouds__cloud:nth-child(11) { -webkit-animation-delay: 5s; animation-delay: 5s; }
 
-.clouds__cloud:nth-child(12) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(12) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
-.clouds__cloud:nth-child(13) { -webkit-animation-delay: 7s; animation-delay: 7s; }
+.clouds__cloud:nth-child(13) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(14) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(14) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(15) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(15) { -webkit-animation-delay: 4s; animation-delay: 4s; }
 
-.clouds__cloud:nth-child(16) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(16) { -webkit-animation-delay: 8s; animation-delay: 8s; }
 
-.clouds__cloud:nth-child(17) { -webkit-animation-delay: 3s; animation-delay: 3s; }
+.clouds__cloud:nth-child(17) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
-.clouds__cloud:nth-child(18) { -webkit-animation-delay: 5s; animation-delay: 5s; }
+.clouds__cloud:nth-child(18) { -webkit-animation-delay: 1s; animation-delay: 1s; }
 
-.clouds__cloud:nth-child(19) { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.clouds__cloud:nth-child(19) { -webkit-animation-delay: 7s; animation-delay: 7s; }
 
 .clouds__cloud:nth-child(20) { -webkit-animation-delay: 2s; animation-delay: 2s; }
 
@@ -1535,10 +1535,8 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
 
 .ico-unknown { background-image: url("../img/sprite.png"); background-position: 0px -90px; width: 33px; height: 35px; }
 
-@media only screen and (min-width: 1800px) {
- .feature-pic { margin-top: 4.5rem; }
- .features-iptv .feature-pic { margin-top: 6rem; }
- .transcoder { margin-right: 20%; } }
+@media only screen and (min-width: 1700px) {
+ .feature-pic { margin-top: 2rem; } }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
  .ico-pdf { background-image: url("../img/sprite@2x.png"); background-size: 162px 125px; }
@@ -1565,8 +1563,10 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
 @media only screen and (min-width: 1650px) {
  .feature-pic { margin-top: 1rem; } }
 
-@media only screen and (min-width: 1700px) {
- .feature-pic { margin-top: 2rem; } }
+@media only screen and (min-width: 1800px) {
+ .feature-pic { margin-top: 4.5rem; }
+ .features-iptv .feature-pic { margin-top: 6rem; }
+ .transcoder { margin-right: 20%; } }
 
 @media only screen and (min-width: 1950px) {
  .feature-pic { margin-top: 6rem; } }
@@ -1691,11 +1691,11 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
  .header .header__inner { padding: 15px 0; position: static; }
  .header .hero-links { padding-left: 15px; padding-right: 15px; }
  .header .header__right { top: 50%; margin-top: -0.65em; right: 58px; }
- .header .nav { visibility: hidden; opacity: 0; position: absolute; z-index: 3; top: 0; right: 0; left: 0; background: white; text-align: center; padding: 40px 15px 15px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); transition: 0.3s ease; transition-property: opacity, visibility; max-height: 100vh; overflow: auto; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
+ .header .nav { visibility: hidden; opacity: 0; position: absolute; z-index: -1; top: 0; right: 0; left: 0; background: white; text-align: center; padding: 40px 15px 15px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); max-height: 100vh; overflow: auto; box-sizing: border-box; -webkit-overflow-scrolling: touch; }
  .header .nav__item { display: block; margin: 0; }
  .header .nav__link { line-height: 2; }
  .header.is-show-menu .logo { z-index: 5; }
- .header.is-show-menu .nav { opacity: 1; visibility: visible; }
+ .header.is-show-menu .nav { opacity: 1; visibility: visible; transition: 0.3s ease; transition-property: opacity, visibility; }
  .header .hero-btn { font-size: 14px; }
  .menu-button { display: block; }
  .nav.is-mod a:hover { color: #003CFF; }
@@ -1752,14 +1752,8 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
  .footer_inner .footer__right, .footer_type .footer__right { width: 100%; float: none; text-align: center; margin-left: 0; }
  body.is-ip .toparea__svg.is-aerial { bottom: -170px; } }
 
-@media only screen and (max-width: 599px) {
- .customers .customers__list { margin: 0; -webkit-column-count: initial; -moz-column-count: initial; column-count: initial; -webkit-column-gap: initial; -moz-column-gap: initial; column-gap: initial; }
- .customers .customers__list-item { display: block; width: auto; margin: 20px 0 0 0; padding: 0; }
- .footer { text-align: center; }
- .footer .footer__left { float: none; margin-top: 10px; }
- .footer .footer__right { float: none; width: auto; }
- .footer .site-maker { left: 0; }
- .site-maker > img, .site-maker .logo-als { float: none; display: block; margin: 0 auto 10px; } }
+@media only screen and (max-width: 700px) {
+ .header .nav { transition: 0.3s ease; transition-property: opacity, visibility; } }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
  .motion__item:before { background-image: url("../img/motion-x2.png"); }
@@ -1774,6 +1768,15 @@ body.is-ip .col-left { padding-right: 330px; min-width: 198px; min-height: 170px
  .logo-iptvportal { background-image: url("../img/partner-iptvportal-x2.png"); }
  .logo-yisp { background-image: url("../img/partner-yisp-x2.png"); }
  .logo-als { background-image: url("../img/als-logo-x2.png"); } }
+
+@media only screen and (max-width: 599px) {
+ .customers .customers__list { margin: 0; -webkit-column-count: initial; -moz-column-count: initial; column-count: initial; -webkit-column-gap: initial; -moz-column-gap: initial; column-gap: initial; }
+ .customers .customers__list-item { display: block; width: auto; margin: 20px 0 0 0; padding: 0; }
+ .footer { text-align: center; }
+ .footer .footer__left { float: none; margin-top: 10px; }
+ .footer .footer__right { float: none; width: auto; }
+ .footer .site-maker { left: 0; }
+ .site-maker > img, .site-maker .logo-als { float: none; display: block; margin: 0 auto 10px; } }
 
 @media only screen and (max-width: 568px) {
  .toparea_inner { text-align: center; box-sizing: border-box; background-position: 50% 0; }

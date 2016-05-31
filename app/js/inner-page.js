@@ -276,11 +276,17 @@ $('body').on('click', function () {
 	$('.js-search-wrap').removeClass('is-active');
 });
 
-$(document).on('scroll', function () {
-	var hash = window.location.hash;
-	$('html, body').animate({
-		scrollTop: $(hash).offset().top - 30
-	}, 600);
+$(document).ready(function () {
+	var hash = window.location.hash,
+		href = window.location.href.split('#')[1];
+	if (href = href) {
+		$('html, body').animate({
+			scrollTop: $(hash).offset().top - 30
+		}, 600);
+	}
+	else {
+		return false;
+	}
 });
 
 

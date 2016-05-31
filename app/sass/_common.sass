@@ -86,8 +86,9 @@ a:not([class])
       visibility: visible
     .hero-btn
       transform: translateY(0)
-    .lang
-      z-index: 0
+    .lang,
+    .search
+      display: none
   &.is-hide-buttons
     .hero-links
       opacity: 0
@@ -135,6 +136,7 @@ a:not([class])
         z-index: 5
       .nav
         opacity: 1
+        z-index: 5
         visibility: visible
         transition: 0.3s ease
         transition-property: opacity, visibility
@@ -349,8 +351,8 @@ a:not([class])
         transition: border-color .3s
         display: none
         +sm
-          top: 0
-          bottom: 0
+          top: -2px
+          bottom: -2px
 
 .nav__item
   display: inline-block
@@ -529,13 +531,14 @@ a:not([class])
   &_small
     +f(el, 35)
     +rmin(1600)
-      font-size: 35px
+      font-size: 32px
   +md
     &:not(.title_small)
      font-size: 45px
   +sm
-    font-size: 34px
-    font-size: 3.4rem
+    &:not(.title_small)
+      font-size: 34px
+      font-size: 3.4rem
 
 
 .section
@@ -1325,9 +1328,9 @@ textarea.input
   border-radius: 2px
 
 .customers
-  +sm
-    .customers__list
-      column-count: 2
+  // +sm
+  //   .customers__list
+  //     column-count: 2
   +xs
     .customers__list
       margin: 0
@@ -1342,17 +1345,26 @@ textarea.input
 .customers__list
   font-size: 0
   margin: 0 0 -50px
-  column-count: 3
-  column-gap: 60px
+  // column-count: 3
+  // column-gap: 60px
 
 .customers__list-item
   display: inline-block
   vertical-align: top
   font-size: 16px
   font-size: 1.6rem
-  width: 100%
+  width: calc(33.1% - 40px)
+  margin-left: 60px
   box-sizing: border-box
   margin-bottom: 50px
+  &:nth-child(3n+1)
+    margin-left: 0
+  +sm
+    width: calc(49% - 40px)
+    &:nth-child(3n+1)
+      margin-left: 40px
+    &:nth-child(2n+1)
+      margin-left: 0
 .customer__text
   margin-top: 5px
 
